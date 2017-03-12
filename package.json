@@ -1,0 +1,23 @@
+{
+  "name": "learn-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "koa": "^2.1.0",
+    "koa-bodyparser": "^4.1.0",
+    "koa-router": "^7.0.1",
+    "koa-views": "^6.0.1",
+    "nunjucks": "^3.0.0",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "axios": "^0.15.3"
+  }
+}
