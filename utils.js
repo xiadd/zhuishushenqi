@@ -1,7 +1,1 @@
-const axios = require('axios')
-
-const instance = axios.create({
-  headers: {
-    'x-powered-by': 'xiadd'
-  }
-})
+const log4js = require('log4js')
