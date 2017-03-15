@@ -11,14 +11,15 @@ app.use(async (ctx, next) => {
   try {
     await next()
   } catch (e) {
-    console.log(e);
-    ctx.body = e
+    ctx.body = e.status
   }
 })
 //message handle
-router.get('/wechat', ctx => {
-  ctx.body = 'name'
+router.get('/wechat', async ctx => {
+  ctx.throw(400, 'Invalid name')
 })
+
 app.use(router.routes()).use(router.allowedMethods())
+
 
 app.listen(8080, () => console.log('server is running on port 8080'))
