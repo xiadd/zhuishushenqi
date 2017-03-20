@@ -1,27 +1,14 @@
-const Emitter = require('events')
+var debug = require('debug')('http')
+  , http = require('http')
+  , name = 'My App';
 
+// fake app
 
-class App extends Emitter {
-  constructor () {
-    super()
-  }
+debug('booting %s', name);
 
-  handleError() {
-    this.on('error', function (e) {
-      console.log(e)
-    })
-  }
-
-  getName () {
-    this.emit('error', 1)
-  }
-}
-
-const app = new App()
-
-app.on('error', function (e) {
-  console.log(e)
-})
-
-app.getName()
-// nodejs events
+http.createServer(function(req, res){
+  debug(req.method + ' ' + req.url);
+  res.end('hello\n');
+}).listen(3000, function(){
+  debug('listening');
+});
