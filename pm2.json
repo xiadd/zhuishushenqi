@@ -1,0 +1,7 @@
+{
+  "name" : "MyApp",
+  "script" : "myapp.js",
+  "env_production" : {
+    "NODE_ENV": "production"
+  }
+}
