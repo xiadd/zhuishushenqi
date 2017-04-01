@@ -22,6 +22,7 @@
     "koa-session": "^5.0.0",
     "koa-views": "^6.0.1",
     "log4js": "^1.1.1",
+    "moment": "^2.18.1",
     "mongoose": "^4.9.1",
     "mz": "^2.6.0",
     "nunjucks": "^3.0.0",

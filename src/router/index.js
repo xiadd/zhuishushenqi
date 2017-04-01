@@ -1,8 +1,7 @@
 import Router from 'koa-router'
+import { getUserInfo, registerNewUser } from '../controller/user'
 
 const router = new Router()
-
-import { getUserInfo, registerNewUser } from '../controller/user'
 
 //用户相关的路由
 router.get('/user/:uid', async ctx => getUserInfo(ctx))

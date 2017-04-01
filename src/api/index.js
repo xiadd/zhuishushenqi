@@ -9,7 +9,8 @@ export default {
   },
   book: {
     // 书籍详情
-    bookInfo: 'http://api.zhuishushenqi.com/book/:id',
+    bookInfo: 'http://api.zhuishushenqi.com/book/:id', // id 书籍id
+    
     // 作者名下的书籍
     authorBooks: 'http://api02u58f.zhuishushenqi.com/book/accurate-search', // query ?author=忘语
     // 书籍章节内容
