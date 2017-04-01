@@ -17,7 +17,9 @@ export default {
     // 书源
     bookSource: 'http://api.zhuishushenqi.com/atoc', // query ?view=summary&book=5779b38d3b433dd647d95da2
     // 章节内容:id 单章id
-    chapterContent: 'http://chapter2.zhuishushenqi.com/chapter/http://vip.zhuishushenqi.com/chapter/:id' //id: chapter id
+    chapterContent: 'http://chapter2.zhuishushenqi.com/chapter/http://vip.zhuishushenqi.com/chapter/:id', //id: chapter id
+    // 书籍搜索 可以搜索作者但是不精确
+    bookSearch: 'http://api.zhuishushenqi.com/book/fuzzy-search' //query ?query=凡人修仙传
   },
   rank: {
     // 排名分类
