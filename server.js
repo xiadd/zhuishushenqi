@@ -6,4 +6,4 @@ const app = process.env.NODE_ENV === 'development'
 ? require('./src/app')
 : require('./dist/app')
 
-app.listen(3000, console.log('server is running'))
+app.listen(8080, console.log('server is running'))
