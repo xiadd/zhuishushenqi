@@ -4,6 +4,7 @@ import { JWTSecret } from '../../config/config.default'
 import UserController from '../controller/user'
 import categoryController from '../controller/category'
 import bookController from '../controller/book'
+import rankController from '../controller/rank'
 
 const router = new Router()
 
@@ -14,10 +15,14 @@ router.prefix('/api')
  */
 
 // 登录
-router.post('/authenticate', UserController.userLogin)
+router.get('/authenticate', UserController.userLogin)
+//router.get('/authenticate', UserController.userLogin)
 
 //设置jwt 权限
 router.use(jwt({ secret: JWTSecret }))
+
+// 获取用户信息
+router.get('/profile', UserController.getUserInfo)
 
 // 获取带书籍数量的父分类
 router.get('/categories', categoryController.getCategoriesWithBookCount)
@@ -45,5 +50,11 @@ router.get('/search', bookController.getBookSearchResults)
 
 // 获取书籍源
 router.get('/book-sources', bookController.getBookSources)
+
+// 获取排名分类
+router.get('/rank-category', rankController.getRankCategory)
+
+// 获取排名详情
+router.get('/rank/:id', rankController.getRankInfo)
 
 export default router

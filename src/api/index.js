@@ -25,6 +25,6 @@ export default {
     // 排名分类
     rankCategory: 'http://api.zhuishushenqi.com/ranking/gender',
     // 排名详情
-    rankInfo: 'http://api.zhuishushenqi.com/ranking/:id' // id: rank id
+    rankInfo: 'http://api.zhuishushenqi.com/ranking' // id: rank id
   }
 }

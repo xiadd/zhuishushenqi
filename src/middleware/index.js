@@ -4,6 +4,9 @@ function setCorrectResponse() {
   return async (ctx, next) => {
     try {
       await next()
+      if (ctx.status === 404) {
+        ctx.throw(404)
+      }
       ctx.body = {
         code: 1,
         message: 'ok',
