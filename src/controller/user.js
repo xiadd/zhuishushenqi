@@ -9,6 +9,18 @@ export default {
     const userData = ctx.request.body
     const wxSessionUrl = `https://api.weixin.qq.com/sns/jscode2session?appid=${config.WXAppId}&secret=${config.WXSecret}&js_code=${ctx.query.code}&grant_type=authorization_code`
     const sessionData = await axios.get(wxSessionUrl)
+
+    // 存储用户openid 这里不再解析获取用户信息直接通过openid标识用户唯一
+    // 首先搜索数据库寻找用户是否已经存在
+    const userExist = await User.findUserByOpenid(sessionData.data.openid)
+    if (!userExist) {
+      const loginUser = new User({
+        openid: sessionData.data.openid,
+        bookShelf: []
+      })
+      loginUser.save()
+    }
+
     const token = authenticate({ openid: sessionData.data.openid }, { expiresIn: '1000 days' })
     ctx.body = token
   },
