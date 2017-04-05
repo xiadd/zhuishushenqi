@@ -21,9 +21,6 @@ router.get('/authenticate', UserController.userLogin)
 //设置jwt 权限
 router.use(jwt({ secret: JWTSecret }))
 
-// 获取用户信息
-router.get('/profile', UserController.getUserInfo)
-
 // 获取带书籍数量的父分类
 router.get('/categories', categoryController.getCategoriesWithBookCount)
 
@@ -56,5 +53,13 @@ router.get('/rank-category', rankController.getRankCategory)
 
 // 获取排名详情
 router.get('/rank/:id', rankController.getRankInfo)
+
+// 用户部分
+
+// 获取书架
+router.get('/bookshelf', UserController.getBookShelf)
+
+// 获取用户信息
+router.get('/profile', UserController.getUserInfo)
 
 export default router

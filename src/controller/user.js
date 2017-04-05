@@ -15,30 +15,50 @@ export default {
     const userExist = await User.findUserByOpenid(sessionData.data.openid)
     if (!userExist) {
       const loginUser = new User({
-        openid: sessionData.data.openid,
-        bookShelf: []
+        openid: sessionData.data.openid
       })
-      loginUser.save()
+      try {
+        loginUser.save()
+      } catch (e) {
+        ctx.throw(500, e)
+      }
     }
 
+    // 生成jwt
     const token = authenticate({ openid: sessionData.data.openid }, { expiresIn: '1000 days' })
     ctx.body = token
   },
 
   // 获取书架
   async getBookShelf (ctx) {
-
+    const openid = ctx.state.user.openid
+    const user = await User.findUserByOpenid(openid)
+    if (user) {
+      ctx.body = user.bookShelf
+    } else {
+      ctx.throw(new Error('unknown error'))
+    }
   },
 
-  // 获取用户信息
+  // 获取用户信息 //@DESPREAT
   async getUserInfo (ctx) {
     console.log(ctx.state.user)
     ctx.body = '123'
   },
 
-  // 添加到书架
+  // 添加到书架 id: bookid
   async addToShelf (ctx) {
-
+    const id = ctx.body._id
+    const openid = ctx.state.openid
+    const user = await User.findUserByOpenid(openid)
+    if (user) {
+      user.bookShelf.push(ctx.body)
+      try {
+        user.save()
+      } catch (e) {
+        ctx.throw(500, e)
+      }
+    }
   },
 
   // 从书架删除
