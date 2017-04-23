@@ -48,13 +48,14 @@ export default {
 
   // 添加到书架 id: bookid
   async addToShelf (ctx) {
-    const id = ctx.body._id
-    const openid = ctx.state.openid
+    const id = ctx.request.body._id
+    const openid = ctx.state.user.openid
     const user = await User.findUserByOpenid(openid)
     if (user) {
-      user.bookShelf.push(ctx.body)
+      user.bookShelf.push(ctx.request.body._id)
       try {
         user.save()
+        ctx.body = '加入到书架'
       } catch (e) {
         ctx.throw(500, e)
       }
@@ -63,7 +64,24 @@ export default {
 
   // 从书架删除
   async deleteFromShelf (ctx) {
-
+    const id = ctx.request.body._id
+    const openid = ctx.state.user.openid
+    const user = await User.findUserByOpenid(openid)
+    if (user) {
+      if (user.bookShelf.indexOf(id) === -1) {
+        ctx.throw(401, new Error('书架中不存在该书籍'))
+      } else {
+        user.bookShelf.splice(user.bookShelf.indexOf(id), 1)
+        try {
+          user.save()
+          ctx.body = '从书架中移除'
+        } catch(e) {
+          ctx.throw(500, e)
+        }
+      }
+    } else {
+      ctx.throw(400, new Error('不存在该用户'))
+    }
   },
 
   //

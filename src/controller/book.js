@@ -26,6 +26,7 @@ export default {
   },
   // 获取章节内容
   async getChapterContent (ctx) {
+    console.log(1)
     const chapterContent = await axios.get(book.chapterContent + `/${ctx.params.link}`)
     ctx.body = chapterContent.data
   },

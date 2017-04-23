@@ -59,6 +59,12 @@ router.get('/rank/:id', rankController.getRankInfo)
 // 获取书架
 router.get('/bookshelf', UserController.getBookShelf)
 
+// 添加到书架
+router.post('/bookshelf', UserController.addToShelf)
+
+// 从书架移除
+router.delete('/bookshelf', UserController.deleteFromShelf)
+
 // 获取用户信息
 router.get('/profile', UserController.getUserInfo)
 
