@@ -36,7 +36,7 @@ router.get('/book-info/:id', bookController.getBookInfo)
 // 获取作者名下的书籍
 router.get('/author-books', bookController.getAuthorBooks)
 
-// 获取书籍章节 id: bookid
+// 获取书籍章节 id: 书源id
 router.get('/book-chapters/:id', bookController.getBookChapters)
 
 // 获取章节详细内容

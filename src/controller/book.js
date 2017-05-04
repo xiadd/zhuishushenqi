@@ -41,7 +41,7 @@ export default {
   // 获取书籍源
   async getBookSources (ctx) {
     if (!ctx.query.view || !ctx.query.book) {
-      ctx.throw(400, new Error('related query is not provided: { summary: view, book: [bookId] }'))
+      ctx.throw(400, new Error('related query is not provided: { view: summary, book: [bookId] }'))
     }
     const bookSources = await axios.get(book.bookSources, { params: ctx.query })
     ctx.body = bookSources.data

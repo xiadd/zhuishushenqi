@@ -153,6 +153,12 @@ response:
 
 #### 书籍章节
 
+这部分相对比较复杂
+
+步骤如下:
+
+书籍id -> 获取所有书源 -> 书源id -> 获取章节目录 -> 章节link -> 章节内容
+
 url : `http://api.zhuishushenqi.com/btoc`
 
 request:
