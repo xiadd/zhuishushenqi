@@ -1,7 +1,7 @@
 if (process.env.NODE_ENV === 'development') {
   require('babel-register')
-  require('babel-polyfill')
 }
+require('babel-polyfill')
 
 //set app
 const app = process.env.NODE_ENV === 'development'
