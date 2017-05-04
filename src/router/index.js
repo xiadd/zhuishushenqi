@@ -9,7 +9,7 @@ import rankController from '../controller/rank'
 const router = new Router()
 
 //设置前缀
-router.prefix('/api')
+// router.prefix('/api')
 /**
  * 分类相关路由
  */
@@ -19,7 +19,7 @@ router.get('/authenticate', UserController.userLogin)
 //router.get('/authenticate', UserController.userLogin)
 
 //设置jwt 权限
-router.use(jwt({ secret: JWTSecret }))
+// router.use(jwt({ secret: JWTSecret }))  如果需要授权的话
 
 // 获取带书籍数量的父分类
 router.get('/categories', categoryController.getCategoriesWithBookCount)

@@ -1,6 +1,6 @@
 {
-  "name" : "MyApp",
-  "script" : "myapp.js",
+  "name" : "novel",
+  "script" : "server.js",
   "env_production" : {
     "NODE_ENV": "production"
   }
