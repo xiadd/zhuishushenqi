@@ -5,31 +5,116 @@
 注意: **如果运行在自己的服务器的话 请务必使用node 7.6 以上**
 
 
-#### 简介
+## api接口
 
-首先感谢追书神器, 这里的接口都是用的追书神器的(除了用户) 由于不是收费接口所以这里就不对接口数据进行存储了,都是直接请求追书的接口
+#### 获取带书籍数量的父分类
 
-如果是收费接口建议还是要做下缓存的(接口没有做任何缓存)
+url: `http://novel.juhe.im/categories`
 
+#### 获取带子分类的分类
 
-#### 关于axios
+url: `http://novel.juhe.im/sub-categories`
 
-这里仅仅是axios的初级应用,并没有新建实例,因为我发现追书的接口都是直接暴露的,我这里并不需要追加header之类的东西,所以还是直接引入使用方便
+#### 获取分类详情
 
-#### 说明
+url: `http://novel.juhe.im/category-info?gender=male&type=hot&major=奇幻&minor=&start=0&limit=20`
 
-我之前使用的一直都是express 趁着koa2正式发布就准备通过实现一个小应用学习,所以可能有很多谬误,欢迎指出,这里的目录结构大量参考了eggjs,这里一并感谢
+query:
 
-#### 为什么是jwt
+```
+{
+  gender, type, major(主分类), minor(子分类), start, limit
+}
+```
 
-很大一部分原因是因为小程序不支持cookie 不然我是更愿意使用cookie-session的.
+#### 获取书籍详情
 
-#### 为什么是mongo
+url: `http://novel.juhe.im/book-info/53115e30173bfacb4904897e`
 
-因为我只会mongo
+params:
 
-#### 关于书架
+```
+{
+  id: book id
+}
+```
 
+#### 获取作者名下的书籍
+
+url: `http://novel.juhe.im/author-books?author=忘语`
+
+query:
+
+```
+{
+  author: 作者名
+}
+```
+
+#### 获取书籍源
+
+url: `http://novel.juhe.im/book-sources?view=summary&book=567d2cb9ee0e56bc713cb2c0`
+
+query:
+
+```
+{
+  view: summary,
+  book: {bookid}
+}
+```
+
+#### 获取书籍章节
+
+url: `http://novel.juhe.im/book-chapters/56f8da09176d03ac1983f6cd`
+
+params:
+
+```
+{
+  id: {书籍源id}
+}
+```
+
+#### 获取章节详细内容
+
+url: `http://novel.juhe.im/chapters/http%3A%2F%2Fvip.zhuishushenqi.com%2Fchapter%2F56f8da09176d03ac1983f6d7%3Fcv%3D1486473051386`  // 注意这里需要进行url编码
+
+params:
+
+```
+{
+  link: {目录中的章节link}
+}
+```
+
+#### 获取搜索结果
+
+url: `http://novel.juhe.im/search?keyword=遮天`
+
+query:
+
+```
+{
+  keyword: {书籍关键字}
+}
+```
+
+#### 获取排名分类
+
+url: `http://novel.juhe.im/rank-category`
+
+#### 获取排名详情
+
+url: `http://novel.juhe.im/rank/54d42d92321052167dfb75e3`
+
+params:
+
+```
+{
+  id: {排名分类的id}
+}
+```
 
 演示
 
