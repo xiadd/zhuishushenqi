@@ -11,9 +11,9 @@ import setCorrectResponse from './middleware'
 const app = new Koa()
 
 app.context.config = config
-
+console.log(path.resolve('./static'));
 //中间件
-app.use(serve(__dirname + '/static'))
+app.use(serve(path.resolve('./static')))
 
 app.use(bodyParser())
 app.use(setCorrectResponse())
