@@ -5,6 +5,7 @@ import UserController from '../controller/user'
 import categoryController from '../controller/category'
 import bookController from '../controller/book'
 import rankController from '../controller/rank'
+import homeController from '../controller/home'
 
 const router = new Router()
 
@@ -13,6 +14,9 @@ const router = new Router()
 /**
  * 分类相关路由
  */
+
+// 首页
+router.get('/', homeController.index)
 
 // 登录
 router.get('/authenticate', UserController.userLogin)
