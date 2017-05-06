@@ -21,4 +21,5 @@ app.use(log4js.koaLogger(log4js.getLogger('http'), { level: 'auto' }))
 app.use(setCorrectResponse())
 app.use(router.routes()).use(router.allowedMethods())
 
+
 export default app

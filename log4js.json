@@ -23,6 +23,14 @@
           "filename": "app.log",
           "maxLogSize": 10485760,
           "numBackups": 5
+        },
+        {
+          "type": "logLevelFilter",
+          "level": "ERROR",
+          "appender": {
+            "type": "file",
+            "filename": "errors.log"
+          }
         }
       ]
     }
