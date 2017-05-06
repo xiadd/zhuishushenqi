@@ -1,4 +1,4 @@
-# 在线地址:
+# 在线地址(支持https):
 
 `http://novel.juhe.im`
 
