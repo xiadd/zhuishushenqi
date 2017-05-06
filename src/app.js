@@ -1,4 +1,7 @@
 import Koa from 'koa'
+import path from 'path'
+import views from 'koa-views'
+import serve from 'koa-static'
 import bodyParser from 'koa-bodyparser'
 import config from '../config/config.default'
 import DB from './model'
@@ -8,11 +11,12 @@ import setCorrectResponse from './middleware'
 const app = new Koa()
 
 app.context.config = config
-
+console.log(path.resolve('./static'));
 //中间件
-app.use(setCorrectResponse())
+app.use(serve(path.resolve('./static')))
 
 app.use(bodyParser())
+app.use(setCorrectResponse())
 app.use(router.routes()).use(router.allowedMethods())
 
 export default app
