@@ -1,0 +1,30 @@
+{
+  "appenders": [
+    {
+      "type": "console"
+    },
+    {
+      "type": "clustered",
+      "appenders": [
+        {
+          "type": "dateFile",
+          "filename": "startup.log",
+          "pattern": "-yyyy-MM-dd",
+          "category": "startup"
+        },
+        {
+          "type": "dateFile",
+          "filename": "http.log",
+          "pattern": "-yyyy-MM-dd",
+          "category": "http"
+        },
+        {
+          "type": "file",
+          "filename": "app.log",
+          "maxLogSize": 10485760,
+          "numBackups": 5
+        }
+      ]
+    }
+  ]
+}

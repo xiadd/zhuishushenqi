@@ -20,6 +20,7 @@
     "koa": "^2.1.0",
     "koa-bodyparser": "^4.1.0",
     "koa-jwt": "^3.2.1",
+    "koa-log4": "^2.2.1",
     "koa-router": "^7.0.1",
     "koa-session": "^5.0.0",
     "koa-static": "^3.0.0",
