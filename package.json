@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development nodemon server",
-    "build": "cross-env NODE_ENV=production babel src -d dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "cross-env NODE_ENV=production babel src -d dist"
   },
   "author": "",
   "license": "ISC",
