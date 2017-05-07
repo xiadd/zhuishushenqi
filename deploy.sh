@@ -1,1 +1,1 @@
-npm install && npm run build 
+echo 1
