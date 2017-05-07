@@ -1,0 +1,5 @@
+deployment:
+  development:
+    branch: master  # branches starting with "feature-"
+    commands:
+      - ./deploy.sh
