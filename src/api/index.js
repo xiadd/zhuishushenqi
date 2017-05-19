@@ -10,6 +10,8 @@ export default {
   book: {
     // 书籍详情
     bookInfo: 'http://api.zhuishushenqi.com/book', // id 书籍id
+    // 相关推荐
+    relatedRecommendedBooks: 'http://api.zhuishushenqi.com/book', // http://api.zhuishushenqi.com/book/56d0b60dfb51235c3a7a2739/recommend
     // 作者名下的书籍
     authorBooks: 'http://api02u58f.zhuishushenqi.com/book/accurate-search', // query ?author=忘语
     // 书籍章节内容

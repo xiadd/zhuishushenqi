@@ -37,6 +37,9 @@ router.get('/category-info', categoryController.getCategoryInfo)
 // 获取书籍详情 id: bookid
 router.get('/book-info/:id', bookController.getBookInfo)
 
+// 获取书籍相关推荐
+router.get('/recommend/:id', bookController.getRelatedRecommendedBooks)
+
 // 获取作者名下的书籍
 router.get('/author-books', bookController.getAuthorBooks)
 
