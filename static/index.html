@@ -1,570 +1,110 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>小说接口</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- common.css -->
+    <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+    <!-- ace-static.css -->
+    <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+    <style>.ace-chrome .ace_gutter {background: #ebebeb;color: #333;overflow : hidden;}.ace-chrome .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-chrome {background-color: #FFFFFF;color: black;}.ace-chrome .ace_cursor {color: black;}.ace-chrome .ace_invisible {color: rgb(191, 191, 191);}.ace-chrome .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-chrome .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-chrome .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-chrome .ace_invalid {background-color: rgb(153, 0, 0);color: white;}.ace-chrome .ace_fold {}.ace-chrome .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-chrome .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-chrome .ace_support.ace_type,.ace-chrome .ace_support.ace_class.ace-chrome .ace_support.ace_other {color: rgb(109, 121, 222);}.ace-chrome .ace_variable.ace_parameter {font-style:italic;color:#FD971F;}.ace-chrome .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-chrome .ace_comment {color: #236e24;}.ace-chrome .ace_comment.ace_doc {color: #236e24;}.ace-chrome .ace_comment.ace_doc.ace_tag {color: #236e24;}.ace-chrome .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-chrome .ace_variable {color: rgb(49, 132, 149);}.ace-chrome .ace_xml-pe {color: rgb(104, 104, 91);}.ace-chrome .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-chrome .ace_heading {color: rgb(12, 7, 255);}.ace-chrome .ace_list {color:rgb(185, 6, 144);}.ace-chrome .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-chrome .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-chrome .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-chrome .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-chrome .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-chrome .ace_gutter-active-line {background-color : #dcdcdc;}.ace-chrome .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-chrome .ace_storage,.ace-chrome .ace_keyword,.ace-chrome .ace_meta.ace_tag {color: rgb(147, 15, 128);}.ace-chrome .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-chrome .ace_string {color: #1A1AA6;}.ace-chrome .ace_entity.ace_other.ace_attribute-name {color: #994409;}.ace-chrome .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}</style>
+    <!-- export.css -->
+    <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+    </style>
+    <!-- User CSS -->
+    <style> .text-cell {font-size: 15px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;}.latex-cell {font-size: 15px;}</style>
 </head>
 <body>
-<div class="note-wrapper">
-    <h1># 在线地址(支持https):</h1>
-    <br>
-    <p><code class='code-inline'>http://novel.juhe.im</code></p>
-    <br>
-    <p>注意: 如果运行在自己的服务器的话 请务必使用node 7.6 以上(因为很多模块直接用到了async,所以就算加上babel也没用, 打包过后仍然是直接引用)</p>
-    <br>
-    <h1>部署</h1>
-    <br>
-    <p><code class='code-inline'>npm start</code>: 启动开发服务器 通过babel转义</p>
-    <br>
-    <p><code class='code-inline'>npm run build</code>: 通过babel打包</p>
-    <br>
-    <br>
-    <h2>api接口</h2>
-    <br>
-    <h4>获取带书籍数量的父分类</h4>
-    <br>
-    <p>url: <code class='code-inline'>http://novel.juhe.im/categories</code></p>
-    <br>
-    <h4>获取带子分类的分类</h4>
-    <br>
-    <p>url: <code class='code-inline'>http://novel.juhe.im/sub-categories</code></p>
-    <br>
-    <h4>获取分类详情</h4>
-    <br>
-    <p>url: <code class='code-inline'>http://novel.juhe.im/category-info?gender=male&type=hot&major=奇幻&minor=&start=0&limit=20</code></p>
-    <br>
-    <p>query:</p>
-    <br>
-    <pre><code class='code-multiline'>{
-  gender, type, major(主分类), minor(子分类), start, limit
-}
-</code></pre>
-    <h4>获取书籍详情</h4>
-    <br>
-    <p>url: <code class='code-inline'>http://novel.juhe.im/book-info/53115e30173bfacb4904897e</code></p>
-    <br>
-    <p>params:</p>
-    <br>
-    <pre><code class='code-multiline'>{
-  id: book id
-}
-</code></pre>
-    <h4>获取作者名下的书籍</h4>
-    <br>
-    <p>url: <code class='code-inline'>http://novel.juhe.im/author-books?author=忘语</code></p>
-    <br>
-    <p>query:</p>
-    <br>
-    <pre><code class='code-multiline'>{
-  author: 作者名
-}
-</code></pre>
-    <h4>获取书籍源</h4>
-    <br>
-    <p>url: <code class='code-inline'>http://novel.juhe.im/book-sources?view=summary&book=567d2cb9ee0e56bc713cb2c0</code></p>
-    <br>
-    <p>query:</p>
-    <br>
-    <pre><code class='code-multiline'>{
-  view: summary,
-  book: {bookid}
-}
-</code></pre>
-    <h4>获取书籍章节</h4>
-    <br>
-    <p>url: <code class='code-inline'>http://novel.juhe.im/book-chapters/56f8da09176d03ac1983f6cd</code></p>
-    <br>
-    <p>params:</p>
-    <br>
-    <pre><code class='code-multiline'>{
-  id: {书籍源id}
-}
-</code></pre>
-    <h4>获取章节详细内容</h4>
-    <br>
-    <p>url: <code class='code-inline'>http://novel.juhe.im/chapters/http%3A%2F%2Fvip.zhuishushenqi.com%2Fchapter%2F56f8da09176d03ac1983f6d7%3Fcv%3D1486473051386</code>   注意这里需要进行url编码</p>
-    <br>
-    <p>params:</p>
-    <br>
-    <pre><code class='code-multiline'>{
-  link: {目录中的章节link}
-}
-</code></pre>
-    <h4>获取搜索结果</h4>
-    <br>
-    <p>url: <code class='code-inline'>http://novel.juhe.im/search?keyword=遮天</code></p>
-    <br>
-    <p>query:</p>
-    <br>
-    <pre><code class='code-multiline'>{
-  keyword: {书籍关键字}
-}
-</code></pre>
-    <h4>获取排名分类</h4>
-    <br>
-    <p>url: <code class='code-inline'>http://novel.juhe.im/rank-category</code></p>
-    <br>
-    <h4>获取排名详情</h4>
-    <br>
-    <p>url: <code class='code-inline'>http://novel.juhe.im/rank/54d42d92321052167dfb75e3</code></p>
-    <br>
-    <p>params:</p>
-    <br>
-    <pre><code class='code-multiline'>{
-  id: {排名分类的id}
-}
-</code></pre>
-    <p>演示</p>
-    <br>
-    <p><img src="https://ooo.0o0.ooo/2017/04/23/58fc43dd29072.gif" alt="demo" title=""></p>
-    <br>
-    <br>
-    <p>已完成功能</p>
-    <br>
-    <p>书架 换源 阅读 切换章节 demo上有的未展示 换源这个功能只能说可以实现吧</p>
-    <br>
-    <p>欢迎加入群讨论:</p>
-    <br>
-    <p><img src="https://camo.githubusercontent.com/a63f5178a3128dd2bdff9e7f358e66217de27dd2/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031372f30312f31382f353837663331346538616335612e706e67" alt="群" title=""></p>
+
+<div id="titlearea">
+    <h2>小说接口</h2>
 </div>
-
-<style>
-    @charset "UTF-8";
-    /* line 5, ../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed,
-    figure, figcaption, footer, header, hgroup,
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font: inherit;
-        font-size: 100%;
-        vertical-align: baseline;
-    }
-
-    /* line 22, ../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-    html {
-        line-height: 1;
-    }
-
-    /* line 24, ../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-    ol, ul {
-        list-style: none;
-    }
-
-    /* line 26, ../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-    table {
-        border-collapse: collapse;
-        border-spacing: 0;
-    }
-
-    /* line 28, ../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-    caption, th, td {
-        text-align: left;
-        font-weight: normal;
-        vertical-align: middle;
-    }
-
-    /* line 30, ../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-    q, blockquote {
-        quotes: none;
-    }
-    /* line 103, ../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-    q:before, q:after, blockquote:before, blockquote:after {
-        content: "";
-        content: none;
-    }
-
-    /* line 32, ../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-    a img {
-        border: none;
-    }
-
-    /* line 116, ../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-    article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-        display: block;
-    }
-
-    /* line 8, ../Sass/sass/utilities/_common-import.scss */
-    * {
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-
-    /* line 106, ../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
-    html {
-        font-size: 87.5%;
-        line-height: 1.57143em;
-    }
-
-    /* line 8, ../Sass/sass/partials/_typography.scss */
-    html {
-        font-size: 14px;
-        line-height: 1.6em;
-        -webkit-text-size-adjust: 100%;
-    }
-
-    /* line 14, ../Sass/sass/partials/_typography.scss */
-    body {
-        background: #fcfcfc;
-        color: #545454;
-        text-rendering: optimizeLegibility;
-        font-family: "Avenir-Book";
-    }
-
-    /* line 21, ../Sass/sass/partials/_typography.scss */
-    a {
-        color: #de4c4f;
-        text-decoration: none;
-    }
-
-    /* line 26, ../Sass/sass/partials/_typography.scss */
-    h1 {
-        font-family: "Avenir-Medium";
-        color: #333333;
-        font-size: 1.6em;
-        line-height: 1.3em;
-        margin-bottom: 0.78571em;
-    }
-
-    /* line 34, ../Sass/sass/partials/_typography.scss */
-    h2 {
-        font-family: "Avenir-Medium";
-        color: #333333;
-        font-size: 1.3em;
-        line-height: 1em;
-        margin-bottom: 0.62857em;
-    }
-
-    /* line 44, ../Sass/sass/partials/_typography.scss */
-    h3 {
-        font-family: "Avenir-Medium";
-        color: #333333;
-        font-size: 1.15em;
-        line-height: 1em;
-        margin-bottom: 0.47143em;
-    }
-
-    /* line 53, ../Sass/sass/partials/_typography.scss */
-    p {
-        margin-bottom: 1.57143em;
-        hyphens: auto;
-    }
-
-    /* line 58, ../Sass/sass/partials/_typography.scss */
-    hr {
-        height: 1px;
-        border: 0;
-        background-color: #dedede;
-        margin: -1px auto 1.57143em auto;
-    }
-
-    /* line 66, ../Sass/sass/partials/_typography.scss */
-    ul, ol {
-        margin-bottom: 1.57143em;
-    }
-    /* line 68, ../Sass/sass/partials/_typography.scss */
-    ul ul, ul ol, ol ul, ol ol {
-        margin-bottom: 0px;
-    }
-
-    /* line 73, ../Sass/sass/partials/_typography.scss */
-    b, strong {
-        font-family: "Avenir-Heavy";
-    }
-
-    /* line 77, ../Sass/sass/partials/_typography.scss */
-    i, em {
-        font-family: "Avenir-BookOblique";
-    }
-
-    /* line 81, ../Sass/sass/partials/_typography.scss */
-    code {
-        font-family: "Menlo-Regular";
-    }
-
-    /* line 87, ../Sass/sass/partials/_typography.scss */
-    .text-overflow-ellipsis {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    /* line 5, ../Sass/sass/partials/_code.scss */
-    .sf_code_syntax_string {
-        color: #D33905;
-    }
-
-    /* line 7, ../Sass/sass/partials/_code.scss */
-    .sf_code_syntax_comment {
-        color: #838383;
-    }
-
-    /* line 9, ../Sass/sass/partials/_code.scss */
-    .sf_code_syntax_documentation_comment {
-        color: #128901;
-    }
-
-    /* line 11, ../Sass/sass/partials/_code.scss */
-    .sf_code_syntax_number {
-        color: #0E73A2;
-    }
-
-    /* line 13, ../Sass/sass/partials/_code.scss */
-    .sf_code_syntax_project {
-        color: #5B2599;
-    }
-
-    /* line 15, ../Sass/sass/partials/_code.scss */
-    .sf_code_syntax_keyword {
-        color: #0E73A2;
-    }
-
-    /* line 17, ../Sass/sass/partials/_code.scss */
-    .sf_code_syntax_character {
-        color: #1B00CE;
-    }
-
-    /* line 19, ../Sass/sass/partials/_code.scss */
-    .sf_code_syntax_preprocessor {
-        color: #920448;
-    }
-
-    /* line 9, ../Sass/sass/HTMLExport.scss */
-    .note-wrapper {
-        max-width: 46em;
-        margin: 0px auto;
-        padding: 1.57143em 3.14286em;
-    }
-    /* line 14, ../Sass/sass/HTMLExport.scss */
-    .note-wrapper.spotlight-preview {
-        overflow-x: hidden;
-    }
-
-    /* line 19, ../Sass/sass/HTMLExport.scss */
-    u {
-        text-decoration: none;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #e06e73 50%);
-        background-repeat: repeat-x;
-        background-size: 2px 2px;
-        background-position: 0 1.05em;
-    }
-
-    /* line 24, ../Sass/sass/HTMLExport.scss */
-    s {
-        color: #878787;
-    }
-
-    /* line 28, ../Sass/sass/HTMLExport.scss */
-    p {
-        margin-bottom: 0.1em;
-    }
-
-    /* line 32, ../Sass/sass/HTMLExport.scss */
-    hr {
-        margin-bottom: 0.7em;
-        margin-top: 0.7em;
-    }
-
-    /* line 38, ../Sass/sass/HTMLExport.scss */
-    ul li {
-        text-indent: -0.6em;
-    }
-    /* line 40, ../Sass/sass/HTMLExport.scss */
-    ul li:before {
-        content: "•";
-        color: #e06e73;
-        display: inline-block;
-        margin-right: 0.3em;
-    }
-    /* line 47, ../Sass/sass/HTMLExport.scss */
-    ul ul {
-        margin-left: 1.25714em;
-    }
-
-    /* line 53, ../Sass/sass/HTMLExport.scss */
-    ol li {
-        text-indent: -1.55em;
-    }
-    /* line 56, ../Sass/sass/HTMLExport.scss */
-    ol ol {
-        margin-left: 1.25714em;
-    }
-
-    /* line 61, ../Sass/sass/HTMLExport.scss */
-    blockquote {
-        display: block;
-        margin-left: -1em;
-        padding-left: 0.8em;
-        border-left: 0.2em solid #e06e73;
-    }
-
-    /* line 70, ../Sass/sass/HTMLExport.scss */
-    .todo-list ul {
-        margin-left: 1.88571em;
-    }
-    /* line 74, ../Sass/sass/HTMLExport.scss */
-    .todo-list li {
-        text-indent: -1.75em;
-    }
-    /* line 77, ../Sass/sass/HTMLExport.scss */
-    .todo-list li:before {
-        content: "";
-        display: static;
-        margin-right: 0px;
-    }
-
-    /* line 85, ../Sass/sass/HTMLExport.scss */
-    .todo-checkbox {
-        text-indent: -1.7em;
-    }
-    /* line 88, ../Sass/sass/HTMLExport.scss */
-    .todo-checkbox svg {
-        margin-right: 0.3em;
-        position: relative;
-        top: 0.2em;
-    }
-    /* line 93, ../Sass/sass/HTMLExport.scss */
-    .todo-checkbox svg #check {
-        display: none;
-    }
-    /* line 98, ../Sass/sass/HTMLExport.scss */
-    .todo-checkbox.todo-checked #check {
-        display: inline;
-    }
-    /* line 101, ../Sass/sass/HTMLExport.scss */
-    .todo-checkbox.todo-checked .todo-text {
-        text-decoration: line-through;
-        color: #878787;
-    }
-
-    /* line 108, ../Sass/sass/HTMLExport.scss */
-    .code-inline {
-        display: inline-block;
-        background: white;
-        border: solid 1px #dedede;
-        padding: 0.0em 0.5em;
-        font-size: 0.9em;
-    }
-
-    /* line 116, ../Sass/sass/HTMLExport.scss */
-    .code-multiline {
-        display: block;
-        background: white;
-        border: solid 1px #dedede;
-        padding: 0.7em 1em;
-        font-size: 0.9em;
-        overflow-x: auto;
-    }
-
-    /* line 125, ../Sass/sass/HTMLExport.scss */
-    .hashtag {
-        display: inline-block;
-        color: white;
-        background: #b8bfc2;
-        padding: 0.0em 0.5em;
-        border-radius: 1em;
-    }
-    /* line 131, ../Sass/sass/HTMLExport.scss */
-    .hashtag a {
-        color: white;
-    }
-
-    /* line 138, ../Sass/sass/HTMLExport.scss */
-    .address a {
-        color: #545454;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #0da35e 50%);
-        background-repeat: repeat-x;
-        background-size: 2px 2px;
-        background-position: 0 1.05em;
-    }
-    /* line 143, ../Sass/sass/HTMLExport.scss */
-    .address svg {
-        position: relative;
-        top: 0.2em;
-        display: inline-block;
-        margin-right: 0.2em;
-    }
-
-    /* line 151, ../Sass/sass/HTMLExport.scss */
-    .color-preview {
-        display: inline-block;
-        width: 1em;
-        height: 1em;
-        border: solid 1px rgba(0, 0, 0, 0.3);
-        border-radius: 50%;
-        margin-right: 0.1em;
-        position: relative;
-        top: 0.2em;
-        white-space: nowrap;
-    }
-
-    /* line 163, ../Sass/sass/HTMLExport.scss */
-    .color-code {
-        margin-right: 0.2em;
-        font-family: "Menlo-Regular";
-        font-size: 0.9em;
-    }
-
-    /* line 169, ../Sass/sass/HTMLExport.scss */
-    .color-hash {
-        opacity: 0.4;
-    }
-
-    /* line 177, ../Sass/sass/HTMLExport.scss */
-    .ordered-list-number {
-        color: #e06e73;
-        text-align: right;
-        display: inline-block;
-        min-width: 1em;
-    }
-
-    /* line 186, ../Sass/sass/HTMLExport.scss */
-    .arrow svg {
-        position: relative;
-        top: 0.08em;
-        display: inline-block;
-        margin-right: 0.15em;
-        margin-left: 0.15em;
-    }
-    /* line 193, ../Sass/sass/HTMLExport.scss */
-    .arrow svg #rod {
-        stroke: #545454;
-    }
-    /* line 194, ../Sass/sass/HTMLExport.scss */
-    .arrow svg #point {
-        fill: #545454;
-    }
-
-    /* line 198, ../Sass/sass/HTMLExport.scss */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-</style>
-
-<script>
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?ea7a6dbfcbce1da67623dcb355b37976";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
-</script>
-<script src="https://s11.cnzz.com/z_stat.php?id=1261044706&web_id=1261044706" language="JavaScript"></script>
+<div id="contentarea"><div class="cell markdown-cell"><h1>在线地址(支持https):</h1>
+    <p><code>http://novel.juhe.im</code></p>
+    <p>注意: <strong>如果运行在自己的服务器的话 请务必使用node 7.6 以上</strong>(因为很多模块直接用到了async,所以就算加上babel也没用, 打包过后仍然是直接引用)</p>
+    <h1>部署</h1>
+    <p><code>npm start</code>: 启动开发服务器 通过babel转义</p>
+    <p><code>npm run build</code>: 通过babel打包</p>
+    <h2>api接口</h2>
+    <h4>获取带书籍数量的父分类</h4>
+    <p>url: <code>http://novel.juhe.im/categories</code></p>
+    <h4>获取带子分类的分类</h4>
+    <p>url: <code>http://novel.juhe.im/sub-categories</code></p>
+    <h4>获取分类详情</h4>
+    <p>url: <code>http://novel.juhe.im/category-info?gender=male&amp;type=hot&amp;major=奇幻&amp;minor=&amp;start=0&amp;limit=20</code></p>
+    <p>query:</p>
+    <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  gender, type, major(<span class="ace_cjk" style="width:NaNpx">主</span><span class="ace_cjk" style="width:NaNpx">分</span><span class="ace_cjk" style="width:NaNpx">类</span>), minor(<span class="ace_cjk" style="width:NaNpx">子</span><span class="ace_cjk" style="width:NaNpx">分</span><span class="ace_cjk" style="width:NaNpx">类</span>), start, limit
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></pre>
+    <h4>获取书籍详情</h4>
+    <p>url: <code>http://novel.juhe.im/book-info/53115e30173bfacb4904897e</code></p>
+    <p>params:</p>
+    <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  id: book id
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></pre>
+    <h4>获取作者名下的书籍</h4>
+    <p>url: <code>http://novel.juhe.im/author-books?author=忘语</code></p>
+    <p>query:</p>
+    <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  author: <span class="ace_cjk" style="width:NaNpx">作</span><span class="ace_cjk" style="width:NaNpx">者</span><span class="ace_cjk" style="width:NaNpx">名</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></pre>
+    <h4>获取书籍源</h4>
+    <p>url: <code>http://novel.juhe.im/book-sources?view=summary&amp;book=567d2cb9ee0e56bc713cb2c0</code></p>
+    <p>query:</p>
+    <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  view: summary,
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  book: {bookid}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></pre>
+    <h4>获取书籍章节</h4>
+    <p>url: <code>http://novel.juhe.im/book-chapters/56f8da09176d03ac1983f6cd</code></p>
+    <p>params:</p>
+    <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  id: {<span class="ace_cjk" style="width:NaNpx">书</span><span class="ace_cjk" style="width:NaNpx">籍</span><span class="ace_cjk" style="width:NaNpx">源</span>id}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></pre>
+    <h4>获取章节详细内容</h4>
+    <p>url: <code>http://novel.juhe.im/chapters/http%3A%2F%2Fvip.zhuishushenqi.com%2Fchapter%2F56f8da09176d03ac1983f6d7%3Fcv%3D1486473051386</code>  // 注意这里需要进行url编码</p>
+    <p>params:</p>
+    <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  link: {<span class="ace_cjk" style="width:NaNpx">目</span><span class="ace_cjk" style="width:NaNpx">录</span><span class="ace_cjk" style="width:NaNpx">中</span><span class="ace_cjk" style="width:NaNpx">的</span><span class="ace_cjk" style="width:NaNpx">章</span><span class="ace_cjk" style="width:NaNpx">节</span>link}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></pre>
+    <h4>获取搜索结果</h4>
+    <p>url: <code>http://novel.juhe.im/search?keyword=遮天</code></p>
+    <p>query:</p>
+    <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  keyword: {<span class="ace_cjk" style="width:NaNpx">书</span><span class="ace_cjk" style="width:NaNpx">籍</span><span class="ace_cjk" style="width:NaNpx">关</span><span class="ace_cjk" style="width:NaNpx">键</span><span class="ace_cjk" style="width:NaNpx">字</span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></pre>
+    <h4>获取排名分类</h4>
+    <p>url: <code>http://novel.juhe.im/rank-category</code></p>
+    <h4>获取排名详情</h4>
+    <p>url: <code>http://novel.juhe.im/rank/54d42d92321052167dfb75e3</code></p>
+    <p>params:</p>
+    <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  id: {<span class="ace_cjk" style="width:NaNpx">排</span><span class="ace_cjk" style="width:NaNpx">名</span><span class="ace_cjk" style="width:NaNpx">分</span><span class="ace_cjk" style="width:NaNpx">类</span><span class="ace_cjk" style="width:NaNpx">的</span>id}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></pre>
+    <p>演示</p>
+    <p><img src="https://ooo.0o0.ooo/2017/04/23/58fc43dd29072.gif" alt="demo"></p>
+    <p>已完成功能</p>
+    <p>书架 换源 阅读 切换章节 demo上有的未展示 换源这个功能只能说可以实现吧</p>
+    <p>欢迎加入群讨论:</p>
+    <p><img src="https://camo.githubusercontent.com/a63f5178a3128dd2bdff9e7f358e66217de27dd2/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031372f30312f31382f353837663331346538616335612e706e67" alt="群"></p>
+</div><div class="cell markdown-cell"></div></div>
+<script></script>
 </body>
 </html>
+  
