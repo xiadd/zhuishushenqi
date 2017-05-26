@@ -22,4 +22,15 @@ function setCorrectResponse() {
   }
 }
 
-export default setCorrectResponse
+// 支持跨域
+function setCors () {
+  return async (ctx, next) => {
+    ctx.set('Access-Control-Allow-Origin', '*')
+    await next()
+  }
+}
+
+export default {
+  setCorrectResponse,
+  setCors
+}

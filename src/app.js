@@ -7,7 +7,7 @@ import bodyParser from 'koa-bodyparser'
 import config from '../config/config.default'
 import DB from './model'
 import router from './router'
-import setCorrectResponse from './middleware'
+import { setCorrectResponse, setCors } from './middleware'
 import './lib/logger'
 
 const app = new Koa()
@@ -19,7 +19,7 @@ app.use(serve(path.resolve('./static')))
 app.use(bodyParser())
 app.use(log4js.koaLogger(log4js.getLogger('http'), { level: 'auto' }))
 app.use(setCorrectResponse())
+app.use(setCors())
 app.use(router.routes()).use(router.allowedMethods())
-
 
 export default app
