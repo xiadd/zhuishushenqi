@@ -29,7 +29,7 @@ module.exports = {
       ref  : "origin/master",
       repo : "https://github.com/xiadd/zhuishushenqi.git",
       path : "/root",
-      "post-deploy" : "npm install && npm run build && pm2 startOrRestart ecosystem.config.js --env production",
+      "post-deploy" : "npm install && npm run build && npm run start:prod",
       "post-setup": "ls -la"
     }
   }

@@ -6,6 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development nodemon server",
     "build": "cross-env NODE_ENV=production babel src -d dist",
+    "start:prod": "pm2 startOrRestart ecosystem.config.js --env production",
     "deploy": "pm2 deploy ecosystem.config.js production setup"
   },
   "author": "",
@@ -30,6 +31,7 @@
     "mongoose": "^4.9.1",
     "mz": "^2.6.0",
     "nunjucks": "^3.0.0",
+    "pm2": "^2.4.6",
     "xml2js": "^0.4.17"
   },
   "devDependencies": {
