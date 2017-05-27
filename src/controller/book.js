@@ -20,6 +20,10 @@ export default {
     ctx.body = relatedBooks.data
   },
 
+  async getHotComments (ctx) {
+    ctx.body = 'hot comments'
+  },
+
   // 获取作者名下的书籍
   async getAuthorBooks (ctx) {
     if (!ctx.query.author) {

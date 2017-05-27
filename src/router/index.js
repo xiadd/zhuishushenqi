@@ -40,6 +40,9 @@ router.get('/book-info/:id', bookController.getBookInfo)
 // 获取书籍相关推荐
 router.get('/recommend/:id', bookController.getRelatedRecommendedBooks)
 
+// 获取书籍热评
+router.get('/comments/:id', bookController.getHotComments)
+
 // 获取作者名下的书籍
 router.get('/author-books', bookController.getAuthorBooks)
 
