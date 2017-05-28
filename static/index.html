@@ -1,16 +1,16 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- common.css -->
-    <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
-    <!-- ace-static.css -->
-    <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
-    <style>.ace-chrome .ace_gutter {background: #ebebeb;color: #333;overflow : hidden;}.ace-chrome .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-chrome {background-color: #FFFFFF;color: black;}.ace-chrome .ace_cursor {color: black;}.ace-chrome .ace_invisible {color: rgb(191, 191, 191);}.ace-chrome .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-chrome .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-chrome .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-chrome .ace_invalid {background-color: rgb(153, 0, 0);color: white;}.ace-chrome .ace_fold {}.ace-chrome .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-chrome .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-chrome .ace_support.ace_type,.ace-chrome .ace_support.ace_class.ace-chrome .ace_support.ace_other {color: rgb(109, 121, 222);}.ace-chrome .ace_variable.ace_parameter {font-style:italic;color:#FD971F;}.ace-chrome .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-chrome .ace_comment {color: #236e24;}.ace-chrome .ace_comment.ace_doc {color: #236e24;}.ace-chrome .ace_comment.ace_doc.ace_tag {color: #236e24;}.ace-chrome .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-chrome .ace_variable {color: rgb(49, 132, 149);}.ace-chrome .ace_xml-pe {color: rgb(104, 104, 91);}.ace-chrome .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-chrome .ace_heading {color: rgb(12, 7, 255);}.ace-chrome .ace_list {color:rgb(185, 6, 144);}.ace-chrome .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-chrome .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-chrome .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-chrome .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-chrome .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-chrome .ace_gutter-active-line {background-color : #dcdcdc;}.ace-chrome .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-chrome .ace_storage,.ace-chrome .ace_keyword,.ace-chrome .ace_meta.ace_tag {color: rgb(147, 15, 128);}.ace-chrome .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-chrome .ace_string {color: #1A1AA6;}.ace-chrome .ace_entity.ace_other.ace_attribute-name {color: #994409;}.ace-chrome .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}</style>
-    <!-- export.css -->
-    <style>
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-chrome .ace_gutter {background: #ebebeb;color: #333;overflow : hidden;}.ace-chrome .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-chrome {background-color: #FFFFFF;color: black;}.ace-chrome .ace_cursor {color: black;}.ace-chrome .ace_invisible {color: rgb(191, 191, 191);}.ace-chrome .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-chrome .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-chrome .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-chrome .ace_invalid {background-color: rgb(153, 0, 0);color: white;}.ace-chrome .ace_fold {}.ace-chrome .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-chrome .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-chrome .ace_support.ace_type,.ace-chrome .ace_support.ace_class.ace-chrome .ace_support.ace_other {color: rgb(109, 121, 222);}.ace-chrome .ace_variable.ace_parameter {font-style:italic;color:#FD971F;}.ace-chrome .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-chrome .ace_comment {color: #236e24;}.ace-chrome .ace_comment.ace_doc {color: #236e24;}.ace-chrome .ace_comment.ace_doc.ace_tag {color: #236e24;}.ace-chrome .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-chrome .ace_variable {color: rgb(49, 132, 149);}.ace-chrome .ace_xml-pe {color: rgb(104, 104, 91);}.ace-chrome .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-chrome .ace_heading {color: rgb(12, 7, 255);}.ace-chrome .ace_list {color:rgb(185, 6, 144);}.ace-chrome .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-chrome .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-chrome .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-chrome .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-chrome .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-chrome .ace_gutter-active-line {background-color : #dcdcdc;}.ace-chrome .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-chrome .ace_storage,.ace-chrome .ace_keyword,.ace-chrome .ace_meta.ace_tag {color: rgb(147, 15, 128);}.ace-chrome .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-chrome .ace_string {color: #1A1AA6;}.ace-chrome .ace_entity.ace_other.ace_attribute-name {color: #994409;}.ace-chrome .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}</style>
+      <!-- export.css -->
+      <style>
         body{margin:0 auto;max-width:800px;line-height:1.4}
         #nav{margin:5px 0 10px;font-size:15px}
         #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
@@ -18,93 +18,109 @@
         .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
         .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
         .latex-cell{white-space:pre-wrap;}
-    </style>
-    <!-- User CSS -->
-    <style> .text-cell {font-size: 15px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;}.latex-cell {font-size: 15px;}</style>
-</head>
-<body>
-
-<div id="titlearea">
-    <h2>小说接口</h2>
-</div>
-<div id="contentarea"><div class="cell markdown-cell"><h1>在线地址(支持https):</h1>
-    <p><code>http://novel.juhe.im</code></p>
-    <p>注意: <strong>如果运行在自己的服务器的话 请务必使用node 7.6 以上</strong>(因为很多模块直接用到了async,所以就算加上babel也没用, 打包过后仍然是直接引用)</p>
-    <h1>部署</h1>
-    <p><code>npm start</code>: 启动开发服务器 通过babel转义</p>
-    <p><code>npm run build</code>: 通过babel打包</p>
-    <h2>api接口</h2>
-    <h4>获取带书籍数量的父分类</h4>
-    <p>url: <code>http://novel.juhe.im/categories</code></p>
-    <h4>获取带子分类的分类</h4>
-    <p>url: <code>http://novel.juhe.im/sub-categories</code></p>
-    <h4>获取分类详情</h4>
-    <p>url: <code>http://novel.juhe.im/category-info?gender=male&amp;type=hot&amp;major=奇幻&amp;minor=&amp;start=0&amp;limit=20</code></p>
-    <p>query:</p>
-    <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  gender, type, major(<span class="ace_cjk" style="width:NaNpx">主</span><span class="ace_cjk" style="width:NaNpx">分</span><span class="ace_cjk" style="width:NaNpx">类</span>), minor(<span class="ace_cjk" style="width:NaNpx">子</span><span class="ace_cjk" style="width:NaNpx">分</span><span class="ace_cjk" style="width:NaNpx">类</span>), start, limit
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+      </style>
+      <!-- User CSS -->
+      <style> .text-cell {font-size: 15px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;}.latex-cell {font-size: 15px;}</style>
+      <title>追书神器</title>
+    </head>
+    <body>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>在线地址(支持https):</h1>
+<p><code>http://novel.juhe.im</code></p>
+<p>注意: **如果运行在自己的服务器的话 请务必使用node 7.6</p>
+<p>以上**(因为很多模块直接用到了async,所以就算加上babel也没用, 打包过后仍然是直接引用)</p>
+<p>已经允许跨域 前端一般无需进行任何配置</p>
+<h1>部署</h1>
+<p><code>npm start</code>: 启动开发服务器 通过babel转义</p>
+<p><code>npm run build</code>: 通过babel打包</p>
+<p><code>npm run setup</code>: 部署前步奏</p>
+<p><code>npm run deploy</code>: 部署</p>
+<h2>api接口</h2>
+<h4>获取带书籍数量的父分类</h4>
+<p>url: <code>http://novel.juhe.im/categories</code></p>
+<h4>获取带子分类的分类</h4>
+<p>url: <code>http://novel.juhe.im/sub-categories</code></p>
+<h4>获取分类详情</h4>
+<p>url: <code>http://novel.juhe.im/category-info?gender=male&amp;type=hot&amp;major=奇幻&amp;minor=&amp;start=0&amp;limit=20</code></p>
+<p>query:</p>
+<pre><div class="ace-chrome"><div class="ace_static_highlight" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line">  <span class="ace_identifier">gender</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">type</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">major</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier"><span class="ace_cjk" style="width:NaNpx">主</span><span class="ace_cjk" style="width:NaNpx">分</span><span class="ace_cjk" style="width:NaNpx">类</span></span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">minor</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier"><span class="ace_cjk" style="width:NaNpx">子</span><span class="ace_cjk" style="width:NaNpx">分</span><span class="ace_cjk" style="width:NaNpx">类</span></span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">start</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">limit</span>
+</div><div class="ace_line"><span class="ace_paren ace_rparen">}</span>
 </div></div></div></pre>
-    <h4>获取书籍详情</h4>
-    <p>url: <code>http://novel.juhe.im/book-info/53115e30173bfacb4904897e</code></p>
-    <p>params:</p>
-    <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  id: book id
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+<h4>获取书籍详情</h4>
+<p>url: <code>http://novel.juhe.im/book-info/53115e30173bfacb4904897e</code></p>
+<p>params:</p>
+<pre><div class="ace-chrome"><div class="ace_static_highlight" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line">  <span class="ace_identifier">id</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_identifier">book</span> <span class="ace_identifier">id</span>
+</div><div class="ace_line"><span class="ace_paren ace_rparen">}</span>
 </div></div></div></pre>
-    <h4>获取作者名下的书籍</h4>
-    <p>url: <code>http://novel.juhe.im/author-books?author=忘语</code></p>
-    <p>query:</p>
-    <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  author: <span class="ace_cjk" style="width:NaNpx">作</span><span class="ace_cjk" style="width:NaNpx">者</span><span class="ace_cjk" style="width:NaNpx">名</span>
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+<h4>获取书籍相关推荐</h4>
+<p>url: <code>http://novel.juhe.im/recommend/53115e30173bfacb4904897e</code></p>
+<p>query:</p>
+<pre><div class="ace-chrome"><div class="ace_static_highlight" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line">  <span class="ace_identifier">id</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_identifier"><span class="ace_cjk" style="width:NaNpx">书</span><span class="ace_cjk" style="width:NaNpx">籍</span>id</span>
+</div><div class="ace_line"><span class="ace_paren ace_rparen">}</span>
 </div></div></div></pre>
-    <h4>获取书籍源</h4>
-    <p>url: <code>http://novel.juhe.im/book-sources?view=summary&amp;book=567d2cb9ee0e56bc713cb2c0</code></p>
-    <p>query:</p>
-    <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  view: summary,
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  book: {bookid}
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+<h4>获取作者名下的书籍</h4>
+<p>url: <code>http://novel.juhe.im/author-books?author=忘语</code></p>
+<p>query:</p>
+<pre><div class="ace-chrome"><div class="ace_static_highlight" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line">  <span class="ace_identifier">author</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_identifier"><span class="ace_cjk" style="width:NaNpx">作</span><span class="ace_cjk" style="width:NaNpx">者</span><span class="ace_cjk" style="width:NaNpx">名</span></span>
+</div><div class="ace_line"><span class="ace_paren ace_rparen">}</span>
 </div></div></div></pre>
-    <h4>获取书籍章节</h4>
-    <p>url: <code>http://novel.juhe.im/book-chapters/56f8da09176d03ac1983f6cd</code></p>
-    <p>params:</p>
-    <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  id: {<span class="ace_cjk" style="width:NaNpx">书</span><span class="ace_cjk" style="width:NaNpx">籍</span><span class="ace_cjk" style="width:NaNpx">源</span>id}
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+<h4>获取书籍源</h4>
+<p>url: <code>http://novel.juhe.im/book-sources?view=summary&amp;book=567d2cb9ee0e56bc713cb2c0</code></p>
+<p>query:</p>
+<pre><div class="ace-chrome"><div class="ace_static_highlight" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line">  <span class="ace_identifier">view</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_identifier">summary</span><span class="ace_punctuation ace_operator">,</span>
+</div><div class="ace_line">  <span class="ace_identifier">book</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">{</span><span class="ace_identifier">bookid</span><span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_paren ace_rparen">}</span>
 </div></div></div></pre>
-    <h4>获取章节详细内容</h4>
-    <p>url: <code>http://novel.juhe.im/chapters/http%3A%2F%2Fvip.zhuishushenqi.com%2Fchapter%2F56f8da09176d03ac1983f6d7%3Fcv%3D1486473051386</code>  // 注意这里需要进行url编码</p>
-    <p>params:</p>
-    <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  link: {<span class="ace_cjk" style="width:NaNpx">目</span><span class="ace_cjk" style="width:NaNpx">录</span><span class="ace_cjk" style="width:NaNpx">中</span><span class="ace_cjk" style="width:NaNpx">的</span><span class="ace_cjk" style="width:NaNpx">章</span><span class="ace_cjk" style="width:NaNpx">节</span>link}
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+<h4>获取书籍章节</h4>
+<p>url: <code>http://novel.juhe.im/book-chapters/56f8da09176d03ac1983f6cd</code></p>
+<p>params:</p>
+<pre><div class="ace-chrome"><div class="ace_static_highlight" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line">  <span class="ace_identifier">id</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">{</span><span class="ace_identifier"><span class="ace_cjk" style="width:NaNpx">书</span><span class="ace_cjk" style="width:NaNpx">籍</span><span class="ace_cjk" style="width:NaNpx">源</span>id</span><span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_paren ace_rparen">}</span>
 </div></div></div></pre>
-    <h4>获取搜索结果</h4>
-    <p>url: <code>http://novel.juhe.im/search?keyword=遮天</code></p>
-    <p>query:</p>
-    <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  keyword: {<span class="ace_cjk" style="width:NaNpx">书</span><span class="ace_cjk" style="width:NaNpx">籍</span><span class="ace_cjk" style="width:NaNpx">关</span><span class="ace_cjk" style="width:NaNpx">键</span><span class="ace_cjk" style="width:NaNpx">字</span>}
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+<h4>获取章节详细内容</h4>
+<p>url: <code>http://novel.juhe.im/chapters/http%3A%2F%2Fvip.zhuishushenqi.com%2Fchapter%2F56f8da09176d03ac1983f6d7%3Fcv%3D1486473051386</code>  // 注意这里需要进行url编码</p>
+<p>params:</p>
+<pre><div class="ace-chrome"><div class="ace_static_highlight" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line">  <span class="ace_identifier">link</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">{</span><span class="ace_identifier"><span class="ace_cjk" style="width:NaNpx">目</span><span class="ace_cjk" style="width:NaNpx">录</span><span class="ace_cjk" style="width:NaNpx">中</span><span class="ace_cjk" style="width:NaNpx">的</span><span class="ace_cjk" style="width:NaNpx">章</span><span class="ace_cjk" style="width:NaNpx">节</span>link</span><span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_paren ace_rparen">}</span>
 </div></div></div></pre>
-    <h4>获取排名分类</h4>
-    <p>url: <code>http://novel.juhe.im/rank-category</code></p>
-    <h4>获取排名详情</h4>
-    <p>url: <code>http://novel.juhe.im/rank/54d42d92321052167dfb75e3</code></p>
-    <p>params:</p>
-    <pre><div class="ace-chrome"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  id: {<span class="ace_cjk" style="width:NaNpx">排</span><span class="ace_cjk" style="width:NaNpx">名</span><span class="ace_cjk" style="width:NaNpx">分</span><span class="ace_cjk" style="width:NaNpx">类</span><span class="ace_cjk" style="width:NaNpx">的</span>id}
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+<h4>获取搜索结果</h4>
+<p>url: <code>http://novel.juhe.im/search?keyword=遮天</code></p>
+<p>query:</p>
+<pre><div class="ace-chrome"><div class="ace_static_highlight" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line">  <span class="ace_identifier">keyword</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">{</span><span class="ace_identifier"><span class="ace_cjk" style="width:NaNpx">书</span><span class="ace_cjk" style="width:NaNpx">籍</span><span class="ace_cjk" style="width:NaNpx">关</span><span class="ace_cjk" style="width:NaNpx">键</span><span class="ace_cjk" style="width:NaNpx">字</span></span><span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_paren ace_rparen">}</span>
 </div></div></div></pre>
-    <p>演示</p>
-    <p><img src="https://ooo.0o0.ooo/2017/04/23/58fc43dd29072.gif" alt="demo"></p>
-    <p>已完成功能</p>
-    <p>书架 换源 阅读 切换章节 demo上有的未展示 换源这个功能只能说可以实现吧</p>
-    <p>欢迎加入群讨论:</p>
-    <p><img src="https://camo.githubusercontent.com/a63f5178a3128dd2bdff9e7f358e66217de27dd2/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031372f30312f31382f353837663331346538616335612e706e67" alt="群"></p>
+<h4>获取排名分类</h4>
+<p>url: <code>http://novel.juhe.im/rank-category</code></p>
+<h4>获取排名详情</h4>
+<p>url: <code>http://novel.juhe.im/rank/54d42d92321052167dfb75e3</code></p>
+<p>params:</p>
+<pre><div class="ace-chrome"><div class="ace_static_highlight" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line">  <span class="ace_identifier">id</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">{</span><span class="ace_identifier"><span class="ace_cjk" style="width:NaNpx">排</span><span class="ace_cjk" style="width:NaNpx">名</span><span class="ace_cjk" style="width:NaNpx">分</span><span class="ace_cjk" style="width:NaNpx">类</span><span class="ace_cjk" style="width:NaNpx">的</span>id</span><span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_paren ace_rparen">}</span>
+</div></div></div></pre>
+<p>演示</p>
+<p><img src="https://ooo.0o0.ooo/2017/04/23/58fc43dd29072.gif" alt="demo"></p>
+<p>已完成功能</p>
+<p>书架 换源 阅读 切换章节 demo上有的未展示 换源这个功能只能说可以实现吧</p>
+<p>欢迎加入群讨论:</p>
+<p><img src="https://camo.githubusercontent.com/a63f5178a3128dd2bdff9e7f358e66217de27dd2/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031372f30312f31382f353837663331346538616335612e706e67" alt="群"></p>
 </div><div class="cell markdown-cell"></div></div>
-<script></script>
-</body>
-</html>
-  
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "https://hm.baidu.com/hm.js?ea7a6dbfcbce1da67623dcb355b37976";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    </body>
+    </html>
