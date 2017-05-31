@@ -8,7 +8,7 @@ import bodyParser from 'koa-bodyparser'
 import config from '../config/config.default'
 import DB from './model'
 import router from './router'
-import { setCorrectResponse, setCors } from './middleware'
+import { setCorrectResponse, setCors, setRateLimit } from './middleware'
 
 const accessLogStream = fs.createWriteStream(path.resolve(__dirname, '../logs/access.log'), { flags: 'a' })
 
@@ -18,11 +18,13 @@ app.use(morgan('combined', { stream: accessLogStream }))
 
 app.context.config = config
 //中间件
+app.proxy = true
 app.use(serve(path.resolve('./static')))
 
 app.use(bodyParser())
 app.use(setCorrectResponse())
 app.use(setCors())
+app.use(setRateLimit())
 app.use(router.routes()).use(router.allowedMethods())
 
 export default app

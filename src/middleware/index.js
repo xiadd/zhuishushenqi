@@ -1,3 +1,5 @@
+import Redis from 'ioredis'
+import ratelimit from 'koa-ratelimit'
 
 // 集中处理接口响应
 function setCorrectResponse() {
@@ -30,7 +32,24 @@ function setCors () {
   }
 }
 
+// 限制频率
+function setRateLimit () {
+  return ratelimit({
+    db: new Redis(),
+    duration: 60000,
+    errorMessage: 'Sometimes You Just Have to Slow Down.',
+    id: (ctx) => ctx.ip,
+    headers: {
+      remaining: 'Rate-Limit-Remaining',
+      reset: 'Rate-Limit-Reset',
+      total: 'Rate-Limit-Total'
+    },
+    max: 100
+  })
+}
+
 export default {
   setCorrectResponse,
-  setCors
+  setCors,
+  setRateLimit
 }
