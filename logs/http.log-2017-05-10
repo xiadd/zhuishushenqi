@@ -1,5 +1,0 @@
-[2017-05-10 22:24:39.136] [INFO] http - ::1 - - "GET / HTTP/1.1" 200 50 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36"
-[2017-05-10 22:27:20.749] [INFO] http - ::1 - - "GET / HTTP/1.1" 200 50 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36"
-[2017-05-10 22:28:06.068] [INFO] http - ::1 - - "GET / HTTP/1.1" 200 50 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36"
-[2017-05-10 22:28:07.506] [INFO] http - ::1 - - "GET / HTTP/1.1" 200 50 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36"
-[2017-05-10 22:38:13.250] [ERROR] http - ::1 - - "GET /favicon.ico HTTP/1.1" 404 33 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36"
