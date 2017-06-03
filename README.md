@@ -106,7 +106,7 @@ params:
 
 #### 获取章节详细内容
 
-url: `http://novel.juhe.im/chapters/http%3A%2F%2Fvip.zhuishushenqi.com%2Fchapter%2F56f8da09176d03ac1983f6d7%3Fcv%3D1486473051386`  // 注意这里需要进行url编码
+url: `http://novel.juhe.im/chapters/http%3A%2F%2Fvip.zhuishushenqi.com%2Fchapter%2F56f8da09176d03ac1983f6d7%3Fcv%3D1486473051386`  **注意这里需要进行url编码**
 
 params:
 
