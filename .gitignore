@@ -3,3 +3,4 @@ dist/
 ssl
 logs/*
 .idea
+.vscode
