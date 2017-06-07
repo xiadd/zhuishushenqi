@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon server",
+    "dev": "cross-env NODE_ENV=development nodemon $NODE_DEBUG_OPTION server",
     "build": "cross-env NODE_ENV=production babel src -d dist",
     "start": "pm2 start pm2.json",
     "start:prod": "pm2 startOrRestart ecosystem.config.js --env production",
@@ -37,6 +37,7 @@
     "mz": "^2.6.0",
     "nunjucks": "^3.0.0",
     "pm2": "^2.4.6",
+    "restc": "0.0.7",
     "xml2js": "^0.4.17"
   },
   "devDependencies": {
