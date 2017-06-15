@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { User } from '../model'
 import authenticate from '../lib/authenticate'
 import config from '../../config/config.default'
 
