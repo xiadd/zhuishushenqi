@@ -7,7 +7,6 @@ import restc from 'restc'
 import fs from 'fs'
 import bodyParser from 'koa-bodyparser'
 import config from '../config/config.default'
-import DB from './model'
 import router from './router'
 import { setCorrectResponse, setCors, setRateLimit } from './middleware'
 
