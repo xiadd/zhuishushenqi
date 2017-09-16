@@ -20,9 +20,6 @@ export default {
       ctx.throw(400, new Error('you must pass some query string: { gender, type, major, minor, start, limit }'))
     }
     const categoriesInfo = await axios.get(category.categoryInfo, { params: ctx.query })
-    categoriesInfo.data.books.forEach(function (book) {
-      book.cover = 'http://statics.zhuishushenqi.com' + book.cover
-    })
     ctx.body = categoriesInfo.data
   }
 }

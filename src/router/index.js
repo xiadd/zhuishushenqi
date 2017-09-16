@@ -6,6 +6,8 @@ import categoryController from '../controller/category'
 import bookController from '../controller/book'
 import rankController from '../controller/rank'
 import homeController from '../controller/home'
+import commentsController from '../controller/comment'
+import BookListController from '../controller/booklist'
 
 const router = new Router()
 
@@ -64,7 +66,24 @@ router.get('/rank-category', rankController.getRankCategory)
 // 获取排名详情
 router.get('/rank/:id', rankController.getRankInfo)
 
-// 用户部分
+// 获取书籍讨论
+router.get('/book/discussions', commentsController.getBookComments)
+
+// 获取书籍短评
+router.get('/book/short-reviews', commentsController.getBookShortReviews)
+
+// 获取长书评
+router.get('/book/reviews', commentsController.getBookReviews)
+
+// 获取书单列表
+router.get('/booklists', BookListController.getLists)
+
+// 获取书单详情
+router.get('/booklists/:id', BookListController.getListDetail)
+
+/**
+ * 用户部分
+ */
 
 // 获取书架
 router.get('/bookshelf', UserController.getBookShelf)

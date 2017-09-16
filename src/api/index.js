@@ -13,7 +13,7 @@ export default {
     // 相关推荐
     relatedRecommendedBooks: 'http://api.zhuishushenqi.com/book', // http://api.zhuishushenqi.com/book/56d0b60dfb51235c3a7a2739/recommend
     // 作者名下的书籍
-    authorBooks: 'http://api02u58f.zhuishushenqi.com/book/accurate-search', // query ?author=忘语
+    authorBooks: 'http://api.zhuishushenqi.com/book/accurate-search', // query ?author=忘语
     // 书籍章节内容
     bookChapters: 'http://api.zhuishushenqi.com/atoc',
     // 书源
@@ -28,5 +28,17 @@ export default {
     rankCategory: 'http://api.zhuishushenqi.com/ranking/gender',
     // 排名详情
     rankInfo: 'http://api.zhuishushenqi.com/ranking' // id: rank id
+  },
+  comment: {
+    // 讨论
+    discussions: 'http://api.zhuishushenqi.com/post/by-book',
+    // 短评
+    shortReviews: 'http://api.zhuishushenqi.com/post/short-review',
+    //长评
+    bookReviews: 'http://api.zhuishushenqi.com/post/review/by-book'
+  },
+  bookList: {
+    lists: 'http://api.zhuishushenqi.com/book-list',
+    detail: 'http://api.zhuishushenqi.com/book-list' // bookId
   }
 }

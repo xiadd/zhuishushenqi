@@ -11,9 +11,6 @@ export default {
   // 获取排名详情
   async getRankInfo (ctx) {
     const rankInfo = await axios.get(rank.rankInfo + `/${ctx.params.id}`)
-    rankInfo.data.ranking.books.forEach(book => {
-      book.cover = 'http://statics.zhuishushenqi.com' + book.cover
-    })
     ctx.body = rankInfo.data
   }
 }

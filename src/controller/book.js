@@ -5,18 +5,12 @@ export default {
   // 获取书籍详情
   async getBookInfo (ctx) {
     const bookInfo = await axios.get(book.bookInfo + `/${ctx.params.id}`)
-    if (bookInfo.data.cover) {
-      bookInfo.data.cover = 'http://statics.zhuishushenqi.com' + bookInfo.data.cover
-    }
     ctx.body = bookInfo.data
   },
 
   // 获取书籍相关推荐
   async getRelatedRecommendedBooks (ctx) {
     const relatedBooks = await axios.get(book.relatedRecommendedBooks + `/${ctx.params.id}/recommend`)
-    relatedBooks.data.books.forEach(function (book) {
-      book.cover = 'http://statics.zhuishushenqi.com' + book.cover
-    })
     ctx.body = relatedBooks.data
   },
 
@@ -29,10 +23,7 @@ export default {
     if (!ctx.query.author) {
       ctx.throw(400, new Error('you must pass author name to query like { author: xxx }'))
     }
-    const bookInfo = await axios.get(book.authorBooks, { params: { author: ctx.query.author }})
-    bookInfo.data.books.forEach(function (book) {
-      book.cover = 'http://statics.zhuishushenqi.com' + book.cover
-    })
+    const bookInfo = await axios.get(book.authorBooks, { params: ctx.query})
     ctx.body = bookInfo.data
   },
   // 获取书籍章节
@@ -45,7 +36,6 @@ export default {
   },
   // 获取章节内容
   async getChapterContent (ctx) {
-    console.log(1)
     const chapterContent = await axios.get(book.chapterContent + `/${ctx.params.link}`)
     ctx.body = chapterContent.data
   },
@@ -55,9 +45,6 @@ export default {
       ctx.throw(400, new Error('you must provide search keyword'))
     }
     const searchResult = await axios.get(book.bookSearch, { params: { query: ctx.query.keyword } })
-    searchResult.data.books.forEach(function (book) {
-      book.cover = 'http://statics.zhuishushenqi.com' + book.cover
-    })
     ctx.body = searchResult.data
   },
   // 获取书籍源
