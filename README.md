@@ -1,9 +1,9 @@
 # 追书神器
 
-服务器还是挺贵的, 尤其香港的, 希望大家支持一下吧, 帮助小站持续运营
+服务器还是挺贵的, 尤其香港的, 希望大家支持一下吧, 帮助小站持续运营, 请点击下面搬瓦工链接注册一下, 我也收获点aff支撑服务器运营:
 
-![](https://user-images.githubusercontent.com/8351437/34351972-c1e62a5e-ea5a-11e7-8f36-2c2eb0fe08ec.png)
-# 在线地址(支持https):
+#### [搬瓦工](https://bandwagonhost.com/aff.php?aff=30537)
+
 
 `http://novel.juhe.im`
 
