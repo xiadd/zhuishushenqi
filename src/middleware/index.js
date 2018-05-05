@@ -2,7 +2,7 @@ import Redis from 'ioredis'
 import ratelimit from 'koa-ratelimit'
 
 // 集中处理接口响应
-function setCorrectResponse() {
+export function setCorrectResponse() {
   return async (ctx, next) => {
     try {
       await next()
@@ -28,7 +28,7 @@ function setCorrectResponse() {
 }
 
 // 支持跨域
-function setCors () {
+export function setCors () {
   return async (ctx, next) => {
     ctx.set('Access-Control-Allow-Origin', '*')
     await next()
@@ -36,7 +36,7 @@ function setCors () {
 }
 
 // 限制频率
-function setRateLimit () {
+export function setRateLimit () {
   return ratelimit({
     db: new Redis(),
     duration: 60000,
@@ -49,10 +49,4 @@ function setRateLimit () {
     },
     max: 100
   })
-}
-
-export default {
-  setCorrectResponse,
-  setCors,
-  setRateLimit
 }
