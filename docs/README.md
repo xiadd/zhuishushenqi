@@ -2,7 +2,7 @@
 
 服务器还是挺贵的, 尤其香港的, 希望大家支持一下吧, 帮助小站持续运营, 请点击下面搬瓦工链接注册一下, 我也收获点aff支撑服务器运营:
 
-#### [搬瓦工](https://bandwagonhost.com/aff.php?aff=30537)
+## [搬瓦工](https://bandwagonhost.com/aff.php?aff=30537)
 
 
 `http://novel.juhe.im`
@@ -21,7 +21,7 @@
 
 关于静态资源不再提供补全 前端中自行补全 静态资源地址为: `http://statics.zhuishushenqi.com`
 
-# 部署
+## 部署
 
 `npm run dev`: 启动开发服务器
 
@@ -34,15 +34,15 @@
 
 ## api接口
 
-#### 获取带书籍数量的父分类
+### 获取带书籍数量的父分类
 
 url: `http://novel.juhe.im/categories`
 
-#### 获取带子分类的分类
+### 获取带子分类的分类
 
 url: `http://novel.juhe.im/sub-categories`
 
-#### 获取分类详情
+### 获取分类详情
 
 url: `http://novel.juhe.im/category-info?gender=male&type=hot&major=奇幻&minor=&start=0&limit=20`
 
@@ -54,7 +54,7 @@ query:
 }
 ```
 
-#### 获取书籍详情
+### 获取书籍详情
 
 url: `http://novel.juhe.im/book-info/53115e30173bfacb4904897e`
 
@@ -66,7 +66,7 @@ params:
 }
 ```
 
-#### 获取书籍相关推荐
+### 获取书籍相关推荐
 
 url: `http://novel.juhe.im/recommend/53115e30173bfacb4904897e`
 
@@ -78,7 +78,7 @@ query:
 }
 ```
 
-#### 获取作者名下的书籍
+### 获取作者名下的书籍
 
 url: `http://novel.juhe.im/author-books?author=忘语`
 
@@ -90,7 +90,7 @@ query:
 }
 ```
 
-#### 获取书籍源
+### 获取书籍源
 
 url: `http://novel.juhe.im/book-sources?view=summary&book=567d2cb9ee0e56bc713cb2c0`
 
@@ -103,7 +103,7 @@ query:
 }
 ```
 
-#### 获取书籍章节
+### 获取书籍章节
 
 url: `http://novel.juhe.im/book-chapters/56f8da09176d03ac1983f6cd`
 
@@ -115,7 +115,7 @@ params:
 }
 ```
 
-#### 获取章节详细内容
+### 获取章节详细内容
 
 url: `http://novel.juhe.im/chapters/http%3A%2F%2Fvip.zhuishushenqi.com%2Fchapter%2F56f8da09176d03ac1983f6d7%3Fcv%3D1486473051386`  **注意这里需要进行url编码**
 
@@ -127,7 +127,7 @@ params:
 }
 ```
 
-#### 获取搜索结果
+### 获取搜索结果
 
 url: `http://novel.juhe.im/search?keyword=遮天`
 
@@ -139,11 +139,11 @@ query:
 }
 ```
 
-#### 获取排名分类
+### 获取排名分类
 
 url: `http://novel.juhe.im/rank-category`
 
-#### 获取排名详情
+### 获取排名详情
 
 url: `http://novel.juhe.im/rank/54d42d92321052167dfb75e3`
 
@@ -155,9 +155,7 @@ params:
 }
 ```
 
-### 书评
-
-#### 讨论
+### 书评-讨论
 
 url: `http://api.zhuishushenqi.com/post/by-book?&start=21&limit=20`
 
@@ -202,7 +200,7 @@ response:
 }
 ```
 
-#### 短评
+### 书评-短评
 
 url: `http://api.zhuishushenqi.com/post/short-review/by-book`
 
