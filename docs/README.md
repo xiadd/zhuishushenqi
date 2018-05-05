@@ -1,8 +1,16 @@
-# 追书神器
+## 追书神器接口
+
+这里整理的追书神器接口， 不保证实时更新，如有侵权请联系删除。
+
+欢迎加入群讨论:
+
+![群](https://camo.githubusercontent.com/a63f5178a3128dd2bdff9e7f358e66217de27dd2/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031372f30312f31382f353837663331346538616335612e706e67)
+
+## 帮助与支持
 
 服务器还是挺贵的, 尤其香港的, 希望大家支持一下吧, 帮助小站持续运营, 请点击下面搬瓦工链接注册一下, 我也收获点aff支撑服务器运营:
 
-## [搬瓦工](https://bandwagonhost.com/aff.php?aff=30537)
+[搬瓦工](https://bandwagonhost.com/aff.php?aff=30537)
 
 
 `http://novel.juhe.im`
@@ -21,15 +29,13 @@
 
 关于静态资源不再提供补全 前端中自行补全 静态资源地址为: `http://statics.zhuishushenqi.com`
 
-## 部署
+## 开发与部署
 
 `npm run dev`: 启动开发服务器
 
-`npm run build`: 通过babel打包
+~~`npm run build`: 通过babel打包~~ 已经移除babel
 
-`npm run setup`: 部署前步奏
-
-`npm run deploy`: 部署
+部署按照正常node 部署即可·`npm start`
 
 
 ## api接口
@@ -410,18 +416,5 @@ response:
     "ok": true
 }
 ```
-
-演示
-
-![demo](https://ooo.0o0.ooo/2017/04/23/58fc43dd29072.gif)
-
-
-已完成功能
-
-书架 换源 阅读 切换章节 demo上有的未展示 换源这个功能只能说可以实现吧
-
-欢迎加入群讨论:
-
-![群](https://camo.githubusercontent.com/a63f5178a3128dd2bdff9e7f358e66217de27dd2/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031372f30312f31382f353837663331346538616335612e706e67)
 
 
