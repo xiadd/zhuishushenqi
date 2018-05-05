@@ -257,7 +257,7 @@ response:
 }
 ```
 
-### 书评
+### 书评--长评
 
 url: `http://api.zhuishushenqi.com/post/review/by-book?book=51060c88bb1c67cf28000035&sort=updated&start=0&limit=20`
 
