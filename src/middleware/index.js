@@ -9,7 +9,7 @@ export function setCorrectResponse() {
       if (ctx.status === 404) {
         ctx.throw(404)
       }
-      if (ctx.url.indexOf('/restc') !== -1) {
+      if (ctx.url.indexOf('/') !== -1) {
         return
       }
       ctx.body = {

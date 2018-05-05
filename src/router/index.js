@@ -1,7 +1,5 @@
 import Router from 'koa-router'
 import jwt from 'koa-jwt'
-import { JWTSecret } from '../../config/config.default'
-import UserController from '../controller/user'
 import categoryController from '../controller/category'
 import bookController from '../controller/book'
 import rankController from '../controller/rank'
@@ -21,7 +19,7 @@ const router = new Router()
 router.get('/', homeController.index)
 
 // 登录
-router.get('/authenticate', UserController.userLogin)
+// router.get('/authenticate', UserController.userLogin)
 //router.get('/authenticate', UserController.userLogin)
 
 //设置jwt 权限
@@ -86,15 +84,15 @@ router.get('/booklists/:id', BookListController.getListDetail)
  */
 
 // 获取书架
-router.get('/bookshelf', UserController.getBookShelf)
+// router.get('/bookshelf', UserController.getBookShelf)
 
 // 添加到书架
-router.post('/bookshelf', UserController.addToShelf)
+// router.post('/bookshelf', UserController.addToShelf)
 
 // 从书架移除
-router.delete('/bookshelf', UserController.deleteFromShelf)
+// router.delete('/bookshelf', UserController.deleteFromShelf)
 
 // 获取用户信息
-router.get('/profile', UserController.getUserInfo)
+// router.get('/profile', UserController.getUserInfo)
 
 export default router

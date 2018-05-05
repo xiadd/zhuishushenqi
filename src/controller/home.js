@@ -1,5 +1,5 @@
 export default {
-  index (ctx) {
-    ctx.body = '首页建设中'
+  async index (ctx) {
+    await ctx.render('index.njk')
   }
 }
