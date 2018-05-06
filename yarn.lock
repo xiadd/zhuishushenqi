@@ -3217,6 +3217,10 @@ resolve@^1.1.6:
   dependencies:
     path-parse "^1.0.5"
 
+restc@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/restc/-/restc-0.3.2.tgz#d09d857b6c98904846d8eef2dc04d17219574723"
+
 ret@~0.1.10:
   version "0.1.15"
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"

@@ -6,6 +6,7 @@ import morgan from 'koa-morgan'
 import mount from 'koa-mount'
 import fs from 'fs'
 import bodyParser from 'koa-bodyparser'
+import restc from 'restc'
 import config from 'config'
 import router from './router'
 import { setCorrectResponse, setCors } from './middleware'
@@ -29,6 +30,7 @@ app.use(bodyParser())
 app.use(setCorrectResponse())
 app.use(setCors())
 app.use(mount('/static', serve(path.resolve(__dirname, '../static'))))
+// app.use(restc.koa2())
 // app.use(setRateLimit())
 app.use(router.routes()).use(router.allowedMethods())
 
