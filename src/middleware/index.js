@@ -50,3 +50,15 @@ export function setRateLimit () {
     max: 100
   })
 }
+
+/**
+ * 设置子路由
+ * @param {string} path 
+ * @param {object} routes 
+ */
+export function setSubdomains (path, routes) {
+  return async (ctx, next) => {
+    console.log(ctx.subdomains)
+    await next()
+  }
+}

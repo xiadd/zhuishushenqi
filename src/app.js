@@ -35,3 +35,4 @@ app.use(mount('/static', serve(path.resolve(__dirname, '../static'))))
 app.use(router.routes()).use(router.allowedMethods())
 
 export default app
+ 

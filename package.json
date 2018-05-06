@@ -24,7 +24,7 @@
     "http-proxy": "^1.17.0",
     "ioredis": "^3.1.1",
     "jsonwebtoken": "^7.3.0",
-    "koa": "^2.1.0",
+    "koa": "^2.5.1",
     "koa-bodyparser": "^4.1.0",
     "koa-jwt": "^3.2.1",
     "koa-log4": "^2.2.1",
