@@ -8,24 +8,18 @@
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
   <style>
     /* 设置滚动条样式 */
-    ::-webkit-scrollbar-thumb:active {
-      background-color: #aaa;
-      border-width: 2px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      min-height: 2rem;
-      background: #d2d2d2;
-      background-clip: padding-box;
-      border: 3px solid rgba(51, 51, 51, 0);
-      border-radius: 5px;
-    }
-    -webkit-scrollbar-button {
-      display: none;
-    }
     ::-webkit-scrollbar {
+      width: 6px !important;
+      height: 6px !important;
       -webkit-appearance: none;
-      width: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      height: 6px;
+      border-radius: 6px;
+      background-color: #BAC1C6;
+    }
+    ::-webkit-scrollbar-track {
+      border-radius: 0px;
     }
 
     .pace .pace-progress {
