@@ -28,12 +28,16 @@
   </style>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">加载中</div>
 </body>
-<script
-  src="//unpkg.com/docsify/lib/docsify.min.js"
-  data-router>
+<script>
+  window.$docsify = {
+    coverpage: true,
+    loadSidebar: true,
+    subMaxLevel: 4
+  }
 </script>
+<script src="//unpkg.com/docsify/lib/docsify.min.js" data-router></script>
 <script>
 var _hmt = _hmt || [];
 (function() {
