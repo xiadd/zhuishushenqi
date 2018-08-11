@@ -1,7 +1,7 @@
 novel.juhe.im
 tls xiadd0102@gmail.com
 log /var/log/caddy/novel.log
-gzip on
+gzip
 proxy / 127.0.0.1:8080 {
   header_upstream Host {host}
   header_upstream X-Real-IP {remote}
