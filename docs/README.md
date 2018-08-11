@@ -308,7 +308,7 @@ response:
 
 ### 书单
 
-url: `http://api.zhuishushenqi.com/book-list`
+url: `https://novel.juhe.im/booklists`
 
 request: 
 
@@ -352,7 +352,7 @@ response:
 
 ### 书单详情
 
-url: `http://api.zhuishushenqi.com/book-list/:bookId`
+url: `https://novel.juhe.im/booklists/:bookId`
 
 request: 
 

@@ -1,7 +1,5 @@
 import axios from 'axios'
-import {
-  book
-} from '../api'
+import { book } from '../api'
 
 export default {
   // 获取书籍详情
