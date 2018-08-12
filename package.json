@@ -5,10 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon -r esm server",
-    "start": "pm2 start pm2.json",
-    "start:prod": "pm2 startOrRestart ecosystem.config.js --env production",
-    "deploy": "pm2 deploy ecosystem.config.js production deploy",
-    "setup": "pm2 deploy ecosystem.config.js production setup"
+    "start": "node -r esm server.js"
   },
   "author": "",
   "license": "ISC",
@@ -24,7 +21,7 @@
     "http-proxy": "^1.17.0",
     "ioredis": "^3.1.1",
     "jsonwebtoken": "^7.3.0",
-    "koa": "^2.5.1",
+    "koa": "^2.5.2",
     "koa-bodyparser": "^4.1.0",
     "koa-jwt": "^3.2.1",
     "koa-log4": "^2.2.1",
