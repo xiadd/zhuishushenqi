@@ -1,6 +1,16 @@
-import dotenv from 'dotenv'
-import app from './src/app'
+import next from 'next'
+import { app as server, router } from './src/app'
 
-dotenv.config()
+const dev = process.env.NODE_ENV !== 'production' // 是否是生产环境
+const app = next({ dev })
 
-app.listen(8080, console.log('server is running'))
+app.prepare()
+  .then(() => {
+    router.get('/', async ctx => {
+      await app.render(ctx.req, ctx.res, '/', ctx.query)
+      ctx.respond = false
+    })
+
+    server.use(router.routes()).use(router.allowedMethods())
+    server.listen(8080, console.log('server is running'))
+  })

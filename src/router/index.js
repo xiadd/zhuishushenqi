@@ -16,7 +16,7 @@ const router = new Router()
  */
 
 // 首页
-router.get('/', homeController.index)
+// router.get('/', homeController.index)
 
 // 登录
 // router.get('/authenticate', UserController.userLogin)

@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon -r esm server",
-    "start": "node -r esm server.js"
+    "dev": "nodemon -r esm server.js",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=production node -r esm server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "antd": "^3.8.1",
     "axios": "^0.15.3",
     "babel-polyfill": "^6.23.0",
     "bluebird": "^3.5.0",
@@ -41,10 +43,12 @@
     "pm2": "^2.4.6",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "reactstrap": "^6.3.1",
     "restc": "^0.3.2",
     "xml2js": "^0.4.17"
   },
   "devDependencies": {
+    "babel-plugin-import": "^1.8.0",
     "nodemon": "^1.17.3"
   },
   "engines": {

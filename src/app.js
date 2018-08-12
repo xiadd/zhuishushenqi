@@ -27,12 +27,13 @@ app.use(views(__dirname + '/views', {
   }
 }))
 app.use(bodyParser())
-app.use(setCorrectResponse())
+// app.use(setCorrectResponse())
 app.use(setCors())
 app.use(mount('/static', serve(path.resolve(__dirname, '../static'))))
 // app.use(restc.koa2())
 // app.use(setRateLimit())
-app.use(router.routes()).use(router.allowedMethods())
 
-export default app
+export {  
+  router, app
+}
  
