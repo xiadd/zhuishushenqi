@@ -67,22 +67,35 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
-/******/ ({
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
 
-/***/ "./pages/index.jsx":
+module.exports = require("react");
+
+/***/ }),
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(5);
+
+
+/***/ }),
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_reactstrap__ = __webpack_require__("reactstrap");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_reactstrap__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_reactstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_reactstrap__);
-var _jsxFileName = "C:\\Users\\Administrator\\Desktop\\zhuishushenqi\\pages\\index.jsx";
-
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -121,68 +134,31 @@ function (_Component) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 7
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_reactstrap__["Jumbotron"], {
         style: {
           textAlign: 'center',
           width: '100%'
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 8
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
-        className: "display-4",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 9
-        }
+        className: "display-4"
       }, "\u8FFD\u4E66\u795E\u5668\u63A5\u53E3"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
-        className: "lead",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10
-        }
+        className: "lead"
       }, "\u7B80\u5355\u7684\u8FFD\u4E66\u795E\u5668\u63A5\u53E3\u6574\u7406\u8FD8\u5728\u4E0D\u65AD\u66F4\u65B0\u4E2D, \u6709\u95EE\u9898\u53EF\u4EE5\u8054\u7CFB\u672C\u4EBA"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("hr", {
-        className: "my-4",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        }
-      }, "\u5982\u6709\u4FB5\u6743\u95EE\u9898\u8BF7\u8054\u7CFB\u672C\u4EBA\u5220\u9664"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
-        className: "lead",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 17
-        }
+        className: "my-4"
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", null, "\u5982\u6709\u4FB5\u6743\u95EE\u9898\u8BF7\u8054\u7CFB\u672C\u4EBA\u5220\u9664!"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
+        className: "lead"
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         className: "btn btn-primary btn-lg",
         style: {
           marginRight: '10px'
         },
         href: "https://xiadd.github.io/zhuishushenqi/#/",
-        role: "button",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 18
-        }
+        role: "button"
       }, "\u67E5\u770B\u6587\u6863"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         className: "btn btn-danger btn-lg",
         href: "https://github.com/xiadd/zhuishushenqi",
-        role: "button",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 19
-        }
+        role: "button"
       }, "\u67E5\u770B\u6E90\u7801"))));
     }
   }]);
@@ -193,28 +169,10 @@ function (_Component) {
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
-
-/***/ 3:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("./pages/index.jsx");
-
-
-/***/ }),
-
-/***/ "react":
-/***/ (function(module, exports) {
-
-module.exports = require("react");
-
-/***/ }),
-
-/***/ "reactstrap":
+/* 6 */
 /***/ (function(module, exports) {
 
 module.exports = require("reactstrap");
 
 /***/ })
-
-/******/ });
-//# sourceMappingURL=index.js.map
+/******/ ]);

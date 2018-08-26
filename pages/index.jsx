@@ -12,7 +12,7 @@ class Index extends Component {
           </p>
           <hr className="my-4" />
           <p>
-            如有侵权问题请联系本人删除
+            如有侵权问题请联系本人删除!
           </p>
           <p className="lead" >
             <a className="btn btn-primary btn-lg" style={{ marginRight: '10px' }} href="https://xiadd.github.io/zhuishushenqi/#/" role="button">查看文档</a>

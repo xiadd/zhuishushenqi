@@ -21,11 +21,6 @@ app.context.config = config
 //中间件
 app.proxy = true
 
-app.use(views(__dirname + '/views', {
-  map: {
-    njk: 'nunjucks'
-  }
-}))
 app.use(bodyParser())
 // app.use(setCorrectResponse())
 app.use(setCors())
