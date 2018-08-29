@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon -r esm server.js",
     "build": "next build",
-    "start": "cross-env NODE_ENV=production node -r esm server.js"
+    "start": "cross-env NODE_ENV=production node -r esm server.js",
+    "docs": "npx apidoc -i src/router -o doc/"
   },
   "author": "",
   "license": "ISC",
@@ -48,6 +49,7 @@
     "xml2js": "^0.4.17"
   },
   "devDependencies": {
+    "apidoc": "^0.17.6",
     "babel-plugin-import": "^1.8.0",
     "nodemon": "^1.17.3"
   },

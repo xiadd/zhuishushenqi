@@ -1,0 +1,1 @@
+define({  "name": "追书神器接口",  "version": "0.1.0",  "description": "简化版追书神器",  "sampleUrl": false,  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2018-08-29T14:27:01.712Z",    "url": "http://apidocjs.com",    "version": "0.17.6"  }});

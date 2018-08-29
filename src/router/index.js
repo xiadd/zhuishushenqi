@@ -25,19 +25,34 @@ const router = new Router()
 //设置jwt 权限
 // router.use(jwt({ secret: JWTSecret }))  如果需要授权的话
 
-// 获取带书籍数量的父分类
+/**
+ * @api {get} /categories 获取父级分类
+ * @apiGroup Categories
+ */
 router.get('/categories', categoryController.getCategoriesWithBookCount)
 
-// 获取带子分类的分类
+/**
+ * @api {get} /sub-categories 获取带子分类的分类
+ * @apiGroup Categories
+ */
 router.get('/sub-categories', categoryController.getCategoriesWithSubCategories)
 
-// 获取分类详情
+/**
+ * @api {get} /category-info 获取分类详情
+ * @apiGroup Categories
+ */
 router.get('/category-info', categoryController.getCategoryInfo)
 
-// 获取书籍详情 id: bookid
+/**
+ * @api {get} /book-info/:id 获取书籍详情
+ * @apiGroup Book
+ */
 router.get('/book-info/:id', bookController.getBookInfo)
 
-// 获取书籍相关推荐
+/**
+ * @api {get} /recommend/:id 获取书籍相关推荐
+ * @apiGroup Book
+ */
 router.get('/recommend/:id', bookController.getRelatedRecommendedBooks)
 
 // 获取书籍热评
