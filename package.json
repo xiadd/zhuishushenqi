@@ -51,6 +51,7 @@
   "devDependencies": {
     "apidoc": "^0.17.6",
     "babel-plugin-import": "^1.8.0",
+    "babel-plugin-inline-import": "^3.0.0",
     "nodemon": "^1.17.3"
   },
   "engines": {

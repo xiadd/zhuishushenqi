@@ -3683,25 +3683,32 @@ function (_Document) {
           fileName: _jsxFileName,
           lineNumber: 8
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
+        href: "https://cdn.bootcss.com/antd/3.5.4/antd.min.css",
+        rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 9
         }
-      }, "\u8FFD\u4E66\u795E\u5668")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("body", {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 10
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Main"], {
+      }, "\u8FFD\u4E66\u795E\u5668")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("body", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 12
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["NextScript"], {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Main"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 13
+        }
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["NextScript"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
         }
       })));
     }
