@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-// import { Button, Jumbotron } from 'reactstrap'
 import { Icon, Collapse, Row, Col } from 'antd'
 import styled from 'styled-components'
+import axios from 'axios'
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -27,11 +27,13 @@ const Wrapper = styled.div`
 
   .ant-collapse-content-box {
     background: #f5f5f5;
-    text-align: left
+    text-align: left;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .ant-collapse-content-box p {
-    margin-bottom: 0;
     text-align: left
   }
   .ant-collapse-item {
@@ -46,17 +48,19 @@ const Wrapper = styled.div`
     text-align: left;
     font-size: .8rem
   }
+  .ant-row {
+    margin-bottom: 1rem;
+  }
 `
 
 const Panel = Collapse.Panel
 
 class Index extends Component {
 
-  static getInitialProps () {
-    console.log(process.memoryUsage())
-    return {
-      memory: process.memoryUsage().rss / 1024 /1024
-    }
+  static async getInitialProps (ctx) {
+    const systemInfo = await axios.get('http://127.0.0.1:8080/system')
+    console.log(systemInfo.data)
+    return systemInfo.data
   }
 
   render () {
@@ -71,8 +75,32 @@ class Index extends Component {
         <Collapse>
           <Panel header="调试信息" key="1">
             <Row gutter={16}>
+              <Col span={8} className="debug-name">git hash</Col>
+              <Col span={16} className="debut-value">{this.props.gitHash.slice(0, 7)}</Col>
+            </Row>
+            <Row gutter={16}>
               <Col span={8} className="debug-name">内存占用</Col>
-              <Col span={16} className="debut-value">{this.props.memory} MB</Col>
+              <Col span={16} className="debut-value">{this.props.memory}MB</Col>
+            </Row>
+            <Row gutter={16}>
+              <Col span={8} className="debug-name">运行时间</Col>
+              <Col span={16} className="debut-value">{this.props.runTime}s</Col>
+            </Row>
+            <Row gutter={16}>
+              <Col span={8} className="debug-name">操作系统</Col>
+              <Col span={16} className="debut-value">{this.props.systemPlatform}</Col>
+            </Row>
+            <Row gutter={16}>
+              <Col span={8} className="debug-name">系统内存</Col>
+              <Col span={16} className="debut-value">{this.props.systemMem}MB</Col>
+            </Row>
+            <Row gutter={16}>
+              <Col span={8} className="debug-name">剩余内存</Col>
+              <Col span={16} className="debut-value">{this.props.systemFreeMem}MB</Col>
+            </Row>
+            <Row gutter={16}>
+              <Col span={8} className="debug-name">CPU</Col>
+              <Col span={16} className="debut-value">{this.props.systemCpus}</Col>
             </Row>
           </Panel>
         </Collapse>

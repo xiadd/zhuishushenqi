@@ -1,5 +1,26 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import { ServerStyleSheet, injectGlobal } from 'styled-components'
+
+injectGlobal`
+  ::-webkit-scrollbar {
+    width: 6px !important;
+    height: 6px !important;
+    -webkit-appearance: none;
+  }
+  ::-webkit-scrollbar-thumb {
+      height: 6px;
+      border-radius: 6px;
+      background-color: #BAC1C6;
+  }
+  ::-webkit-scrollbar-track {
+      border-radius: 0px;
+  }
+  
+  body {
+    min-height: 600px;
+    overflow: auto;
+  }
+`
 
 export default class MyDocument extends Document {
 

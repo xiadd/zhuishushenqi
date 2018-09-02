@@ -6,7 +6,7 @@ webpackHotUpdate(1,{
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* unused harmony export css */
 /* unused harmony export keyframes */
-/* unused harmony export injectGlobal */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return injectGlobal; });
 /* unused harmony export isStyledComponent */
 /* unused harmony export consolidateStreamedStyles */
 /* unused harmony export ThemeProvider */
@@ -2343,7 +2343,7 @@ var keyframes = _keyframes(generateAlphabeticName, stringifyRules, css);
 var injectGlobal = _injectGlobal(stringifyRules, css);
 var styled = _styled(StyledComponent, constructWithOptions);
 
-/* unused harmony default export */ var _unused_webpack_default_export = (styled);
+/* harmony default export */ __webpack_exports__["b"] = (styled);
 
 //# sourceMappingURL=styled-components.browser.esm.js.map
 
@@ -2362,7 +2362,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_document__ = __webpack_require__("./node_modules/next/document.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_document___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_document__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.browser.esm.js");
-var _jsxFileName = "/Users/xiadd/Documents/node_projects/zhuishushenqi/pages/_document.js";
+var _jsxFileName = "/Users/xiadd/Documents/nodejs_projects/zhuishushenqi/pages/_document.js";
+
+var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  ::-webkit-scrollbar {\n    width: 6px !important;\n    height: 6px !important;\n    -webkit-appearance: none;\n  }\n  ::-webkit-scrollbar-thumb {\n      height: 6px;\n      border-radius: 6px;\n      background-color: #BAC1C6;\n  }\n  ::-webkit-scrollbar-track {\n      border-radius: 0px;\n  }\n  \n  body {\n    min-height: 600px;\n    overflow: auto;\n  }\n"]);
+
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -2385,8 +2388,11 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
+
+Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["c" /* injectGlobal */])(_templateObject);
 
 var MyDocument =
 /*#__PURE__*/
@@ -2405,31 +2411,31 @@ function (_Document) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("html", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 36
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Head"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 37
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
         href: "https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 38
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
         href: "https://cdn.bootcss.com/antd/3.5.4/antd.min.css",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 39
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 40
         }
       }, "\u8FFD\u4E66\u795E\u5668"), this.props.styleTags), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("body", {
         style: {
@@ -2437,17 +2443,17 @@ function (_Document) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 43
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Main"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 44
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 45
         }
       })));
     }
@@ -2461,7 +2467,7 @@ function (_Document) {
           return sheet.collectStyles(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(App, _extends({}, props, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 8
+              lineNumber: 29
             }
           })));
         };
@@ -2500,4 +2506,4 @@ function (_Document) {
 /***/ })
 
 })
-//# sourceMappingURL=1.c6e3e34eb34fe4be9781.hot-update.js.map
+//# sourceMappingURL=1.e434b967aff52c2dd0fa.hot-update.js.map

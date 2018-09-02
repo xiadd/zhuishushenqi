@@ -6,6 +6,7 @@ import rankController from '../controller/rank'
 import homeController from '../controller/home'
 import commentsController from '../controller/comment'
 import BookListController from '../controller/booklist'
+import SystemController from '../controller/system'
 
 const router = new Router()
 
@@ -109,5 +110,10 @@ router.get('/booklists/:id', BookListController.getListDetail)
 
 // 获取用户信息
 // router.get('/profile', UserController.getUserInfo)
+/**
+ * 获取系统详情
+ */
+
+router.get('/system', SystemController.getSystemInfo)
 
 export default router
