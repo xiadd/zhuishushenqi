@@ -129,7 +129,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Wrapper = __WEBPACK_IMPORTED_MODULE_3_styled_components___default()("div").withConfig({
   displayName: "pages__Wrapper",
   componentId: "nnjbnk-0"
-})(["height:100vh;display:flex;width:100vw;align-items:center;justify-content:center;font-family:'PingFang SC','Microsoft YaHei','Lantinghei SC','Source Han Sans SC','Noto Sans CJK SC','WenQuanYi Micro Hei','sans-serif','SimSun';background:#f5f5f5;flex-direction:column;h1,h5{font-weight:300;color:#444;}.ant-collapse{border:none;width:500px;background:#f5f5f5}.ant-collapse-content-box{background:#f5f5f5}.ant-collapse-content-box p{margin-bottom:0}.ant-collapse-item{border:none}"]);
+})(["height:100vh;display:flex;width:100vw;align-items:center;justify-content:center;font-family:'PingFang SC','Microsoft YaHei','Lantinghei SC','Source Han Sans SC','Noto Sans CJK SC','WenQuanYi Micro Hei','sans-serif','SimSun';background:#f5f5f5;flex-direction:column;h1,h5,p{font-weight:300;color:#444;width:500px;text-align:center}.ant-collapse{border:none;width:400px;background:#f5f5f5}.ant-collapse-content-box{background:#f5f5f5;text-align:left}.ant-collapse-content-box p{margin-bottom:0;text-align:left}.ant-collapse-item{border:none}"]);
 var Panel = __WEBPACK_IMPORTED_MODULE_1_antd_es_collapse___default.a.Panel;
 
 var Index =
@@ -153,9 +153,9 @@ function (_Component) {
         style: {
           color: '#d32122'
         }
-      }), " \u8FFD\u4E66\u795E\u5668"), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("h5", null, "\u57FA\u4E8Ekoa+react.js+next.js\u7684\u8FFD\u4E66\u795E\u5668\u63A5\u53E3"), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("p", null, "\u4E66\u7C4D\u5168\u9762, \u53EF\u6362\u6E90, \u5B9E\u65F6\u66F4\u65B0, \u66F4\u91CD\u8981\u7684\u662F\u53EF\u4EE5\u4E00\u8D77\u5B66\u4E60nodejs+react, \u6587\u6863\u8BF7\u67E5\u770B: ", __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("a", {
-        href: "https://novel.juhe.im"
-      }, "https://novel.juhe.im")), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("p", null, "-- Made with \u2764\uFE0F by ", __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("a", {
+      }), " \u8FFD\u4E66\u795E\u5668"), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("h5", null, "\u57FA\u4E8Ekoa+react.js+next.js\u7684\u8FFD\u4E66\u795E\u5668\u63A5\u53E3"), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("p", null, "\u4E66\u7C4D\u5168\u9762, \u53EF\u6362\u6E90, \u5B9E\u65F6\u66F4\u65B0, \u66F4\u91CD\u8981\u7684\u662F\u53EF\u4EE5\u4E00\u8D77\u5B66\u4E60nodejs+react."), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("p", null, "\u6587\u6863\u8BF7\u67E5\u770B: ", __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("a", {
+        href: "https://xiadd.github.io/zhuishushenqi"
+      }, "https://xiadd.github.io/zhuishushenqi")), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("p", null, "-- Made with \u2764\uFE0F by ", __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("a", {
         href: "http://github.com/xiadd"
       }, "xiadd")), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_es_collapse___default.a, null, __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(Panel, {
         header: "\u8C03\u8BD5\u4FE1\u606F",
