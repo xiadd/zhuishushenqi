@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import { Button, Jumbotron } from 'reactstrap'
-import { Icon, Collapse } from 'antd'
+import { Icon, Collapse, Row, Col } from 'antd'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -37,11 +37,28 @@ const Wrapper = styled.div`
   .ant-collapse-item {
     border: none
   }
+  .debug-name {
+    text-align: left;
+    font-size: .8rem
+  }
+
+  .debug-value {
+    text-align: left;
+    font-size: .8rem
+  }
 `
 
 const Panel = Collapse.Panel
 
 class Index extends Component {
+
+  static getInitialProps () {
+    console.log(process.memoryUsage())
+    return {
+      memory: process.memoryUsage().rss / 1024 /1024
+    }
+  }
+
   render () {
     return (
       <Wrapper className="container">
@@ -53,7 +70,10 @@ class Index extends Component {
 
         <Collapse>
           <Panel header="调试信息" key="1">
-            <p>调试信息</p>
+            <Row gutter={16}>
+              <Col span={8} className="debug-name">内存占用</Col>
+              <Col span={16} className="debut-value">{this.props.memory} MB</Col>
+            </Row>
           </Panel>
         </Collapse>
 

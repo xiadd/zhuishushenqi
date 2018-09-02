@@ -5,7 +5,7 @@ webpackHotUpdate(5,{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_antd_es_icon__ = __webpack_require__("./node_modules/antd/es/icon/index.js");
+/* WEBPACK VAR INJECTION */(function(process, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_antd_es_icon__ = __webpack_require__("./node_modules/antd/es/icon/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_antd_es_collapse__ = __webpack_require__("./node_modules/antd/es/collapse/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
@@ -34,7 +34,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Wrapper = Object(__WEBPACK_IMPORTED_MODULE_3_styled_components__["b" /* default */])("div").withConfig({
   displayName: "pages__Wrapper",
   componentId: "nnjbnk-0"
-})(["height:100vh;display:flex;width:100vw;align-items:center;justify-content:center;font-family:'PingFang SC','Microsoft YaHei','Lantinghei SC','Source Han Sans SC','Noto Sans CJK SC','WenQuanYi Micro Hei','sans-serif','SimSun';background:#f5f5f5;flex-direction:column;h1,h5,p{font-weight:300;color:#444;width:500px;text-align:center}.ant-collapse{border:none;width:500px;background:#f5f5f5}.ant-collapse-content-box{background:#f5f5f5}.ant-collapse-content-box p{margin-bottom:0}.ant-collapse-item{border:none}"]);
+})(["height:100vh;display:flex;width:100vw;align-items:center;justify-content:center;font-family:'PingFang SC','Microsoft YaHei','Lantinghei SC','Source Han Sans SC','Noto Sans CJK SC','WenQuanYi Micro Hei','sans-serif','SimSun';background:#f5f5f5;flex-direction:column;h1,h5,p{font-weight:300;color:#444;width:500px;text-align:center}.ant-collapse{border:none;width:400px;background:#f5f5f5}.ant-collapse-content-box{background:#f5f5f5;text-align:left}.ant-collapse-content-box p{margin-bottom:0;text-align:left}.ant-collapse-item{border:none}"]);
 var Panel = __WEBPACK_IMPORTED_MODULE_1_antd_es_collapse__["a" /* default */].Panel;
 
 var Index =
@@ -55,12 +55,12 @@ function (_Component) {
         className: "container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 55
         }
       }, __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 56
         }
       }, __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_antd_es_icon__["a" /* default */], {
         type: "book",
@@ -69,53 +69,71 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 56
         }
       }), " \u8FFD\u4E66\u795E\u5668"), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("h5", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 57
         }
       }, "\u57FA\u4E8Ekoa+react.js+next.js\u7684\u8FFD\u4E66\u795E\u5668\u63A5\u53E3"), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 58
         }
-      }, "\u4E66\u7C4D\u5168\u9762, \u53EF\u6362\u6E90, \u5B9E\u65F6\u66F4\u65B0, \u66F4\u91CD\u8981\u7684\u662F\u53EF\u4EE5\u4E00\u8D77\u5B66\u4E60nodejs+react, \u6587\u6863\u8BF7\u67E5\u770B: ", __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("a", {
+      }, "\u4E66\u7C4D\u5168\u9762, \u53EF\u6362\u6E90, \u5B9E\u65F6\u66F4\u65B0, \u66F4\u91CD\u8981\u7684\u662F\u53EF\u4EE5\u4E00\u8D77\u5B66\u4E60nodejs+react."), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        }
+      }, "\u6587\u6863\u8BF7\u67E5\u770B: ", __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("a", {
         href: "https://xiadd.github.io/zhuishushenqi",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 59
         }
       }, "https://xiadd.github.io/zhuishushenqi")), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 60
         }
       }, "-- Made with \u2764\uFE0F by ", __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("a", {
         href: "http://github.com/xiadd",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 60
         }
       }, "xiadd")), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_es_collapse__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 62
         }
       }, __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(Panel, {
         header: "\u8C03\u8BD5\u4FE1\u606F",
         key: "1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 63
         }
       }, __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 64
         }
-      }, "\u8C03\u8BD5\u4FE1\u606F"))));
+      }, "\u5185\u5B58\u5360\u7528"), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 65
+        }
+      }, this.props.memory, "MB"))));
+    }
+  }], [{
+    key: "getInitialProps",
+    value: function getInitialProps() {
+      console.log(process.memoryUsage());
+      return {
+        memory: process.memoryUsage().rss / 1024 / 1024
+      };
     }
   }]);
 
@@ -141,9 +159,9 @@ function (_Component) {
       }
     })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/")
   
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/process/browser.js"), __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ })
 
 })
-//# sourceMappingURL=5.4c4b764346b592b69ca9.hot-update.js.map
+//# sourceMappingURL=5.50f7431827e76794e9fe.hot-update.js.map
