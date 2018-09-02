@@ -1,7 +1,14 @@
 {
-  "plugins": [
-    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "false" }]
-  ],
   "presets": ["next/babel"],
-  "ignore": []
+  "plugins": [
+    [
+      "babel-plugin-styled-components", 
+      {
+        "ssr": true, 
+        "displayName": true, 
+        "preprocess": false 
+      }
+    ],
+    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "false" }]
+  ]
 }

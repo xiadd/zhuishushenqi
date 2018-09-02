@@ -67,7 +67,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -77,25 +77,36 @@ module.exports =
 module.exports = require("react");
 
 /***/ }),
-/* 1 */,
+/* 1 */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
+
+/***/ }),
 /* 2 */,
 /* 3 */,
-/* 4 */
+/* 4 */,
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(5);
+module.exports = __webpack_require__(6);
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_antd_es_button__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_antd_es_button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_antd_es_button__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_antd_es_icon__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_antd_es_icon___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_antd_es_icon__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_antd_es_collapse__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_antd_es_collapse___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_antd_es_collapse__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_styled_components__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_styled_components__);
+
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -114,6 +125,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
  // import { Button, Jumbotron } from 'reactstrap'
 
+
+var Wrapper = __WEBPACK_IMPORTED_MODULE_3_styled_components___default()("div").withConfig({
+  displayName: "pages__Wrapper",
+  componentId: "nnjbnk-0"
+})(["height:100vh;display:flex;width:100vw;align-items:center;justify-content:center;font-family:'PingFang SC','Microsoft YaHei','Lantinghei SC','Source Han Sans SC','Noto Sans CJK SC','WenQuanYi Micro Hei','sans-serif','SimSun';background:#f5f5f5;flex-direction:column;h1,h5{font-weight:300;color:#444;}.ant-collapse{border:none;width:500px;background:#f5f5f5}.ant-collapse-content-box{background:#f5f5f5}.ant-collapse-content-box p{margin-bottom:0}.ant-collapse-item{border:none}"]);
+var Panel = __WEBPACK_IMPORTED_MODULE_1_antd_es_collapse___default.a.Panel;
+
 var Index =
 /*#__PURE__*/
 function (_Component) {
@@ -128,28 +146,40 @@ function (_Component) {
   _createClass(Index, [{
     key: "render",
     value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
-        className: "container",
+      return __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(Wrapper, {
+        className: "container"
+      }, __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("h1", null, __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_antd_es_icon___default.a, {
+        type: "book",
         style: {
-          height: '100vh',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
+          color: '#d32122'
         }
-      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_antd_es_button___default.a, null, "hello"));
+      }), " \u8FFD\u4E66\u795E\u5668"), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("h5", null, "\u57FA\u4E8Ekoa+react.js+next.js\u7684\u8FFD\u4E66\u795E\u5668\u63A5\u53E3"), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("p", null, "\u4E66\u7C4D\u5168\u9762, \u53EF\u6362\u6E90, \u5B9E\u65F6\u66F4\u65B0, \u66F4\u91CD\u8981\u7684\u662F\u53EF\u4EE5\u4E00\u8D77\u5B66\u4E60nodejs+react, \u6587\u6863\u8BF7\u67E5\u770B: ", __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("a", {
+        href: "https://novel.juhe.im"
+      }, "https://novel.juhe.im")), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("p", null, "-- Made with \u2764\uFE0F by ", __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("a", {
+        href: "http://github.com/xiadd"
+      }, "xiadd")), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_es_collapse___default.a, null, __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(Panel, {
+        header: "\u8C03\u8BD5\u4FE1\u606F",
+        key: "1"
+      }, __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("p", null, "\u8C03\u8BD5\u4FE1\u606F"))));
     }
   }]);
 
   return Index;
-}(__WEBPACK_IMPORTED_MODULE_1_react__["Component"]);
+}(__WEBPACK_IMPORTED_MODULE_2_react__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
-module.exports = require("antd/es/button");
+module.exports = require("antd/es/icon");
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/es/collapse");
 
 /***/ })
 /******/ ]);
