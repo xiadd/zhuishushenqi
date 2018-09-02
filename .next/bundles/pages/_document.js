@@ -8173,28 +8173,35 @@ function (_Document) {
           fileName: _jsxFileName,
           lineNumber: 39
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 40
         }
-      }, "\u8FFD\u4E66\u795E\u5668"), this.props.styleTags), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("body", {
-        style: {
-          background: '#f5f5f5'
-        },
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 41
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Main"], {
+      }, "\u8FFD\u4E66\u795E\u5668"), this.props.styleTags), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("body", {
+        style: {
+          background: '#fff'
+        },
         __source: {
           fileName: _jsxFileName,
           lineNumber: 44
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["NextScript"], {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Main"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 45
+        }
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["NextScript"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
         }
       })));
     }

@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   font-family: 'PingFang SC', 'Microsoft YaHei', 'Lantinghei SC', 'Source Han Sans SC', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', 'sans-serif', 'SimSun';
-  background: #f5f5f5;
+  background: #fff;
   flex-direction: column;
   h1, h5, p {
     font-weight: 300;
@@ -57,9 +57,8 @@ const Panel = Collapse.Panel
 
 class Index extends Component {
 
-  static async getInitialProps (ctx) {
+  static async getInitialProps () {
     const systemInfo = await axios.get('http://127.0.0.1:8080/system')
-    console.log(systemInfo.data)
     return systemInfo.data
   }
 
@@ -80,11 +79,11 @@ class Index extends Component {
             </Row>
             <Row gutter={16}>
               <Col span={8} className="debug-name">内存占用</Col>
-              <Col span={16} className="debut-value">{this.props.memory}MB</Col>
+              <Col span={16} className="debut-value">{this.props.memory} m</Col>
             </Row>
             <Row gutter={16}>
               <Col span={8} className="debug-name">运行时间</Col>
-              <Col span={16} className="debut-value">{this.props.runTime}s</Col>
+              <Col span={16} className="debut-value">{this.props.runTime} s</Col>
             </Row>
             <Row gutter={16}>
               <Col span={8} className="debug-name">操作系统</Col>
@@ -92,11 +91,11 @@ class Index extends Component {
             </Row>
             <Row gutter={16}>
               <Col span={8} className="debug-name">系统内存</Col>
-              <Col span={16} className="debut-value">{this.props.systemMem}MB</Col>
+              <Col span={16} className="debut-value">{this.props.systemMem} m</Col>
             </Row>
             <Row gutter={16}>
               <Col span={8} className="debug-name">剩余内存</Col>
-              <Col span={16} className="debut-value">{this.props.systemFreeMem}MB</Col>
+              <Col span={16} className="debut-value">{this.props.systemFreeMem} m</Col>
             </Row>
             <Row gutter={16}>
               <Col span={8} className="debug-name">CPU</Col>

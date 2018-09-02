@@ -6,7 +6,7 @@ webpackHotUpdate(1,{
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* unused harmony export css */
 /* unused harmony export keyframes */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return injectGlobal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return injectGlobal; });
 /* unused harmony export isStyledComponent */
 /* unused harmony export consolidateStreamedStyles */
 /* unused harmony export ThemeProvider */
@@ -2343,7 +2343,7 @@ var keyframes = _keyframes(generateAlphabeticName, stringifyRules, css);
 var injectGlobal = _injectGlobal(stringifyRules, css);
 var styled = _styled(StyledComponent, constructWithOptions);
 
-/* harmony default export */ __webpack_exports__["b"] = (styled);
+/* unused harmony default export */ var _unused_webpack_default_export = (styled);
 
 //# sourceMappingURL=styled-components.browser.esm.js.map
 
@@ -2392,7 +2392,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["c" /* injectGlobal */])(_templateObject);
+Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["b" /* injectGlobal */])(_templateObject);
 
 var MyDocument =
 /*#__PURE__*/
@@ -2432,28 +2432,35 @@ function (_Document) {
           fileName: _jsxFileName,
           lineNumber: 39
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", {
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 40
         }
-      }, "\u8FFD\u4E66\u795E\u5668"), this.props.styleTags), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("body", {
-        style: {
-          background: '#f5f5f5'
-        },
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 41
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Main"], {
+      }, "\u8FFD\u4E66\u795E\u5668"), this.props.styleTags), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("body", {
+        style: {
+          background: '#fff'
+        },
         __source: {
           fileName: _jsxFileName,
           lineNumber: 44
         }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["NextScript"], {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Main"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 45
+        }
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["NextScript"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
         }
       })));
     }
@@ -2506,4 +2513,4 @@ function (_Document) {
 /***/ })
 
 })
-//# sourceMappingURL=1.e434b967aff52c2dd0fa.hot-update.js.map
+//# sourceMappingURL=1.ab86d1d39d1137afde91.hot-update.js.map

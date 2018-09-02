@@ -142,7 +142,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Wrapper = __WEBPACK_IMPORTED_MODULE_6_styled_components___default()("div").withConfig({
   displayName: "pages__Wrapper",
   componentId: "nnjbnk-0"
-})(["height:100vh;display:flex;width:100vw;align-items:center;justify-content:center;font-family:'PingFang SC','Microsoft YaHei','Lantinghei SC','Source Han Sans SC','Noto Sans CJK SC','WenQuanYi Micro Hei','sans-serif','SimSun';background:#f5f5f5;flex-direction:column;h1,h5,p{font-weight:300;color:#444;width:500px;text-align:center}.ant-collapse{border:none;width:400px;background:#f5f5f5}.ant-collapse-content-box{background:#f5f5f5;text-align:left;max-height:300px;overflow-y:auto;overflow-x:hidden;}.ant-collapse-content-box p{text-align:left}.ant-collapse-item{border:none}.debug-name{text-align:left;font-size:.8rem}.debug-value{text-align:left;font-size:.8rem}.ant-row{margin-bottom:1rem;}"]);
+})(["height:100vh;display:flex;width:100vw;align-items:center;justify-content:center;font-family:'PingFang SC','Microsoft YaHei','Lantinghei SC','Source Han Sans SC','Noto Sans CJK SC','WenQuanYi Micro Hei','sans-serif','SimSun';background:#fff;flex-direction:column;h1,h5,p{font-weight:300;color:#444;width:500px;text-align:center}.ant-collapse{border:none;width:400px;background:#f5f5f5}.ant-collapse-content-box{background:#f5f5f5;text-align:left;max-height:300px;overflow-y:auto;overflow-x:hidden;}.ant-collapse-content-box p{text-align:left}.ant-collapse-item{border:none}.debug-name{text-align:left;font-size:.8rem}.debug-value{text-align:left;font-size:.8rem}.ant-row{margin-bottom:1rem;}"]);
 var Panel = __WEBPACK_IMPORTED_MODULE_4_antd_es_collapse___default.a.Panel;
 
 var Index =
@@ -189,7 +189,7 @@ function (_Component) {
       }, "\u5185\u5B58\u5360\u7528"), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_antd_es_col___default.a, {
         span: 16,
         className: "debut-value"
-      }, this.props.memory, "MB")), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_es_row___default.a, {
+      }, this.props.memory, " m")), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_es_row___default.a, {
         gutter: 16
       }, __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_antd_es_col___default.a, {
         span: 8,
@@ -197,7 +197,7 @@ function (_Component) {
       }, "\u8FD0\u884C\u65F6\u95F4"), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_antd_es_col___default.a, {
         span: 16,
         className: "debut-value"
-      }, this.props.runTime, "s")), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_es_row___default.a, {
+      }, this.props.runTime, " s")), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_es_row___default.a, {
         gutter: 16
       }, __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_antd_es_col___default.a, {
         span: 8,
@@ -213,7 +213,7 @@ function (_Component) {
       }, "\u7CFB\u7EDF\u5185\u5B58"), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_antd_es_col___default.a, {
         span: 16,
         className: "debut-value"
-      }, this.props.systemMem, "MB")), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_es_row___default.a, {
+      }, this.props.systemMem, " m")), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_es_row___default.a, {
         gutter: 16
       }, __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_antd_es_col___default.a, {
         span: 8,
@@ -221,7 +221,7 @@ function (_Component) {
       }, "\u5269\u4F59\u5185\u5B58"), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_antd_es_col___default.a, {
         span: 16,
         className: "debut-value"
-      }, this.props.systemFreeMem, "MB")), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_es_row___default.a, {
+      }, this.props.systemFreeMem, " m")), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_es_row___default.a, {
         gutter: 16
       }, __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_antd_es_col___default.a, {
         span: 8,
@@ -236,7 +236,7 @@ function (_Component) {
     value: function () {
       var _getInitialProps = _asyncToGenerator(
       /*#__PURE__*/
-      __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.mark(function _callee(ctx) {
+      __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.mark(function _callee() {
         var systemInfo;
         return __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -247,10 +247,9 @@ function (_Component) {
 
               case 2:
                 systemInfo = _context.sent;
-                console.log(systemInfo.data);
                 return _context.abrupt("return", systemInfo.data);
 
-              case 5:
+              case 4:
               case "end":
                 return _context.stop();
             }
@@ -258,7 +257,7 @@ function (_Component) {
         }, _callee, this);
       }));
 
-      return function getInitialProps(_x) {
+      return function getInitialProps() {
         return _getInitialProps.apply(this, arguments);
       };
     }()

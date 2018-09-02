@@ -150,9 +150,12 @@ function (_Document) {
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
         href: "https://cdn.bootcss.com/antd/3.5.4/antd.min.css",
         rel: "stylesheet"
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", null, "\u8FFD\u4E66\u795E\u5668"), this.props.styleTags), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("body", {
         style: {
-          background: '#f5f5f5'
+          background: '#fff'
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Main"], null), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["NextScript"], null)));
     }

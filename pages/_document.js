@@ -37,10 +37,11 @@ export default class MyDocument extends Document {
         <Head>
           <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" />
           <link href="https://cdn.bootcss.com/antd/3.5.4/antd.min.css" rel="stylesheet" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
           <title>追书神器</title>
           {this.props.styleTags}
         </Head>
-        <body style={{ background: '#f5f5f5' }}>
+        <body style={{ background: '#fff' }}>
           <Main />
           <NextScript />
         </body>
