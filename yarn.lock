@@ -1115,6 +1115,10 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
+bindings@^1.2.1:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.3.0.tgz#b346f6ecf6a95f5a815c5839fc7cdb22502f1ed7"
+
 bitsyntax@~0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/bitsyntax/-/bitsyntax-0.0.4.tgz#eb10cc6f82b8c490e3e85698f07e83d46e0cba82"
@@ -1530,7 +1534,19 @@ co-body@^5.1.0:
     raw-body "^2.2.0"
     type-is "^1.6.14"
 
-co@^4.6.0:
+co-redis@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/co-redis/-/co-redis-2.1.1.tgz#8bc3717977c9ee5bfb6b28f39ae01bcf724d2dde"
+  dependencies:
+    es6-promisify "^4.1.0"
+
+co-wrap-all@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/co-wrap-all/-/co-wrap-all-1.0.0.tgz#370ae3e8333510a53f6b2f7fdfbe4568a11b7ecf"
+  dependencies:
+    co "^4.0.0"
+
+co@^4.0.0, co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
 
@@ -2248,6 +2264,16 @@ es6-map@^0.1.3:
     es6-set "~0.1.5"
     es6-symbol "~3.1.1"
     event-emitter "~0.3.5"
+
+es6-promise@^3.2.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-3.3.1.tgz#a08cdde84ccdbf34d027a1451bc91d4bcd28a613"
+
+es6-promisify@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/es6-promisify/-/es6-promisify-4.1.0.tgz#dbcc1a3e93fdb8e9e709744182b7d2080c03fdb3"
+  dependencies:
+    es6-promise "^3.2.1"
 
 es6-set@~0.1.5:
   version "0.1.5"
@@ -2969,6 +2995,13 @@ hipchat-notifier@^1.1.0:
   dependencies:
     lodash "^4.0.0"
     request "^2.0.0"
+
+hiredis@~0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/hiredis/-/hiredis-0.5.0.tgz#db03a98becd7003d13c260043aceecfacdf59b87"
+  dependencies:
+    bindings "^1.2.1"
+    nan "^2.3.4"
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -3790,6 +3823,17 @@ koa-ratelimit@^4.0.0:
     ratelimiter "^3.0.2"
     thenify "^3.2.0"
 
+koa-redis@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/koa-redis/-/koa-redis-3.1.2.tgz#5b9c8c63f06b44878d9b27ab8f90e3f4d11e77bb"
+  dependencies:
+    co-redis "^2.1.1"
+    co-wrap-all "^1.0.0"
+    debug "^3.1.0"
+    redis "^2.8.0"
+  optionalDependencies:
+    hiredis "~0.5.0"
+
 koa-router@^7.0.1:
   version "7.4.0"
   resolved "https://registry.yarnpkg.com/koa-router/-/koa-router-7.4.0.tgz#aee1f7adc02d5cb31d7d67465c9eacc825e8c5e0"
@@ -4454,6 +4498,10 @@ mz@^2.3.1, mz@^2.4.0, mz@^2.6.0:
     any-promise "^1.0.0"
     object-assign "^4.0.1"
     thenify-all "^1.0.0"
+
+nan@^2.3.4:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.11.0.tgz#574e360e4d954ab16966ec102c0c049fd961a099"
 
 nan@^2.9.2:
   version "2.10.0"
@@ -5934,7 +5982,7 @@ redis-parser@^2.4.0, redis-parser@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/redis-parser/-/redis-parser-2.6.0.tgz#52ed09dacac108f1a631c07e9b69941e7a19504b"
 
-redis@^2.7.1:
+redis@^2.7.1, redis@^2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/redis/-/redis-2.8.0.tgz#202288e3f58c49f6079d97af7a10e1303ae14b02"
   dependencies:

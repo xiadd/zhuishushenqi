@@ -7,11 +7,12 @@ import fs from 'fs'
 import bodyParser from 'koa-bodyparser'
 import config from 'config'
 import router from './router'
-import { setCorrectResponse, setCors } from './middleware'
+import { setCors } from './middleware'
 
 const accessLogStream = fs.createWriteStream(path.resolve(__dirname, '../logs/access.log'), { flags: 'a' })
 
 const app = new Koa()
+app.proxy = true
 
 app.use(morgan('combined', { stream: accessLogStream }))
 

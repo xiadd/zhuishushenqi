@@ -9,6 +9,7 @@ const handle = app.getRequestHandler()
 app.prepare()
   .then(() => {
     router.get('/', async ctx => {
+      console.log(ctx.ip)
       await app.render(ctx.req, ctx.res, '/', ctx.query)
       ctx.respond = false
     })
@@ -24,5 +25,5 @@ app.prepare()
     })
 
     server.use(router.routes()).use(router.allowedMethods())
-    server.listen(8080, console.log('server is running'))
+    server.listen(8080, '0.0.0.0', console.log('server is running'))
   })
