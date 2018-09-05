@@ -12,13 +12,11 @@ import { setCors } from './middleware'
 const accessLogStream = fs.createWriteStream(path.resolve(__dirname, '../logs/access.log'), { flags: 'a' })
 
 const app = new Koa()
-app.proxy = true
 
 app.use(morgan('combined', { stream: accessLogStream }))
 
 app.context.config = config
 //中间件
-app.proxy = true
 
 app.use(bodyParser())
 // app.use(setCorrectResponse())
