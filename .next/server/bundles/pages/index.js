@@ -210,26 +210,10 @@ function (_Component) {
       }, __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_antd_es_col___default.a, {
         span: 8,
         className: "debug-name"
-      }, "\u7CFB\u7EDF\u5185\u5B58"), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_antd_es_col___default.a, {
+      }, "\u5BA2\u6237\u7AEFip"), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_antd_es_col___default.a, {
         span: 16,
         className: "debut-value"
-      }, this.props.systemMem, " m")), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_es_row___default.a, {
-        gutter: 16
-      }, __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_antd_es_col___default.a, {
-        span: 8,
-        className: "debug-name"
-      }, "\u5269\u4F59\u5185\u5B58"), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_antd_es_col___default.a, {
-        span: 16,
-        className: "debut-value"
-      }, this.props.systemFreeMem, " m")), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_es_row___default.a, {
-        gutter: 16
-      }, __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_antd_es_col___default.a, {
-        span: 8,
-        className: "debug-name"
-      }, "CPU"), __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_antd_es_col___default.a, {
-        span: 16,
-        className: "debut-value"
-      }, this.props.systemCpus)))));
+      }, this.props.clientIp)))));
     }
   }], [{
     key: "getInitialProps",

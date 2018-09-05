@@ -2362,7 +2362,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_document__ = __webpack_require__("./node_modules/next/document.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_document___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_document__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.browser.esm.js");
-var _jsxFileName = "/Users/xiadd/Documents/nodejs_projects/zhuishushenqi/pages/_document.js";
+var _jsxFileName = "/Users/xiadd/Documents/node_projects/zhuishushenqi/pages/_document.js";
 
 var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  ::-webkit-scrollbar {\n    width: 6px !important;\n    height: 6px !important;\n    -webkit-appearance: none;\n  }\n  ::-webkit-scrollbar-thumb {\n      height: 6px;\n      border-radius: 6px;\n      background-color: #BAC1C6;\n  }\n  ::-webkit-scrollbar-track {\n      border-radius: 0px;\n  }\n  \n  body {\n    min-height: 600px;\n    overflow: auto;\n  }\n"]);
 
@@ -2513,4 +2513,4 @@ function (_Document) {
 /***/ })
 
 })
-//# sourceMappingURL=1.3b79baef9a21bb995213.hot-update.js.map
+//# sourceMappingURL=1.d884e379e2212acbdb36.hot-update.js.map

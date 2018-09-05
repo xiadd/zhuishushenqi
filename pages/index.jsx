@@ -90,16 +90,8 @@ class Index extends Component {
               <Col span={16} className="debut-value">{this.props.systemPlatform}</Col>
             </Row>
             <Row gutter={16}>
-              <Col span={8} className="debug-name">系统内存</Col>
-              <Col span={16} className="debut-value">{this.props.systemMem} m</Col>
-            </Row>
-            <Row gutter={16}>
-              <Col span={8} className="debug-name">剩余内存</Col>
-              <Col span={16} className="debut-value">{this.props.systemFreeMem} m</Col>
-            </Row>
-            <Row gutter={16}>
-              <Col span={8} className="debug-name">CPU</Col>
-              <Col span={16} className="debut-value">{this.props.systemCpus}</Col>
+              <Col span={8} className="debug-name">客户端ip</Col>
+              <Col span={16} className="debut-value">{this.props.clientIp}</Col>
             </Row>
           </Panel>
         </Collapse>

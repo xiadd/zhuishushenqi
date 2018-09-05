@@ -10,10 +10,11 @@ export default {
     const runTime = (Date.now() - startTime) / 1000
     const systemMem = os.totalmem() / 1024 / 1024
     const systemFreeMem = os.freemem() / 1024 / 1024
-    const systemPlatform = os.platform() + ' ' + os.arch() + ' ' + os.release()
+    const systemPlatform = execSync('uname -a').toString().trim()
     const systemCpus = os.cpus().length
+    const clientIp = ctx.ip
     ctx.body = {
-      gitHash, memory, runTime, systemMem, systemFreeMem, systemPlatform, systemCpus
+      gitHash, memory, runTime, systemMem, systemFreeMem, systemPlatform, systemCpus, clientIp
     }
   }
 }
