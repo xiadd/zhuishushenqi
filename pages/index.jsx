@@ -89,10 +89,10 @@ class Index extends Component {
               <Col span={8} className="debug-name">操作系统</Col>
               <Col span={16} className="debut-value">{this.props.systemPlatform}</Col>
             </Row>
-            <Row gutter={16}>
+            {/* <Row gutter={16}>
               <Col span={8} className="debug-name">客户端ip</Col>
               <Col span={16} className="debut-value">{this.props.clientIp}</Col>
-            </Row>
+            </Row> */}
           </Panel>
         </Collapse>
 
