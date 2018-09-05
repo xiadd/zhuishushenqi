@@ -9,6 +9,7 @@ const handle = app.getRequestHandler()
 app.prepare()
   .then(() => {
     router.get('/', async ctx => {
+      console.log(ctx.ip)
       await app.render(ctx.req, ctx.res, '/', ctx.query)
       ctx.respond = false
     })
