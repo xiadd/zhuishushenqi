@@ -22,6 +22,16 @@ injectGlobal`
   }
 `
 
+const bd_analyst = `
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2b64264f13db2b95b2107e92eadddadd";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+`
+
 export default class MyDocument extends Document {
 
   static getInitialProps ({ renderPage }) {
@@ -44,6 +54,7 @@ export default class MyDocument extends Document {
         <body style={{ background: '#fff' }}>
           <Main />
           <NextScript />
+          <script dangerouslySetInnerHTML={{ __html: bd_analyst }}></script>
         </body>
       </html>
     )

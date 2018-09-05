@@ -8134,6 +8134,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["c" /* injectGlobal */])(_templateObject);
+var bd_analyst = "\nvar _hmt = _hmt || [];\n(function() {\n  var hm = document.createElement(\"script\");\n  hm.src = \"https://hm.baidu.com/hm.js?2b64264f13db2b95b2107e92eadddadd\";\n  var s = document.getElementsByTagName(\"script\")[0]; \n  s.parentNode.insertBefore(hm, s);\n})();\n";
 
 var MyDocument =
 /*#__PURE__*/
@@ -8152,38 +8153,38 @@ function (_Document) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("html", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 46
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Head"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 47
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
         href: "https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 48
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
         href: "https://cdn.bootcss.com/antd/3.5.4/antd.min.css",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 49
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
         name: "viewport",
         content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 50
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 51
         }
       }, "\u8FFD\u4E66\u795E\u5668"), this.props.styleTags), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("body", {
         style: {
@@ -8191,17 +8192,25 @@ function (_Document) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 54
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Main"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 55
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 56
+        }
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("script", {
+        dangerouslySetInnerHTML: {
+          __html: bd_analyst
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
         }
       })));
     }
@@ -8215,7 +8224,7 @@ function (_Document) {
           return sheet.collectStyles(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(App, _extends({}, props, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 29
+              lineNumber: 39
             }
           })));
         };
