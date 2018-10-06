@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Icon, Collapse, Row, Col } from 'antd'
+import Head from 'next/head'
 import styled from 'styled-components'
 import axios from 'axios'
 
@@ -65,6 +66,9 @@ class Index extends Component {
   render () {
     return (
       <Wrapper className="container">
+        <Head>
+          <title>追书神器</title>
+        </Head>
         <h1><Icon type="book" style={{ color: '#d32122' }} /> 追书神器</h1>
         <h5>基于koa+react.js+next.js的追书神器接口</h5>
         <p>书籍全面, 可换源, 实时更新, 更重要的是可以一起学习nodejs+react.</p>
@@ -85,14 +89,6 @@ class Index extends Component {
               <Col span={8} className="debug-name">运行时间</Col>
               <Col span={16} className="debut-value">{this.props.runTime} s</Col>
             </Row>
-            <Row gutter={16}>
-              <Col span={8} className="debug-name">操作系统</Col>
-              <Col span={16} className="debut-value">{this.props.systemPlatform}</Col>
-            </Row>
-            {/* <Row gutter={16}>
-              <Col span={8} className="debug-name">客户端ip</Col>
-              <Col span={16} className="debut-value">{this.props.clientIp}</Col>
-            </Row> */}
           </Panel>
         </Collapse>
 

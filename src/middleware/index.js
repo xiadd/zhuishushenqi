@@ -58,7 +58,6 @@ export function setRateLimit () {
  */
 export function setSubdomains (path, routes) {
   return async (ctx, next) => {
-    console.log(ctx.subdomains)
     await next()
   }
 }

@@ -5,7 +5,6 @@ const startTime = Date.now()
 
 export default {
   async getSystemInfo (ctx) {
-    console.log(ctx.ip)
     const gitHash = execSync('git rev-parse HEAD').toString().trim()
     const memory = process.memoryUsage().rss / 1024 /1024
     const runTime = (Date.now() - startTime) / 1000

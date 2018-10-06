@@ -1,0 +1,63 @@
+{
+  "modules": {
+    "byIdentifier": {
+      "external \"react\"": 0,
+      "external \"antd/es/col\"": 1,
+      "external \"styled-components\"": 2,
+      "external \"next/document\"": 3,
+      "external \"antd/es/row\"": 4,
+      "external \"@babel/runtime/regenerator\"": 5,
+      "external \"antd/es/collapse\"": 6,
+      "external \"antd/es/icon\"": 7,
+      "external \"next/head\"": 8,
+      "external \"axios\"": 9,
+      "multi ./pages/_document.js": 10,
+      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/_document.js": 11,
+      "multi ./pages/index.jsx": 12,
+      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/index.jsx": 13,
+      "multi node_modules/next/dist/pages/_app.js": 14,
+      "node_modules/next/dist/pages/_app.js": 15,
+      "external \"next/app\"": 16,
+      "multi node_modules/next/dist/pages/_error.js": 17,
+      "node_modules/next/dist/pages/_error.js": 18,
+      "external \"next/error\"": 19
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10,
+      "11": 11,
+      "12": 12,
+      "13": 13,
+      "14": 14,
+      "15": 15,
+      "16": 16,
+      "17": 17,
+      "18": 18,
+      "19": 19
+    }
+  },
+  "chunks": {
+    "byName": {
+      "static/BZ4Eg27RjIv79ACzhGLRR/pages/_document.js": 0,
+      "static/BZ4Eg27RjIv79ACzhGLRR/pages/index.js": 1,
+      "static/BZ4Eg27RjIv79ACzhGLRR/pages/_app.js": 2,
+      "static/BZ4Eg27RjIv79ACzhGLRR/pages/_error.js": 3
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      2,
+      3
+    ]
+  }
+}
