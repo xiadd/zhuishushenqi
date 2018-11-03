@@ -4,9 +4,6 @@
 
 #### [搬瓦工](https:///bwh8.net/aff.php?aff=30537) 优惠码: BWH26FXH3HIQ
 
-欢迎赞赏：
-![2018-09-17 07.53.45.jpg](https://i.loli.net/2018/09/17/5b9eed1616598.jpg)
-
 `http://novel.juhe.im`
 
 注意: **如果运行在自己的服务器的话 请务必使用node 7.6
