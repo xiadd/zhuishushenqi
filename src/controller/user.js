@@ -41,7 +41,6 @@ export default {
 
   // 获取用户信息 //@DESPREAT
   async getUserInfo (ctx) {
-    console.log(ctx.state.user)
     ctx.body = '123'
   },
 
