@@ -27,6 +27,7 @@
     "jsonwebtoken": "^7.3.0",
     "koa": "^2.6.2",
     "koa-bodyparser": "^4.1.0",
+    "koa-generic-session": "^2.0.1",
     "koa-jwt": "^3.2.1",
     "koa-log4": "^2.2.1",
     "koa-morgan": "^1.0.1",
