@@ -1,6 +1,22 @@
 {
-  "presets": ["next/babel"],
-  "plugins": [
+  "env": {
+    "development": {
+      "presets": ["next/babel"],
+      "plugins": [
+        [
+          "babel-plugin-styled-components", 
+          {
+            "ssr": true, 
+            "displayName": true, 
+            "preprocess": false 
+          }
+        ],
+        ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "false" }]
+      ],
+    },
+    "production": {
+      "presets": ["next/babel"],
+      "plugins": [
     [
       "babel-plugin-styled-components", 
       {
@@ -10,5 +26,10 @@
       }
     ],
     ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "false" }]
-  ]
+  ],
+    },
+    "test": {
+      "presets": ["env"]
+    }
+  }
 }

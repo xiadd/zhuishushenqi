@@ -39,7 +39,7 @@ app.context.config = config
 app.use(bodyParser())
 // app.use(setCorrectResponse())
 app.use(setCors())
-app.use(mount('/static', serve(path.resolve(__dirname, '../static'))))
+// app.use(mount('/static', serve(path.resolve(__dirname, '../static'))))
 // app.use(restc.koa2())
 // app.use(setRateLimit())
 

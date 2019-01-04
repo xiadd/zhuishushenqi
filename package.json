@@ -7,7 +7,8 @@
     "dev": "nodemon -r esm server.js",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node -r esm server.js",
-    "docs": "npx apidoc -i src/router -o doc/"
+    "docs": "npx apidoc -i src/router -o doc/",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -54,13 +55,28 @@
   },
   "devDependencies": {
     "apidoc": "^0.17.6",
+    "babel-jest": "^24.0.0-alpha.2",
     "babel-plugin-import": "^1.8.0",
     "babel-plugin-inline-import": "^3.0.0",
     "babel-plugin-styled-components": "^1.6.0",
-    "nodemon": "^1.18.9"
+    "babel-preset-env": "^1.7.0",
+    "jest": "23.6.0 ",
+    "nodemon": "^1.18.9",
+    "supertest": "^3.3.0"
   },
   "engines": {
     "node": ">7.6",
     "npm": ">4.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/tests/**/*.js"
+    ],
+    "coverageReporters": [
+      "text-summary",
+      "lcov"
+    ],
+    "bail": true,
+    "testEnvironment": "node"
   }
 }
