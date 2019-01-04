@@ -1,5 +1,4 @@
 import Router from 'koa-router'
-import jwt from 'koa-jwt'
 import categoryController from '../controller/category'
 import bookController from '../controller/book'
 import rankController from '../controller/rank'
