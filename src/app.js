@@ -1,11 +1,9 @@
 import Koa from 'koa'
 import path from 'path'
-import serve from 'koa-static'
 import morgan from 'koa-morgan'
-import mount from 'koa-mount'
 import fs from 'fs'
 // import session from 'koa-generic-session'
-import bodyParser from 'koa-bodyparser'
+// import bodyParser from 'koa-bodyparser'
 // import redisStore from 'koa-redis'
 import config from 'config'
 import router from './router'
@@ -36,7 +34,7 @@ app.context.config = config
 //   console.log(store.get[ctx.originalUrl])
 //   await next()
 // })
-app.use(bodyParser())
+// app.use(bodyParser())
 // app.use(setCorrectResponse())
 app.use(setCors())
 // app.use(mount('/static', serve(path.resolve(__dirname, '../static'))))
