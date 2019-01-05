@@ -67,6 +67,9 @@ router.get('/book-chapters/:id', bookController.getBookChapters)
 // 获取章节详细内容
 router.get('/chapters/:link', bookController.getChapterContent)
 
+// 获取漫画章节详细内容
+router.get('/picture/:link', bookController.getPictureContent)
+
 // 获取搜索结果
 router.get('/search', bookController.getBookSearchResults)
 

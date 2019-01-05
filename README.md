@@ -1,6 +1,10 @@
 # 追书神器
 
-该项目是基于追书神器的接口二次封装，线上演示地址： https://novel.juhe.im。 文档： https://xiadd.github.io/zhuishushenqi/
+该项目是基于追书神器的接口二次封装。
+
+线上演示地址： https://novel.juhe.im。 
+
+文档：https://xiadd.github.io/zhuishushenqi/。
 
 如有需要建议自行打包部署
 

@@ -32,7 +32,7 @@ export default {
   // 获取书籍章节
   async getBookChapters(ctx) {
     if (!ctx.params.id) {
-      ctx.throw(400, new Error('book id is needed'))
+      ctx.throw(400, new Error('book id is required'))
     }
     const bookChapters = await axios.get(book.bookChapters + `/${ctx.params.id}?view=chapters`)
     ctx.body = bookChapters.data
@@ -40,8 +40,14 @@ export default {
 
   // 获取章节内容
   async getChapterContent(ctx) {
-    const chapterContent = await axios.get(book.chapterContent + `/${ctx.params.link}`)
+    const chapterContent = await axios.get(`${book.chapterContent}/${encodeURIComponent(ctx.params.link)}`)
     ctx.body = chapterContent.data
+  },
+
+  // 获取漫画章节内容
+  async getPictureContent(ctx) {
+    const pictureContent = await axios.get(`${book.pictureContent}/${encodeURIComponent(ctx.params.link)}`)
+    ctx.body = pictureContent.data
   },
 
   // 书籍搜索

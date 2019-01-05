@@ -1,5 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet, injectGlobal } from 'styled-components'
+import { extractStyles } from 'evergreen-ui'
 
 injectGlobal`
   ::-webkit-scrollbar {
@@ -17,8 +18,10 @@ injectGlobal`
   }
   
   body {
-    min-height: 600px;
     overflow: auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,"Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+    padding: 0;
+    margin: 0;
   }
 `
 
@@ -38,21 +41,24 @@ export default class MyDocument extends Document {
     const sheet = new ServerStyleSheet()
     const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
     const styleTags = sheet.getStyleElement()
-    return { ...page, styleTags }
+    const { css, hydrationScript } = extractStyles()
+    return { ...page, styleTags, css, hydrationScript }
   }
 
-  render () {
+  render() {
+    const { css, hydrationScript } = this.props
     return (
       <html>
         <Head>
-          <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
           {this.props.styleTags}
+          <style dangerouslySetInnerHTML={{ __html: css }} />
         </Head>
         <body style={{ background: '#fff' }}>
           <Main />
+          {hydrationScript}
           <NextScript />
-          <script dangerouslySetInnerHTML={{ __html: bd_analyst }}></script>
+          <script dangerouslySetInnerHTML={{ __html: bd_analyst }} />
         </body>
       </html>
     )
