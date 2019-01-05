@@ -23,6 +23,8 @@ app.use(morgan('combined', { stream: accessLogStream }))
 app.context.config = config
 app.use(setCors())
 
+app.use(router.routes()).use(router.allowedMethods())
+
 app.on('error', error => {
   logger.error(error)
 })

@@ -14,10 +14,6 @@ export default {
     ctx.body = relatedBooks.data
   },
 
-  async getHotComments(ctx) {
-    ctx.body = 'hot comments'
-  },
-
   // 获取作者名下的书籍
   async getAuthorBooks(ctx) {
     if (!ctx.query.author) {
@@ -29,12 +25,16 @@ export default {
     ctx.body = bookInfo.data
   },
 
-  // 获取书籍章节
+  // 获取书籍章节列表
   async getBookChapters(ctx) {
     if (!ctx.params.id) {
       ctx.throw(400, new Error('book id is required'))
     }
-    const bookChapters = await axios.get(book.bookChapters + `/${ctx.params.id}?view=chapters`)
+    const bookChapters = await axios.get(`${book.bookChapters}/${ctx.params.id}`, {
+      params: {
+        view: 'chapters'
+      }
+    })
     ctx.body = bookChapters.data
   },
 
@@ -65,11 +65,14 @@ export default {
   
   // 获取书籍源
   async getBookSources(ctx) {
-    if (!ctx.query.view || !ctx.query.book) {
-      ctx.throw(400, new Error('related query is not provided: { view: summary, book: [bookId] }'))
+    if (!ctx.query.book) {
+      ctx.throw(400, new Error('未提供书籍id'))
     }
     const bookSources = await axios.get(book.bookSources, {
-      params: ctx.query
+      params: {
+        book: ctx.query.book,
+        view: 'summary'
+      }
     })
     ctx.body = bookSources.data
   }

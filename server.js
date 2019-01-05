@@ -24,6 +24,5 @@ app.prepare()
       await next()
     })
 
-    server.use(router.routes()).use(router.allowedMethods())
     server.listen(8080, '0.0.0.0', console.log(`server is running on http://localhost:${8080}`))
   })
