@@ -49,10 +49,16 @@ class Index extends Component {
           <span className="debug-value">{this.props.runTime} s</span>
         </div>
 
-        {/* <div className="debug-item">
-          <span className="debug-key">操作系统: </span>
-          <span className="debug-value">{this.props.systemPlatform}</span>
-        </div> */}
+        <div className="debug-item">
+          <span className="debug-key">请求数: </span>
+          <span className="debug-value">{this.props.requestCount}</span>
+        </div>
+
+        <div className="debug-item">
+          <span className="debug-key">热门路由: </span>
+          <span className="debug-value" dangerouslySetInnerHTML={{ __html: this.props.hotRoutesValue }} />
+        </div>
+
       </details>
     </StyledIndex>
   }

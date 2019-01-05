@@ -20,11 +20,11 @@ export const StyledIndex = styled.div`
     }
   }
   .system-info {
-    width: 320px;
+    width: 400px;
     margin-top: 1rem;
     text-align: left;
     max-height: 400px;
-    overflow: scroll;
+    overflow-y: scroll;
     &:focus {
       outline: none
     }
@@ -45,7 +45,7 @@ export const StyledIndex = styled.div`
       line-height: 24px;
     }
     .debug-key {
-      width: 100px;
+      width: 60px;
       text-align: right;
       display: inline-block;
       margin-right: 10px;
@@ -55,6 +55,7 @@ export const StyledIndex = styled.div`
       display: inline-block;
       vertical-align: top;
       color: #2c3e50;
+      width: 300px
     }
   }
 `

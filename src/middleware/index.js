@@ -25,7 +25,7 @@ export function setCorrectResponse() {
 }
 
 // 支持跨域
-export function setCors () {
+export function setCors() {
   return async (ctx, next) => {
     ctx.set('Access-Control-Allow-Origin', '*')
     await next()
@@ -37,7 +37,7 @@ export function setCors () {
  * @param {string} path 
  * @param {object} routes 
  */
-export function setSubdomains (path, routes) {
+export function setSubdomains(path, routes) {
   return async (ctx, next) => {
     await next()
   }

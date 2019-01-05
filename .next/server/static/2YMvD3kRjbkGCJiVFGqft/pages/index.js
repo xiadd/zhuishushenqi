@@ -127,7 +127,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  width: 100vw;\n  justify-content: center;\n  align-items: center;\n  .heading-link {\n    margin-top: 1rem;\n    .doc-link {\n      color: #fff;\n      text-decoration: none;\n    }\n\n    .github-link {\n      color: #425A70;\n      text-decoration: none;\n    }\n  }\n  .system-info {\n    width: 320px;\n    margin-top: 1rem;\n    text-align: left;\n    max-height: 400px;\n    overflow: scroll;\n    &:focus {\n      outline: none\n    }\n\n    summary {\n      &:focus {\n        outline: none;\n      }\n      cursor: pointer;\n      color: #2c3e50;\n      margin-bottom: 10px;\n      font-size: .8rem;\n      color: #2c3e50;\n    }\n    .debug-item {\n      margin: 5px 0;\n      font-size: 12px;\n      line-height: 24px;\n    }\n    .debug-key {\n      width: 100px;\n      text-align: right;\n      display: inline-block;\n      margin-right: 10px;\n      color: #2c3e50;\n    }\n    .debug-value {\n      display: inline-block;\n      vertical-align: top;\n      color: #2c3e50;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  width: 100vw;\n  justify-content: center;\n  align-items: center;\n  .heading-link {\n    margin-top: 1rem;\n    .doc-link {\n      color: #fff;\n      text-decoration: none;\n    }\n\n    .github-link {\n      color: #425A70;\n      text-decoration: none;\n    }\n  }\n  .system-info {\n    width: 400px;\n    margin-top: 1rem;\n    text-align: left;\n    max-height: 400px;\n    overflow-y: scroll;\n    &:focus {\n      outline: none\n    }\n\n    summary {\n      &:focus {\n        outline: none;\n      }\n      cursor: pointer;\n      color: #2c3e50;\n      margin-bottom: 10px;\n      font-size: .8rem;\n      color: #2c3e50;\n    }\n    .debug-item {\n      margin: 5px 0;\n      font-size: 12px;\n      line-height: 24px;\n    }\n    .debug-key {\n      width: 60px;\n      text-align: right;\n      display: inline-block;\n      margin-right: 10px;\n      color: #2c3e50;\n    }\n    .debug-value {\n      display: inline-block;\n      vertical-align: top;\n      color: #2c3e50;\n      width: 300px\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -267,7 +267,22 @@ function (_Component) {
         className: "debug-key"
       }, "\u8FD0\u884C\u65F6\u95F4: "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
         className: "debug-value"
-      }, this.props.runTime, " s"))));
+      }, this.props.runTime, " s")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "debug-item"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "debug-key"
+      }, "\u8BF7\u6C42\u6570: "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "debug-value"
+      }, this.props.requestCount)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "debug-item"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "debug-key"
+      }, "\u70ED\u95E8\u8DEF\u7531: "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "debug-value",
+        dangerouslySetInnerHTML: {
+          __html: this.props.hotRoutesValue
+        }
+      }))));
     }
   }], [{
     key: "getInitialProps",
