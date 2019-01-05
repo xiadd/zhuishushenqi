@@ -4,7 +4,7 @@ import morgan from 'koa-morgan'
 import fs from 'fs'
 import config from 'config'
 import router from './router'
-import { setCors } from './middleware'
+import { setCors, countRequests } from './middleware'
 import logger from './middleware/logger'
 
 const accessLogStream = fs.createWriteStream(path.resolve(__dirname, '../logs/access.log'), { flags: 'a' })
