@@ -17,6 +17,8 @@ app.context.debug = {
   routes: []
 }
 
+app.use(countRequests())
+
 app.use(morgan('combined', { stream: accessLogStream }))
 app.context.config = config
 app.use(setCors())
