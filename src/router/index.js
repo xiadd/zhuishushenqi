@@ -56,7 +56,7 @@ router.get('/book-info/:id', bookController.getBookInfo)
 router.get('/recommend/:id', bookController.getRelatedRecommendedBooks)
 
 // 获取书籍热评
-router.get('/comments/:id', bookController.getHotComments)
+// router.get('/comments/:id', bookController.getHotComments)
 
 // 获取作者名下的书籍
 router.get('/author-books', bookController.getAuthorBooks)
@@ -66,6 +66,9 @@ router.get('/book-chapters/:id', bookController.getBookChapters)
 
 // 获取章节详细内容
 router.get('/chapters/:link', bookController.getChapterContent)
+
+// 获取漫画章节详细内容
+router.get('/picture/:link', bookController.getPictureContent)
 
 // 获取搜索结果
 router.get('/search', bookController.getBookSearchResults)

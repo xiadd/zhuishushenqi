@@ -25,7 +25,7 @@ export function setCorrectResponse() {
 }
 
 // 支持跨域
-export function setCors () {
+export function setCors() {
   return async (ctx, next) => {
     ctx.set('Access-Control-Allow-Origin', '*')
     await next()
@@ -37,8 +37,26 @@ export function setCors () {
  * @param {string} path 
  * @param {object} routes 
  */
-export function setSubdomains (path, routes) {
+export function setSubdomains(path, routes) {
   return async (ctx, next) => {
+    await next()
+  }
+}
+
+/**
+ * 统计请求
+ */
+export function countRequests() {
+  return async (ctx, next) => {
+    if (!ctx.debug.routes[ctx.request.path]) {
+      ctx.debug.routes[ctx.request.path] = 0
+    }
+    ctx.debug.routes[ctx.request.path]++
+
+    if (ctx.request.path !== '/') {
+      ctx.debug.request++
+    }
+
     await next()
   }
 }

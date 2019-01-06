@@ -20,6 +20,7 @@ export const book = {
   bookSources: 'http://api.zhuishushenqi.com/atoc', // query ?view=summary&book=5779b38d3b433dd647d95da2
   // 章节内容:id 单章id
   chapterContent: 'http://chapter2.zhuishushenqi.com/chapter', //id: chapter id
+  pictureContent: 'http://chapter2.zhuishushenqi.com/picture', // 漫画内容
   // 书籍搜索 可以搜索作者但是不精确
   bookSearch: 'http://api.zhuishushenqi.com/book/fuzzy-search' //query ?query=凡人修仙传
 }

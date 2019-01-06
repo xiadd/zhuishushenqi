@@ -88,30 +88,103 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
-/******/ ({
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
 
-/***/ "./pages/index.jsx":
-/*!*************************!*\
-  !*** ./pages/index.jsx ***!
-  \*************************/
-/*! exports provided: default */
+module.exports = require("react");
+
+/***/ }),
+/* 1 */,
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/runtime/regenerator");
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+module.exports = require("evergreen-ui");
+
+/***/ }),
+/* 5 */,
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "@babel/runtime/regenerator");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledIndex", function() { return StyledIndex; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  width: 100vw;\n  justify-content: center;\n  align-items: center;\n  .heading-link {\n    margin-top: 1rem;\n    .doc-link {\n      color: #fff;\n      text-decoration: none;\n    }\n\n    .github-link {\n      color: #425A70;\n      text-decoration: none;\n    }\n  }\n  .system-info {\n    width: 400px;\n    margin-top: 1rem;\n    text-align: left;\n    max-height: 400px;\n    overflow-y: scroll;\n    &:focus {\n      outline: none\n    }\n\n    summary {\n      &:focus {\n        outline: none;\n      }\n      cursor: pointer;\n      color: #2c3e50;\n      margin-bottom: 10px;\n      font-size: .8rem;\n      color: #2c3e50;\n    }\n    .debug-item {\n      margin: 5px 0;\n      font-size: 12px;\n      line-height: 24px;\n    }\n    .debug-key {\n      width: 60px;\n      text-align: right;\n      display: inline-block;\n      margin-right: 10px;\n      color: #2c3e50;\n    }\n    .debug-value {\n      display: inline-block;\n      vertical-align: top;\n      color: #2c3e50;\n      width: 300px\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+var StyledIndex = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div(_templateObject());
+
+/***/ }),
+/* 7 */,
+/* 8 */,
+/* 9 */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports) {
+
+module.exports = require("next/link");
+
+/***/ }),
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(18);
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var evergreen_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var evergreen_ui__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(evergreen_ui__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(10);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _index_styled__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -136,23 +209,11 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  height: 100vh;\n  display: flex;\n  width: 100vw;\n  align-items: center;\n  justify-content: center;\n  font-family: 'PingFang SC', 'Microsoft YaHei', 'Lantinghei SC', 'Source Han Sans SC', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', 'sans-serif', 'SimSun';\n  background: #fff;\n  flex-direction: column;\n  h1, h5, p {\n    font-weight: 300;\n    color: #444;\n    width: 500px;\n    text-align: center\n  }\n\n  .ant-collapse {\n    border: none;\n    width: 400px;\n    background: #f5f5f5\n  }\n\n  .ant-collapse-content-box {\n    background: #f5f5f5;\n    text-align: left;\n    max-height: 300px;\n    overflow-y: auto;\n    overflow-x: hidden;\n  }\n\n  .ant-collapse-content-box p {\n    text-align: left\n  }\n  .ant-collapse-item {\n    border: none\n  }\n  .debug-name {\n    text-align: left;\n    font-size: .8rem\n  }\n\n  .debug-value {\n    text-align: left;\n    font-size: .8rem\n  }\n  .ant-row {\n    margin-bottom: 1rem;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
 
 
 
-var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_templateObject());
 
 var Index =
 /*#__PURE__*/
@@ -168,13 +229,60 @@ function (_Component) {
   _createClass(Index, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Wrapper, {
-        className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, "\u8FFD\u4E66\u795E\u5668")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", null, "\u8FFD\u4E66\u795E\u5668"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", null, "\u57FA\u4E8Ekoa+react.js+next.js\u7684\u8FFD\u4E66\u795E\u5668\u63A5\u53E3"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "\u4E66\u7C4D\u5168\u9762, \u53EF\u6362\u6E90, \u5B9E\u65F6\u66F4\u65B0, \u66F4\u91CD\u8981\u7684\u662F\u53EF\u4EE5\u4E00\u8D77\u5B66\u4E60nodejs+react."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "\u6587\u6863\u8BF7\u67E5\u770B: ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-        href: "https://xiadd.github.io/zhuishushenqi"
-      }, "https://xiadd.github.io/zhuishushenqi")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "-- Made with \u2764\uFE0F by ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-        href: "http://github.com/xiadd"
-      }, "xiadd")));
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_index_styled__WEBPACK_IMPORTED_MODULE_5__["StyledIndex"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_3__["Heading"], {
+        size: 800,
+        marginTop: "default"
+      }, "\u8FFD\u4E66\u795E\u5668\u63A5\u53E3"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "\u8FFD\u4E66\u795E\u5668\u63A5\u53E3\u4E8C\u6B21\u5C01\u88C5\uFF0C\u6587\u6863\u5B8C\u5584\uFF0C\u4F7F\u7528\u65B9\u4FBF"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "heading-link"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+        appearance: "primary",
+        height: 40
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
+        href: "https://xiadd.github.io/zhuishushenqi/"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+        className: "doc-link"
+      }, "\u6587\u6863"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+        height: 40,
+        marginLeft: 10
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+        href: "https://github.com/xiadd/zhuishushenqi",
+        className: "github-link"
+      }, "GITHUB"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("details", {
+        className: "system-info"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("summary", null, "\u7CFB\u7EDF\u8BE6\u60C5"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "debug-item"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "debug-key"
+      }, "git hash: "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "debug-value"
+      }, this.props.gitHash.slice(0, 7))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "debug-item"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "debug-key"
+      }, "\u5185\u5B58\u5360\u7528: "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "debug-value"
+      }, this.props.memory, " m")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "debug-item"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "debug-key"
+      }, "\u8FD0\u884C\u65F6\u95F4: "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "debug-value"
+      }, this.props.runTime, " s")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "debug-item"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "debug-key"
+      }, "\u8BF7\u6C42\u6570: "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "debug-value"
+      }, this.props.requestCount)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "debug-item"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "debug-key"
+      }, "\u70ED\u95E8\u8DEF\u7531: "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "debug-value",
+        dangerouslySetInnerHTML: {
+          __html: this.props.hotRoutesValue
+        }
+      }))));
     }
   }], [{
     key: "getInitialProps",
@@ -188,7 +296,7 @@ function (_Component) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return axios__WEBPACK_IMPORTED_MODULE_4___default.a.get('http://127.0.0.1:8080/system');
+                return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('http://127.0.0.1:8080/system');
 
               case 2:
                 systemInfo = _context.sent;
@@ -215,74 +323,5 @@ function (_Component) {
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
-/***/ }),
-
-/***/ 3:
-/*!*******************************!*\
-  !*** multi ./pages/index.jsx ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! ./pages/index.jsx */"./pages/index.jsx");
-
-
-/***/ }),
-
-/***/ "@babel/runtime/regenerator":
-/*!*********************************************!*\
-  !*** external "@babel/runtime/regenerator" ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@babel/runtime/regenerator");
-
-/***/ }),
-
-/***/ "axios":
-/*!************************!*\
-  !*** external "axios" ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("axios");
-
-/***/ }),
-
-/***/ "next/head":
-/*!****************************!*\
-  !*** external "next/head" ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("next/head");
-
-/***/ }),
-
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react");
-
-/***/ }),
-
-/***/ "styled-components":
-/*!************************************!*\
-  !*** external "styled-components" ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("styled-components");
-
 /***/ })
-
-/******/ });
-//# sourceMappingURL=index.js.map
+/******/ ]);
