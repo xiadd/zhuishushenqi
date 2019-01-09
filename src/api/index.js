@@ -20,7 +20,8 @@ export const book = {
   bookSources: 'http://api.zhuishushenqi.com/atoc', // query ?view=summary&book=5779b38d3b433dd647d95da2
   // 章节内容:id 单章id
   chapterContent: 'http://chapter2.zhuishushenqi.com/chapter', //id: chapter id
-  pictureContent: 'http://chapter2.zhuishushenqi.com/picture', // 漫画内容
+  // 漫画内容
+  pictureContent: 'http://chapter2.zhuishushenqi.com/picture',
   // 书籍搜索 可以搜索作者但是不精确
   bookSearch: 'http://api.zhuishushenqi.com/book/fuzzy-search' //query ?query=凡人修仙传
 }
@@ -43,4 +44,17 @@ export const comment = {
 export const bookList = {
   lists: 'http://api.zhuishushenqi.com/book-list',
   detail: 'http://api.zhuishushenqi.com/book-list' // bookId
+}
+
+export const bookSearch = {
+  // 搜索热词
+  searchHotwords: 'http://api.zhuishushenqi.com/book/hot-word',
+  // 热门搜索
+  hotWord: 'http://api.zhuishushenqi.com/book/hot-word',
+  // 搜索补全 ?query={keyword}
+  autoComplete: 'http://api.zhuishushenqi.com/book/auto-complete',
+  // 书籍搜索 可以搜索作者但是不精确
+  bookSearch: 'http://api.zhuishushenqi.com/book/fuzzy-search',
+  // 作者名下的书籍
+  authorBooks: 'http://api.zhuishushenqi.com/book/accurate-search', // query ?author=忘语
 }

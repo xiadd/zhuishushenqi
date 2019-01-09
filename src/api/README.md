@@ -587,3 +587,94 @@ response:
     "ok": true
 }
 ```
+
+### 搜索热词
+
+url: `http://api.zhuishushenqi.com/book/search-hotwords`
+
+response:
+
+```
+{
+    "searchHotWords": [
+        {
+            "word": "系统",
+            "times": 1830,
+            "isNew": 0,
+            "soaring": 0
+        },
+        ....
+    ],
+    "ok": true
+}
+```
+
+### 热门搜索
+
+url: `http://api.zhuishushenqi.com/book/hot-word`
+
+response:
+
+```
+{
+    "hotWords": [
+        "超级兵王",
+        "透视小乡民",
+        "逍遥兵王",
+        "医手遮天：极品丑妃傲天下",
+        "农门寡嫂：状元小叔炕上来",
+        "天行",
+        "寂寞寂寞就好",
+        "死神的哈士奇",
+        "全职法师",
+        "大理寺少卿的宠物生涯",
+        "婚久情已深",
+        "我的微信连三界",
+        "剃头匠",
+        "超级全能学生",
+        "宰执天下",
+        "大叔，不可以"
+    ],
+    "newHotWords": [
+        {
+            "word": "超级兵王",
+            "book": "508de73e55e53b9a1a000031"
+        }
+        ...
+    ],
+    "ok": true
+}
+
+```
+
+### 搜索补全
+
+url: `http://api.zhuishushenqi.com/book/auto-complete?query={keyword}`
+
+request:
+
+```
+querystring {
+  query
+}
+```
+
+response:
+
+```
+{
+    "keywords": [
+        "分花拂柳",
+        "分布文化",
+        "分金术",
+        "分身投胎万界",
+        "分手妻约",
+        "分手才说我爱你",
+        "分身二次元",
+        "分身八爪鱼",
+        "分身大爆炸",
+        "分裂人格"
+    ],
+    "ok": true
+}
+```
