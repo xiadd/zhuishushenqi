@@ -16,6 +16,7 @@
     "@mapbox/rehype-prism": "^0.3.0",
     "@mdx-js/mdx": "^0.16.6",
     "@mdx-js/tag": "^0.16.6",
+    "@sentry/node": "4.4.2",
     "@zeit/next-mdx": "^1.2.0",
     "async": "^2.6.1",
     "axios": "^0.18.0",
