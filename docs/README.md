@@ -10,14 +10,12 @@
 
 服务器还是挺贵的, 尤其香港的, 希望大家支持一下吧, 帮助小站持续运营, 请点击下面搬瓦工链接注册一下, 我也收获点aff支撑服务器运营:
 
-[搬瓦工](https://bandwagonhost.com/aff.php?aff=30537)
+[搬瓦工](https://bwh8.net/aff.php?aff=30537)
 
 
 `http://novel.juhe.im`
 
-注意: **如果运行在自己的服务器的话 请务必使用node 7.6
-
-以上**(因为很多模块直接用到了async,所以就算加上babel也没用, 打包过后仍然是直接引用)
+注意: **如果运行在自己的服务器的话 请务必使用node 7.6以上**(因为很多模块直接用到了async,所以就算加上babel也没用, 打包过后仍然是直接引用)
 
 已经允许跨域 前端一般无需进行任何配置
 
@@ -33,9 +31,9 @@
 
 `npm run dev`: 启动开发服务器
 
-~~`npm run build`: 通过babel打包~~ 已经移除babel
+`npm run build`:  打包前端资源，主要是nextjs
 
-部署按照正常node 部署即可·`npm start`
+`npm start`: 启动生产服务器
 
 
 ## api接口
@@ -62,7 +60,9 @@ query:
 
 ### 获取书籍详情
 
-url: `http://novel.juhe.im/book-info/53115e30173bfacb4904897e`
+url: `http://novel.juhe.im/book-info/:id`
+
+example: `http://novel.juhe.im/book-info/53115e30173bfacb4904897e`
 
 params:
 
@@ -74,7 +74,9 @@ params:
 
 ### 获取书籍相关推荐
 
-url: `http://novel.juhe.im/recommend/53115e30173bfacb4904897e`
+url: `http://novel.juhe.im/recommend/:id`
+
+example: `http://novel.juhe.im/recommend/53115e30173bfacb4904897e`
 
 query:
 
@@ -86,7 +88,9 @@ query:
 
 ### 获取作者名下的书籍
 
-url: `http://novel.juhe.im/author-books?author=忘语`
+url: `http://novel.juhe.im/author-books?author={author}`
+
+example: `http://novel.juhe.im/author-books?author={忘语}`
 
 query:
 
@@ -98,7 +102,9 @@ query:
 
 ### 获取书籍源
 
-url: `http://novel.juhe.im/book-sources?view=summary&book=567d2cb9ee0e56bc713cb2c0`
+url: `http://novel.juhe.im/book-sources?view=summary&book={book}`
+
+example: `http://novel.juhe.im/book-sources?view=summary&book=567d2cb9ee0e56bc713cb2c0`
 
 query:
 
@@ -109,9 +115,11 @@ query:
 }
 ```
 
-### 获取书籍章节
+### 获取书籍章节列表
 
-url: `http://novel.juhe.im/book-chapters/56f8da09176d03ac1983f6cd`
+url: `http://novel.juhe.im/book-chapters/:id`
+
+example: `http://novel.juhe.im/book-chapters/56f8da09176d03ac1983f6cd`
 
 params:
 
@@ -123,7 +131,11 @@ params:
 
 ### 获取章节详细内容
 
-url: `http://novel.juhe.im/chapters/http%3A%2F%2Fvip.zhuishushenqi.com%2Fchapter%2F56f8da09176d03ac1983f6d7%3Fcv%3D1486473051386`  **注意这里需要进行url编码**
+这部分比较复杂：首先使用书籍id获取书源列表，然后选择书源获取章节列表，最后获取章节列表中的link字段url进行编码，作为link传入。
+
+url: `http://novel.juhe.im/chapters/:link`  **注意这里需要进行url编码**
+
+example: `http://novel.juhe.im/chapters/http%3A%2F%2Fvip.zhuishushenqi.com%2Fchapter%2F56f8da09176d03ac1983f6d7%3Fcv%3D1486473051386`
 
 params:
 
@@ -135,7 +147,9 @@ params:
 
 ### 获取搜索结果
 
-url: `http://novel.juhe.im/search?keyword=遮天`
+url: `http://novel.juhe.im/search?keyword={keyword}`
+
+example: `http://novel.juhe.im/search?keyword=遮天`
 
 query:
 
@@ -151,7 +165,9 @@ url: `http://novel.juhe.im/rank-category`
 
 ### 获取排名详情
 
-url: `http://novel.juhe.im/rank/54d42d92321052167dfb75e3`
+url: `http://novel.juhe.im/rank/:id`
+
+example: `http://novel.juhe.im/rank/54d42d92321052167dfb75e3`
 
 params:
 
@@ -163,7 +179,9 @@ params:
 
 ### 书评-讨论
 
-url: `http://api.zhuishushenqi.com/post/by-book?&start=21&limit=20`
+url: `https://novel.juhe.im/book/discussions?&start=21&limit=20&book={bookId}`
+
+url: `https://novel.juhe.im/book/discussions?book=567d2cb9ee0e56bc713cb2c0`
 
 request:
 ```json
@@ -208,7 +226,9 @@ response:
 
 ### 书评-短评
 
-url: `http://api.zhuishushenqi.com/post/short-review/by-book`
+url: `https://novel.juhe.im/book/short-reviews?book={bookId}`
+
+example: `https://novel.juhe.im/book/short-reviews?book=567d2cb9ee0e56bc713cb2c0`
 
 request: 
 
@@ -259,7 +279,10 @@ response:
 
 ### 书评--长评
 
-url: `http://api.zhuishushenqi.com/post/review/by-book?book=51060c88bb1c67cf28000035&sort=updated&start=0&limit=20`
+url: `https://novel.juhe.im/book/reviews?book={bookId}`
+
+
+url: `https://novel.juhe.im/book/reviews?book=51060c88bb1c67cf28000035`
 
 request:
 
