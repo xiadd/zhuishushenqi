@@ -48,7 +48,7 @@ export const bookList = {
 
 export const bookSearch = {
   // 搜索热词
-  searchHotwords: 'http://api.zhuishushenqi.com/book/hot-word',
+  searchHotwords: 'http://api.zhuishushenqi.com/book/search-hotwords',
   // 热门搜索
   hotWord: 'http://api.zhuishushenqi.com/book/hot-word',
   // 搜索补全 ?query={keyword}

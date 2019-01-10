@@ -2,9 +2,9 @@ import Router from 'koa-router'
 import categoryController from '../controller/category'
 import bookController from '../controller/book'
 import rankController from '../controller/rank'
-import homeController from '../controller/home'
 import commentsController from '../controller/comment'
-import BookListController from '../controller/booklist'
+import bookListController from '../controller/booklist'
+import searchController  from '../controller/search'
 import SystemController from '../controller/system'
 
 const router = new Router()
@@ -92,10 +92,19 @@ router.get('/book/short-reviews', commentsController.getBookShortReviews)
 router.get('/book/reviews', commentsController.getBookReviews)
 
 // 获取书单列表
-router.get('/booklists', BookListController.getLists)
+router.get('/booklists', bookListController.getLists)
 
 // 获取书单详情
-router.get('/booklists/:id', BookListController.getListDetail)
+router.get('/booklists/:id', bookListController.getListDetail)
+
+// 搜索热词
+router.get('/search-hotwords', searchController.getHotwords)
+
+// 热门搜索
+router.get('/hot-books', searchController.getHotbooks)
+
+// 自动补全 ?query={keyword}
+router.get('/auto-complete', searchController.autoComplete)
 
 /**
  * 用户部分

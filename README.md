@@ -133,9 +133,25 @@ params:
 
 这部分比较复杂：首先使用书籍id获取书源列表，然后选择书源获取章节列表，最后获取章节列表中的link字段url进行编码，作为link传入。
 
+#### 获取书籍章节内容
+
 url: `http://novel.juhe.im/chapters/:link`  **注意这里需要进行url编码**
 
 example: `http://novel.juhe.im/chapters/http%3A%2F%2Fvip.zhuishushenqi.com%2Fchapter%2F56f8da09176d03ac1983f6d7%3Fcv%3D1486473051386`
+
+params:
+
+```js
+{
+  link: {目录中的章节link}
+}
+```
+
+#### 获取漫画章节内容
+
+url: `http://novel.juhe.im/picture/:link`  **注意这里需要进行url编码**
+
+example: `http://novel.juhe.im/picture/http%3A%2F%2Fvip.zhuishushenqi.com%2Fchapter%2F56f8da09176d03ac1983f6d7%3Fcv%3D1486473051386`
 
 params:
 
@@ -440,4 +456,17 @@ response:
 }
 ```
 
+### 搜索热词
 
+url: `https://novel.juhe.im/search-hotwords`
+
+### 热门搜索
+
+url: `https://novel.juhe.im/hot-books`
+
+
+### 自动补全
+
+url: `https://novel.juhe.im/auto-complete?query={keyword}`
+
+example: `https://novel.juhe.im/auto-complete?query=凡人`
