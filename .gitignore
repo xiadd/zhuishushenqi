@@ -6,3 +6,4 @@ logs/*
 .vscode
 pageage-lock.json
 test.js
+.cache
