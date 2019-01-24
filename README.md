@@ -4,6 +4,9 @@
 
 欢迎加入群讨论:
 
+telegram: https://t.me/fe_node  (刚建，建议入此群)
+
+QQ：
 ![群](https://camo.githubusercontent.com/a63f5178a3128dd2bdff9e7f358e66217de27dd2/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031372f30312f31382f353837663331346538616335612e706e67)
 
 ## 帮助与支持
