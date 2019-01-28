@@ -1,6 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet, injectGlobal } from 'styled-components'
-import { extractStyles } from 'evergreen-ui'
 
 injectGlobal`
   ::-webkit-scrollbar {
@@ -37,26 +36,15 @@ var _hmt = _hmt || [];
 
 export default class MyDocument extends Document {
 
-  static getInitialProps ({ renderPage }) {
-    const sheet = new ServerStyleSheet()
-    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
-    const styleTags = sheet.getStyleElement()
-    const { css, hydrationScript } = extractStyles()
-    return { ...page, styleTags, css, hydrationScript }
-  }
-
   render() {
-    const { css, hydrationScript } = this.props
     return (
       <html>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
           {this.props.styleTags}
-          <style dangerouslySetInnerHTML={{ __html: css }} />
         </Head>
         <body style={{ background: '#fff' }}>
           <Main />
-          {hydrationScript}
           <NextScript />
           <script dangerouslySetInnerHTML={{ __html: bd_analyst }} />
         </body>

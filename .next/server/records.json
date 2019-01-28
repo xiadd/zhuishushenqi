@@ -10,23 +10,22 @@
       "external \"antd/lib/button\"": 6,
       "external \"antd/lib/collapse\"": 7,
       "external \"next/head\"": 8,
-      "external \"evergreen-ui\"": 9,
-      "external \"antd/lib/icon\"": 10,
-      "external \"axios\"": 11,
-      "external \"next/link\"": 12,
-      "multi ./pages/_app.js": 13,
-      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/_app.js": 14,
-      "multi ./pages/_document.js": 15,
-      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/_document.js": 16,
-      "multi ./pages/index/index.jsx": 17,
-      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/index/index.jsx": 18,
-      "external \"antd/lib/icon/style/css\"": 19,
-      "external \"antd/lib/button/style/css\"": 20,
-      "external \"antd/lib/collapse/style/css\"": 21,
-      "multi ./pages/index/index.styled.js": 22,
-      "multi node_modules/next/dist/pages/_error.js": 23,
-      "node_modules/next/dist/pages/_error.js": 24,
-      "external \"next/error\"": 25
+      "external \"antd/lib/icon\"": 9,
+      "external \"axios\"": 10,
+      "external \"next/link\"": 11,
+      "multi ./pages/_app.js": 12,
+      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/_app.js": 13,
+      "multi ./pages/_document.js": 14,
+      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/_document.js": 15,
+      "multi ./pages/index/index.jsx": 16,
+      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/index/index.jsx": 17,
+      "external \"antd/lib/icon/style/css\"": 18,
+      "external \"antd/lib/button/style/css\"": 19,
+      "external \"antd/lib/collapse/style/css\"": 20,
+      "multi ./pages/index/index.styled.js": 21,
+      "multi node_modules/next/dist/pages/_error.js": 22,
+      "node_modules/next/dist/pages/_error.js": 23,
+      "external \"next/error\"": 24
     },
     "usedIds": {
       "0": 0,
@@ -53,17 +52,16 @@
       "21": 21,
       "22": 22,
       "23": 23,
-      "24": 24,
-      "25": 25
+      "24": 24
     }
   },
   "chunks": {
     "byName": {
-      "static/I4~FOB78SF3UofcHZ2MH0/pages/_app.js": 0,
-      "static/I4~FOB78SF3UofcHZ2MH0/pages/_document.js": 1,
-      "static/I4~FOB78SF3UofcHZ2MH0/pages/index.js": 2,
-      "static/I4~FOB78SF3UofcHZ2MH0/pages/index/index.styled.js": 3,
-      "static/I4~FOB78SF3UofcHZ2MH0/pages/_error.js": 4
+      "static/aAKiawYOCyd59uXg3D14W/pages/_app.js": 0,
+      "static/aAKiawYOCyd59uXg3D14W/pages/_document.js": 1,
+      "static/aAKiawYOCyd59uXg3D14W/pages/index.js": 2,
+      "static/aAKiawYOCyd59uXg3D14W/pages/index/index.styled.js": 3,
+      "static/aAKiawYOCyd59uXg3D14W/pages/_error.js": 4
     },
     "bySource": {},
     "usedIds": [
