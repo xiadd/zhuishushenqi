@@ -98,36 +98,29 @@ module.exports =
 module.exports = require("react");
 
 /***/ }),
-/* 1 */,
-/* 2 */
+/* 1 */
 /***/ (function(module, exports) {
 
 module.exports = require("styled-components");
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/regenerator");
 
 /***/ }),
+/* 3 */,
 /* 4 */
-/***/ (function(module, exports) {
-
-module.exports = require("evergreen-ui");
-
-/***/ }),
-/* 5 */,
-/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledIndex", function() { return StyledIndex; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  width: 100vw;\n  justify-content: center;\n  align-items: center;\n  .heading-link {\n    margin-top: 1rem;\n    .doc-link {\n      color: #fff;\n      text-decoration: none;\n    }\n\n    .github-link {\n      color: #425A70;\n      text-decoration: none;\n    }\n  }\n  .system-info {\n    width: 400px;\n    margin-top: 1rem;\n    text-align: left;\n    max-height: 400px;\n    overflow-y: scroll;\n    &:focus {\n      outline: none\n    }\n\n    summary {\n      &:focus {\n        outline: none;\n      }\n      cursor: pointer;\n      color: #2c3e50;\n      margin-bottom: 10px;\n      font-size: .8rem;\n      color: #2c3e50;\n    }\n    .debug-item {\n      margin: 5px 0;\n      font-size: 12px;\n      line-height: 24px;\n    }\n    .debug-key {\n      width: 60px;\n      text-align: right;\n      display: inline-block;\n      margin-right: 10px;\n      color: #2c3e50;\n    }\n    .debug-value {\n      display: inline-block;\n      vertical-align: top;\n      color: #2c3e50;\n      width: 300px\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  width: 100vw;\n  justify-content: center;\n  align-items: center;\n  .heading-link {\n    margin-top: 1rem;\n    .doc-link {\n      color: #fff;\n      text-decoration: none;\n    }\n\n    .github-link {\n      color: #425A70;\n      text-decoration: none;\n    }\n  }\n  .system-info {\n    width: 500px;\n    margin-top: 1rem;\n    text-align: left;\n    max-height: 400px;\n    overflow-y: scroll;\n    &:focus {\n      outline: none\n    }\n    \n    .ant-collapse-header {\n      overflow: hidden\n    }\n\n    summary {\n      &:focus {\n        outline: none;\n      }\n      cursor: pointer;\n      color: #2c3e50;\n      margin-bottom: 10px;\n      font-size: .8rem;\n      color: #2c3e50;\n    }\n    .debug-item {\n      margin: 5px 0;\n      font-size: 12px;\n      line-height: 24px;\n    }\n    .debug-key {\n      width: 60px;\n      text-align: right;\n      display: inline-block;\n      margin-right: 10px;\n      color: #2c3e50;\n    }\n    .debug-value {\n      display: inline-block;\n      vertical-align: top;\n      color: #2c3e50;\n      width: 300px\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -142,22 +135,39 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var StyledIndex = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div(_templateObject());
 
 /***/ }),
-/* 7 */,
+/* 5 */,
+/* 6 */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/button");
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/collapse");
+
+/***/ }),
 /* 8 */,
-/* 9 */
+/* 9 */,
+/* 10 */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/icon");
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports = require("axios");
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ (function(module, exports) {
 
 module.exports = require("next/link");
 
 /***/ }),
-/* 11 */,
-/* 12 */,
 /* 13 */,
 /* 14 */,
 /* 15 */,
@@ -174,17 +184,33 @@ module.exports = __webpack_require__(18);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var evergreen_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
-/* harmony import */ var evergreen_ui__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(evergreen_ui__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(10);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _index_styled__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
+/* harmony import */ var antd_lib_icon_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(19);
+/* harmony import */ var antd_lib_icon_style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_icon_style_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var antd_lib_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10);
+/* harmony import */ var antd_lib_icon__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_icon__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var antd_lib_button_style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(20);
+/* harmony import */ var antd_lib_button_style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button_style_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
+/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var antd_lib_collapse_style_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(21);
+/* harmony import */ var antd_lib_collapse_style_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_lib_collapse_style_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var antd_lib_collapse__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
+/* harmony import */ var antd_lib_collapse__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(antd_lib_collapse__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(11);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(12);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _index_styled__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(4);
+
+
+
+
+
+
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -213,7 +239,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
+var Panel = antd_lib_collapse__WEBPACK_IMPORTED_MODULE_6___default.a.Panel;
 
 var Index =
 /*#__PURE__*/
@@ -229,60 +255,74 @@ function (_Component) {
   _createClass(Index, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_index_styled__WEBPACK_IMPORTED_MODULE_5__["StyledIndex"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_3__["Heading"], {
-        size: 800,
-        marginTop: "default"
-      }, "\u8FFD\u4E66\u795E\u5668\u63A5\u53E3"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "\u8FFD\u4E66\u795E\u5668\u63A5\u53E3\u4E8C\u6B21\u5C01\u88C5\uFF0C\u6587\u6863\u5B8C\u5584\uFF0C\u4F7F\u7528\u65B9\u4FBF"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_index_styled__WEBPACK_IMPORTED_MODULE_10__["StyledIndex"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", null, "\u8FFD\u4E66\u795E\u5668\u63A5\u53E3"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "\u8FFD\u4E66\u795E\u5668\u63A5\u53E3\u4E8C\u6B21\u5C01\u88C5\uFF0C\u6587\u6863\u5B8C\u5584\uFF0C\u4F7F\u7528\u65B9\u4FBF"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "heading-link"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_3__["Button"], {
-        appearance: "primary",
-        height: 40
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_4___default.a, {
+        type: "primary",
+        style: {
+          marginRight: 10
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
         href: "https://xiadd.github.io/zhuishushenqi/"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         className: "doc-link"
-      }, "\u6587\u6863"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_3__["Button"], {
-        height: 40,
-        marginLeft: 10
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+      }, "\u6587\u6863"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_4___default.a, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "https://github.com/xiadd/zhuishushenqi",
         className: "github-link"
-      }, "GITHUB"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("details", {
-        className: "system-info"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("summary", null, "\u7CFB\u7EDF\u8BE6\u60C5"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, "Github"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(antd_lib_collapse__WEBPACK_IMPORTED_MODULE_6___default.a, {
+        bordered: false,
+        expandIcon: function expandIcon(_ref) {
+          var isActive = _ref.isActive;
+          return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(antd_lib_icon__WEBPACK_IMPORTED_MODULE_2___default.a, {
+            type: "caret-right",
+            rotate: isActive ? 90 : 0
+          });
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Panel, {
+        className: "system-info",
+        header: "\u7CFB\u7EDF\u4FE1\u606F",
+        key: "1",
+        style: {
+          background: '#f7f7f7',
+          borderRadius: 4,
+          marginBottom: 24,
+          border: 0,
+          overflow: 'auto'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "debug-item"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "debug-key"
-      }, "git hash: "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      }, "git hash: "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "debug-value"
-      }, this.props.gitHash.slice(0, 7))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, this.props.gitHash.slice(0, 7))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "debug-item"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "debug-key"
-      }, "\u5185\u5B58\u5360\u7528: "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      }, "\u5185\u5B58\u5360\u7528: "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "debug-value"
-      }, this.props.memory, " m")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, this.props.memory, " m")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "debug-item"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "debug-key"
-      }, "\u8FD0\u884C\u65F6\u95F4: "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      }, "\u8FD0\u884C\u65F6\u95F4: "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "debug-value"
-      }, this.props.runTime, " s")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, this.props.runTime, " s")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "debug-item"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "debug-key"
-      }, "\u8BF7\u6C42\u6570: "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      }, "\u8BF7\u6C42\u6570: "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "debug-value"
-      }, this.props.requestCount)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, this.props.requestCount)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "debug-item"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "debug-key"
-      }, "\u70ED\u95E8\u8DEF\u7531: "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      }, "\u70ED\u95E8\u8DEF\u7531: "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "debug-value",
         dangerouslySetInnerHTML: {
           __html: this.props.hotRoutesValue
         }
-      }))));
+      })))));
     }
   }], [{
     key: "getInitialProps",
@@ -296,7 +336,7 @@ function (_Component) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('http://127.0.0.1:8080/system');
+                return axios__WEBPACK_IMPORTED_MODULE_8___default.a.get('http://127.0.0.1:8080/system');
 
               case 2:
                 systemInfo = _context.sent;
@@ -319,9 +359,27 @@ function (_Component) {
   }]);
 
   return Index;
-}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/icon/style/css");
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/button/style/css");
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/collapse/style/css");
 
 /***/ })
 /******/ ]);

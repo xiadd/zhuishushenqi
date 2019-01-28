@@ -20,13 +20,17 @@ export const StyledIndex = styled.div`
     }
   }
   .system-info {
-    width: 400px;
+    width: 500px;
     margin-top: 1rem;
     text-align: left;
     max-height: 400px;
     overflow-y: scroll;
     &:focus {
       outline: none
+    }
+    
+    .ant-collapse-header {
+      overflow: hidden
     }
 
     summary {

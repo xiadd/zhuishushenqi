@@ -26,5 +26,5 @@ app.prepare()
       await next()
     })
 
-    server.listen(8080, '0.0.0.0', console.log(`server is running on http://localhost:${8080}`))
+    server.listen(8080, '0.0.0.0', console.log(`> server is running on http://localhost:${8080}`))
   })

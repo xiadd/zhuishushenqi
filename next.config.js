@@ -1,13 +1,9 @@
-const nextMDX = require('@zeit/next-mdx')
-const rehypePrism = require('@mapbox/rehype-prism')
+/* eslint-disable */
+const withCss = require('@zeit/next-css')
 
-const withMDX = nextMDX({
-  extension: /\.(md|mdx)$/,
-  options: {
-    hastPlugins: [rehypePrism]
-  }
-})
+// fix: prevents error when .css files are required by node
+if (typeof require !== 'undefined') {
+  require.extensions['.css'] = file => {}
+}
 
-module.exports = withMDX({
-  pageExtensions: ['js', 'jsx', 'mdx']
-})
+module.exports = withCss()
