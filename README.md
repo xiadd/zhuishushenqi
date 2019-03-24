@@ -14,7 +14,7 @@ QQ：
 
 服务器还是挺贵的, 尤其香港的, 希望大家支持一下吧, 帮助小站持续运营, 请点击下面搬瓦工链接注册一下, 我也收获点aff支撑服务器运营:
 
-[搬瓦工](https://bwh8.net/aff.php?aff=30537)
+[搬瓦工](https://bwh88.net/aff.php?aff=30537)
 
 
 `http://novel.juhe.im`
