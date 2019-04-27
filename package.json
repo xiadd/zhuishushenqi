@@ -8,14 +8,12 @@
     "build": "next build",
     "dev:server": "nodemon -r esm server.js",
     "start": "cross-env NODE_ENV=production node -r esm server.js",
-    "docs": "npx apidoc -i src/router -o doc/",
     "test": "jest"
   },
-  "author": "",
+  "author": "xiadd",
   "license": "ISC",
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.3.0",
-    "@mapbox/rehype-prism": "^0.3.0",
     "@sentry/node": "4.4.2",
     "@zeit/next-css": "^1.0.1",
     "antd": "^3.16.6",
@@ -43,11 +41,9 @@
     "winston": "^3.1.0"
   },
   "devDependencies": {
-    "apidoc": "^0.17.6",
     "babel-jest": "^24.7.1",
     "babel-plugin-styled-components": "^1.6.0",
     "babel-preset-env": "^1.7.0",
-    "gh-pages": "^2.0.1",
     "jest": "23.6.0 ",
     "nodemon": "^1.18.9",
     "supertest": "^3.3.0"
