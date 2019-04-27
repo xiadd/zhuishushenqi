@@ -30,12 +30,19 @@ export default {
     if (!ctx.params.id) {
       ctx.throw(400, new Error('book id is required'))
     }
-    const bookChapters = await axios.get(`${book.bookChapters}/${ctx.params.id}`, {
-      params: {
-        view: 'chapters'
+    try {
+      const bookChapters = await axios.get(`${book.bookChapters}/${ctx.params.id}`, {
+        params: {
+          view: 'chapters'
+        }
+      })
+      ctx.body = bookChapters.data
+    } catch (err) {
+      ctx.status = err.response.status
+      ctx.body = {
+        msg: 'not found'
       }
-    })
-    ctx.body = bookChapters.data
+    }
   },
 
   // 获取章节内容
