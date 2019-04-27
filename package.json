@@ -9,8 +9,7 @@
     "dev:server": "nodemon -r esm server.js",
     "start": "cross-env NODE_ENV=production node -r esm server.js",
     "docs": "npx apidoc -i src/router -o doc/",
-    "test": "jest",
-    "test-cov": "jest --coverage --runInBand --detectOpenHandles"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
