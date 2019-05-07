@@ -9,7 +9,7 @@ const Panel = Collapse.Panel
 class Index extends Component {
 
   static async getInitialProps () {
-    const systemInfo = await axios.get('http://127.0.0.1:8080/system')
+    const systemInfo = await axios.get('/system')
     return systemInfo.data
   }
 
