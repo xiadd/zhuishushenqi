@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([["1ce8"],{"4sio":function(n,d,i){(window.__NEXT_P=window.__NEXT_P||[]).push(["/index/index.styled",function(){var n=i("8XJj");return{page:n.default||n}}])}},[["4sio","5d41","9da1"]]]);
