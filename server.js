@@ -1,5 +1,8 @@
 import next from 'next'
+import dotenv from 'dotenv'
 import { app as server, router } from './src/app'
+
+dotenv.config()
 
 const dev = process.env.NODE_ENV !== 'production' // 是否是生产环境
 const app = next({ dev })

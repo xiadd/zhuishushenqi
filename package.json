@@ -7,7 +7,7 @@
     "dev": "node -r esm server.js",
     "build": "next build",
     "dev:server": "nodemon -r esm server.js",
-    "start": "cross-env NODE_ENV=production node -r esm server.js",
+    "start": "node -r esm server.js",
     "test": "jest"
   },
   "author": "xiadd",
@@ -24,6 +24,7 @@
     "config": "^1.30.0",
     "cross-env": "^3.2.4",
     "debug": "^3.1.0",
+    "dotenv": "^8.0.0",
     "esm": "^3.0.29",
     "koa": "^2.6.2",
     "koa-morgan": "^1.0.1",
