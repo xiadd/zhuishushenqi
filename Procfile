@@ -1,0 +1,1 @@
+web: cross-env NODE_ENV=production node -r esm server.js
