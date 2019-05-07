@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Collapse, Icon, Button } from 'antd'
-import Link from 'next/link'
 import { StyledIndex } from './index.styled'
 
 const Panel = Collapse.Panel
 
 class Index extends Component {
 
-  static async getInitialProps () {
-    const systemInfo = await axios.get('/system')
-    return systemInfo.data
-  }
+  // static async getInitialProps () {
+  //   const systemInfo = await axios.get('/system')
+  //   return systemInfo.data
+  // }
 
   render() {
     return <StyledIndex>
@@ -29,7 +28,7 @@ class Index extends Component {
         Made by <a href="https://github.com/xiadd" target="_blank" rel="noopener noreferrer">xiadd</a>
       </p>
 
-      <Collapse
+      {/* <Collapse
         bordered={false}
         expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
       >
@@ -70,7 +69,7 @@ class Index extends Component {
               <span className="debug-value" dangerouslySetInnerHTML={{ __html: this.props.hotRoutesValue }} />
             </div>
         </Panel>
-      </Collapse>
+      </Collapse> */}
     </StyledIndex>
   }
 }
