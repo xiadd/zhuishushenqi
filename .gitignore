@@ -7,3 +7,5 @@ logs/*
 pageage-lock.json
 test.js
 .cache
+yarn-error.log
+.next

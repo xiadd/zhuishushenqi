@@ -7,6 +7,9 @@ export const StyledIndex = styled.div`
   width: 100vw;
   justify-content: center;
   align-items: center;
+  p {
+    margin-bottom: 5px
+  }
   .heading-link {
     margin-top: 1rem;
     .doc-link {
@@ -49,7 +52,7 @@ export const StyledIndex = styled.div`
       line-height: 24px;
     }
     .debug-key {
-      width: 60px;
+      width: 100px;
       text-align: right;
       display: inline-block;
       margin-right: 10px;

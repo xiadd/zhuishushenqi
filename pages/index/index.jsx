@@ -8,10 +8,10 @@ const Panel = Collapse.Panel
 
 class Index extends Component {
 
-  static async getInitialProps () {
-    const systemInfo = await axios.get('http://127.0.0.1:8080/system')
-    return systemInfo.data
-  }
+  // static async getInitialProps () {
+  //   const systemInfo = await axios.get('http://127.0.0.1:8080/system')
+  //   return systemInfo.data
+  // }
 
   render() {
     return <StyledIndex>
@@ -19,19 +19,17 @@ class Index extends Component {
       <p>
         追书神器接口二次封装，文档完善，使用方便
       </p>
-      
-      <div className="heading-link">
-        <Button type="primary" style={{ marginRight: 10 }}>
-          <Link href="https://xiadd.github.io/zhuishushenqi/" >
-            <a className="doc-link">文档</a>
-          </Link>
-        </Button>
-        <Button>
-          <a href="https://github.com/xiadd/zhuishushenqi" className="github-link">Github</a>
-        </Button>
-      </div>
+      <p>
+        查看文档：<a href="https://xiadd.github.io/zhuishushenqi/" target="_blank" rel="noopener noreferrer">文档</a>
+      </p>
+      <p>
+      Repo: <a href="https://github.com/xiadd/zhuishushenq" target="_blank" rel="noopener noreferrer">GITHUB</a>
+      </p>
+      <p>
+        Made by <a href="https://github.com/xiadd" target="_blank" rel="noopener noreferrer">xiadd</a>
+      </p>
 
-      <Collapse
+      {/* <Collapse
         bordered={false}
         expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
       >
@@ -40,7 +38,7 @@ class Index extends Component {
           header="系统信息" 
           key="1" 
           style={{
-            background: '#f7f7f7',
+            background: '#fff',
             borderRadius: 4,
             marginBottom: 24,
             border: 0,
@@ -72,7 +70,7 @@ class Index extends Component {
               <span className="debug-value" dangerouslySetInnerHTML={{ __html: this.props.hotRoutesValue }} />
             </div>
         </Panel>
-      </Collapse>
+      </Collapse> */}
     </StyledIndex>
   }
 }

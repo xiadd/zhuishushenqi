@@ -1,5 +1,8 @@
 import next from 'next'
+import dotenv from 'dotenv'
 import { app as server, router } from './src/app'
+
+dotenv.config()
 
 const dev = process.env.NODE_ENV !== 'production' // 是否是生产环境
 const app = next({ dev })
@@ -26,5 +29,5 @@ app.prepare()
       await next()
     })
 
-    server.listen(8080, '0.0.0.0', console.log(`> server is running on http://localhost:${8080}`))
+    server.listen(process.env.PORT || 8080, '0.0.0.0', console.log(`> server is running on http://localhost:${process.env.PORT || 8080}`))
   })
