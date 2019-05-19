@@ -3,19 +3,13 @@ import { ServerStyleSheet, injectGlobal } from 'styled-components'
 
 injectGlobal`
   ::-webkit-scrollbar {
-    width: 6px !important;
-    height: 6px !important;
-    -webkit-appearance: none;
+    width: 4px !important;
   }
   ::-webkit-scrollbar-thumb {
-      height: 6px;
-      border-radius: 6px;
-      background-color: #BAC1C6;
+    border-radius: 3px;
+    background-color: #eee;
   }
-  ::-webkit-scrollbar-track {
-      border-radius: 0px;
-  }
-  
+
   body {
     overflow: auto;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,"Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
