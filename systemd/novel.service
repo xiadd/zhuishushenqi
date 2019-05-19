@@ -1,0 +1,12 @@
+[Unit]
+Description=追书接口分析
+Documentation=https://xiadd.github.io/zhuishushenqi/#/
+After=network.target
+
+[Service]
+WorkingDirectory=/home/zhuishushenqi
+Restart=on-abnormal
+Type=simple
+User=root
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/yarn start
