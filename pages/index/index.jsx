@@ -23,7 +23,7 @@ class Index extends Component {
         查看文档：<a href="https://xiadd.github.io/zhuishushenqi/" target="_blank" rel="noopener noreferrer">文档</a>
       </p>
       <p>
-      Repo: <a href="https://github.com/xiadd/zhuishushenq" target="_blank" rel="noopener noreferrer">GITHUB</a>
+      Repo: <a href="https://github.com/xiadd/zhuishushenqi" target="_blank" rel="noopener noreferrer">GITHUB</a>
       </p>
       <p>
         Made by <a href="https://github.com/xiadd" target="_blank" rel="noopener noreferrer">xiadd</a>
