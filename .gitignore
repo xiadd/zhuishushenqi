@@ -9,3 +9,4 @@ test.js
 .cache
 yarn-error.log
 .next
+yarn.lock
