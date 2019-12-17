@@ -1,3 +1,4 @@
+require = require("esm")(module/*, options*/)
 const supertest = require('supertest')
 const { app } = require('../src/app')
 const request = supertest(app.callback())

@@ -29,7 +29,4 @@ app.on('error', error => {
   logger.error(error)
 })
 
-export {  
-  router, app
-}
- 
+export { app }

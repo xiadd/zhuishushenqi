@@ -1,4 +1,4 @@
-import Router from 'koa-router'
+import Router from '@koa/router'
 import categoryController from '../controller/category'
 import bookController from '../controller/book'
 import rankController from '../controller/rank'
