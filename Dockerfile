@@ -3,7 +3,7 @@ FROM node:13-alpine
 #声明作者
 MAINTAINER xiadd
 #在image中创建文件夹
-RUN mkdir -p /home/Service
+RUN mkdir -p /home/app
 #将该文件夹作为工作目录
 WORKDIR /home/app
 
