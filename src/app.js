@@ -3,6 +3,7 @@ import path from 'path'
 import morgan from 'koa-morgan'
 import fs from 'fs'
 import config from 'config'
+import views from 'koa-views'
 import router from './router'
 import { setCors, countRequests } from './middleware'
 import logger from './middleware/logger'
@@ -17,6 +18,7 @@ app.context.debug = {
   routes: []
 }
 
+app.use(views(__dirname + '/views', { map: { njk: 'nunjucks' }}))
 app.use(countRequests())
 
 app.use(morgan('combined', { stream: accessLogStream }))

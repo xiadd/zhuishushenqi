@@ -6,6 +6,7 @@ import commentsController from '../controller/comment'
 import bookListController from '../controller/booklist'
 import searchController  from '../controller/search'
 import SystemController from '../controller/system'
+import homeController from '../controller/home'
 
 const router = new Router()
 
@@ -16,7 +17,7 @@ const router = new Router()
  */
 
 // 首页
-// router.get('/', homeController.index)
+router.get('/', homeController.index)
 
 // 登录
 // router.get('/authenticate', UserController.userLogin)
