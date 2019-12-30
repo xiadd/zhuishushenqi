@@ -5,5 +5,5 @@ const request = supertest(app.callback())
 
 test('服务器启动', async () => {
   const response = await request.get('/')
-  expect(response.status).toBe(404)
+  expect(response.status).toBe(200)
 })
