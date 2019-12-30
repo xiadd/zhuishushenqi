@@ -18,6 +18,15 @@ class NovelService extends Service {
     });
     return data;
   }
+
+  /**
+   * 获取书籍详情
+   * @param {string} id 书籍id
+   */
+  async detail (id) {
+    const { data } = await axios.get(`${apiUrl}/book/${id}`)
+    return data
+  }
 }
 
 module.exports = NovelService;
