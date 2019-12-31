@@ -40,7 +40,7 @@ class NovelService extends Service {
     const chapters = []
     $('li.chapter a').each((index, item) => {
       chapters.push({
-        url: $(item).attr('href'),
+        cid: $(item).attr('href'),
         wordCount: $(item).attr('title'),
         title: $(item).text()
       })
@@ -59,9 +59,9 @@ class NovelService extends Service {
     const book = await this.detail(id)
     const $ = cheerio.load(data, { decodeEntities: false })
     const chapter = {
-      book,
       title: $('h1').text(),
-      content: $('.content').html()
+      content: $('.content').html(),
+      book
     }
     return chapter
   }

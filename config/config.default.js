@@ -12,6 +12,10 @@ module.exports = appInfo => {
    **/
   const config = exports = {};
 
+  config.view = {
+    defaultViewEngine: 'nunjucks'
+  }
+
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1577691145255_9449';
 

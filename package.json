@@ -10,7 +10,8 @@
     "axios": "^0.19.0",
     "cheerio": "^1.0.0-rc.3",
     "egg": "^2.15.1",
-    "egg-scripts": "^2.11.0"
+    "egg-scripts": "^2.11.0",
+    "egg-view-nunjucks": "^2.2.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
