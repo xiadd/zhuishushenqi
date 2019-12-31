@@ -15,4 +15,4 @@ RUN npm install
 #暴露给主机的端口号
 EXPOSE 8080
 #执行npm start命令，启动Node工程
-RUN npm start
+CMD npm start
