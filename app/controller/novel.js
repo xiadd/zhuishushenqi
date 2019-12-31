@@ -1,13 +1,13 @@
-const Controller = require('egg').Controller;
+const Controller = require('egg').Controller
 
 class NovelController extends Controller {
   /**
    * 获取书籍列表
    */
   async list() {
-    const { ctx } = this;
-    const novels = await ctx.service.novel.list({ start: 0 });
-    ctx.body = novels;
+    const { ctx } = this
+    const novels = await ctx.service.novel.list({ start: 0 })
+    ctx.body = novels
   }
 
   /**
@@ -20,4 +20,4 @@ class NovelController extends Controller {
   }
 }
 
-module.exports = NovelController;
+module.exports = NovelController
