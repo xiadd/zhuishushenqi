@@ -1,8 +1,8 @@
-const Service = require('egg').Service;
-const axios = require('axios');
+const Service = require('egg').Service
+const axios = require('axios')
+const cheerio = require('cheerio')
 
-const pageUrl = 'http://www.aixdzs.com/';
-const apiUrl = 'http://api.ixdzs.com';
+const apiUrl = 'http://api.aixdzs.com'
 
 class NovelService extends Service {
   /**
@@ -16,7 +16,7 @@ class NovelService extends Service {
     const { data } = await axios.get(`${apiUrl}/book-sort`, {
       params: { start, limit, type },
     });
-    return data;
+    return data
   }
 
   /**
@@ -25,7 +25,45 @@ class NovelService extends Service {
    */
   async detail (id) {
     const { data } = await axios.get(`${apiUrl}/book/${id}`)
+    data.chapters = await this.getChapters(id)
     return data
+  }
+
+  /**
+   * 获取书籍章节列表
+   * @param {string} id 书籍id
+   */
+  async getChapters (id) {
+    const url = `http://read.aixdzs.com/1/${id}/`
+    const { data } = await axios.get(url)
+    const $ = cheerio.load(data)
+    const chapters = []
+    $('li.chapter a').each((index, item) => {
+      chapters.push({
+        url: $(item).attr('href'),
+        wordCount: $(item).attr('title'),
+        title: $(item).text()
+      })
+    })
+    return chapters
+  }
+
+  /**
+   * 获取章节详细内容
+   * @param {string} id 书籍id
+   * @param {string} cid 章节id
+   */
+  async getChapterContent (id, cid) {
+    const url = `http://read.aixdzs.com/0/${id}/`
+    const { data } = await axios.get(url + cid)
+    const book = await this.detail(id)
+    const $ = cheerio.load(data, { decodeEntities: false })
+    const chapter = {
+      book,
+      title: $('h1').text(),
+      content: $('.content').html()
+    }
+    return chapter
   }
 }
 
