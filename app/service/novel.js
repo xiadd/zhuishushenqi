@@ -15,7 +15,10 @@ class NovelService extends Service {
   async list({ start = 0, limit = 20, type = 'new' }) {
     const { data } = await axios.get(`${apiUrl}/book-sort`, {
       params: { start, limit, type },
-    });
+    })
+    data.books.forEach(book => {
+      book.cover = book.cover ? 'https://img22.aixdzs.com/' + book.cover : 'https://img22.aixdzs.com/nopic2.jpg'
+    })
     return data
   }
 
@@ -24,8 +27,9 @@ class NovelService extends Service {
    * @param {string} id 书籍id
    */
   async detail (id) {
-    const { data } = await axios.get(`${apiUrl}/book/${id}`)
-    data.chapters = await this.getChapters(id)
+    const [{ data }, chapters] = await Promise.all([axios.get(`${apiUrl}/book/${id}`), this.getChapters(id)])
+    data.chapters = chapters
+    data.cover = data.cover ? 'https://img22.aixdzs.com/' + data.cover : 'https://img22.aixdzs.com/nopic2.jpg'
     return data
   }
 
@@ -55,8 +59,7 @@ class NovelService extends Service {
    */
   async getChapterContent (id, cid) {
     const url = `http://read.aixdzs.com/0/${id}/`
-    const { data } = await axios.get(url + cid)
-    const book = await this.detail(id)
+    const [{ data }, book] = await Promise.all([axios.get(url + cid), this.detail(id)])
     const $ = cheerio.load(data, { decodeEntities: false })
     const chapter = {
       title: $('h1').text(),
