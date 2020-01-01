@@ -16,8 +16,8 @@ stop:
 restart:
 	docker-compose stop && docker-compose start
 
-shell-novel:
+shell-web:
 	docker exec -ti novel_api /bin/sh
 
-log-nginx:
+log-web:
 	docker-compose logs novel_api
