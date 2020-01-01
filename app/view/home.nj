@@ -97,5 +97,8 @@
     <p>源码：<a href="https://github.com/xiadd/zhuishushenqi" target="_blank" rel="noopener noreferrer">github</a></p>
     <p>作者：<a href="https://github.com/xiadd" target="_blank" rel="noopener noreferrer">xiadd</a></p>
   </div>
+  <script>
+    const books = {{ books | dump | safe }}
+  </script>
 </body>
 </html>
