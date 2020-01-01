@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    command: npm start
     container_name: novel_api
     volumes:
       - .:/home/app
