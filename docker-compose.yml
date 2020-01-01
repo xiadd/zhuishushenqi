@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: novel_api
+    volumes:
+      - .:/home/app
+    expose:
+      - 8080
