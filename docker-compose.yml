@@ -9,5 +9,6 @@ services:
     container_name: novel_api
     volumes:
       - .:/home/app
+      - /home/app/node_modules
     expose:
       - 8080
