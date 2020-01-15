@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>追书神器--接口</title>
+  <title>免费小说接口</title>
   <style>
     body {
       font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
@@ -11,7 +11,8 @@
       font-size: 16px;
       color: #2c3e50;
       padding: 0;
-      margin: 0
+      margin: 0;
+      background: #f0f0f0
     }
 
     h2 {
@@ -91,8 +92,8 @@
 </head>
 <body>
   <div id="content">
-    <h2>追书神器接口</h2>
-    <p>追书神器接口二次封装，文档完善，使用方便</p>
+    <h2>免费小说接口</h2>
+    <p>免费小说接口，文档完善，使用方便</p>
     <p>查看文档：<a href="https://github.com/xiadd/zhuishushenqi" target="_blank" rel="noopener noreferrer">文档</a></p>
     <p>源码：<a href="https://github.com/xiadd/zhuishushenqi" target="_blank" rel="noopener noreferrer">github</a></p>
     <p>作者：<a href="https://github.com/xiadd" target="_blank" rel="noopener noreferrer">xiadd</a></p>
