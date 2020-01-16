@@ -41,6 +41,24 @@ p {
   float: left;
 }
 
+.nav-menus {
+  float: left;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.nav-menus a {
+  margin: 4px 0;
+  display: inline-block;
+  height: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-menus a.selected {
+  color: #e36209;
+}
+
 .related-link {
   float: right;
 }

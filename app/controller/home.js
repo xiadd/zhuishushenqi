@@ -5,6 +5,11 @@ class HomeController extends Controller {
     const { ctx } = this
     await ctx.render('home.nj')
   }
+
+  async examples () {
+    const { ctx } = this
+    await ctx.render('examples.nj')
+  }
 }
 
 module.exports = HomeController

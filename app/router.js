@@ -7,6 +7,7 @@ module.exports = app => {
    * 首页门面controller
    */
   router.get('/', controller.home.index)
+  router.get('/examples', controller.home.examples)
   /**
    * 小说相关controller
    */
