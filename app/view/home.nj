@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>免费小说接口</title>
   <link href="/public/css/index.css" rel="stylesheet">
-  <link href="/public/css/markdown-style.css" rel="stylesheet">
+  <link href="/public/css/markdown-style.css?v=0.1" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github-gist.min.css" integrity="sha256-xKngFRXh54wtbQtuYDjv4R5dJSjZAjRiq5u0dlUxAM0=" crossorigin="anonymous" />
 </head>
 <body>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>免费小说接口</title>
-  <link href="/public/css/index.css" rel="stylesheet">
+  <link href="/public/css/index.css?v=0.1" rel="stylesheet">
   <link href="/public/css/markdown-style.css" rel="stylesheet">
 </head>
 <body>
