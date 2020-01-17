@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>免费小说接口</title>
+  <link rel="shortcut icon" href="/public/favicon.png">
+  <link href="/public/css/index.css" rel="stylesheet">
+  {% block css %}{% endblock %}
+</head>
+<body>
+  <div class="nav">
+    <div class="nav-content">
+      <p class="nav-title">免费小说接口</p>
+      <div class="nav-menus">
+        <a href="/" class="{{ 'selected' if activePage == 'home' }}">首页</a>
+        <a href="/examples" class="{{ 'selected' if activePage == 'examples' }}">示例</a>
+        <a href="/analysis" class="{{ 'selected' if activePage == 'analysis' }}">统计</a>
+      </div>
+      <div class="related-link">
+        <a href="https://github.com/xiadd/zhuishushenqi">github</a>
+      </div>
+    </div>
+  </div>
+  {% block content %}{% endblock %}
+  {% block script %}{% endblock %}
+</body>
+</html>
