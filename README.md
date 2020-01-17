@@ -107,3 +107,14 @@
   book: {} // 书籍详情
 }
 ```
+
+## 部署说明
+
+本项目使用docker+docker-compose部署，请确保二者已经安装完成。
+
+1. 下载代码：`git clone https://github.com/xiadd/zhuishushenqi.git`
+2. 进入项目目录
+3. 执行命令：`make build`
+4. 上面命令完成后，执行命令：`make up`
+5. 使用浏览器访问8080端口返回首页即成功
+6. 其他诸如域名设置等等不在本项目范围内，请自行搜索配置
