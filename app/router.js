@@ -8,6 +8,7 @@ module.exports = app => {
    */
   router.get('/', controller.home.index)
   router.get('/examples', controller.home.examples)
+  router.get('/analysis', controller.home.analysis)
   /**
    * 小说相关controller
    */

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>免费小说接口</title>
+  <title>免费小说接口--统计</title>
   <link href="/public/css/index.css?v=0.1" rel="stylesheet">
   <link href="/public/css/markdown-style.css" rel="stylesheet">
 </head>
@@ -12,8 +12,8 @@
       <p class="nav-title">免费小说接口</p>
       <div class="nav-menus">
         <a href="/" >首页</a>
-        <a href="/examples" class="selected">示例</a>
-        <a href="/analysis">统计</a>
+        <a href="/examples">示例</a>
+        <a href="/analysis" class="selected">统计</a>
       </div>
       <div class="related-link">
         <a href="https://github.com/xiadd/zhuishushenqi">github</a>
@@ -26,6 +26,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.8.3/babel.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/react@16.12.0/umd/react.production.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/react-dom@16.12.0/umd/react-dom.production.min.js"></script>
-  <script type="text/babel" data-presets="env,react" src="/public/js/examples.js"></script>
+  <script type="text/babel" data-presets="env,react" src="/public/js/analysis.js"></script>
 </body>
 </html>
