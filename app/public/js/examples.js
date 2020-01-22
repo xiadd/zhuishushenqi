@@ -4,4 +4,4 @@ function App () {
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('content'))
+ReactDOM.render(<App />, document.getElementById('example-content'))

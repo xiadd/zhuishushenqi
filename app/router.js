@@ -15,4 +15,5 @@ module.exports = app => {
   router.get('/books', controller.novel.list)
   router.get('/book/:id', controller.novel.detail)
   router.get('/book/:id/:cid', controller.novel.chapterDetail)
+  router.get('/search', controller.novel.searchBooks)
 };

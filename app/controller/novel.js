@@ -6,7 +6,11 @@ class NovelController extends Controller {
    */
   async list() {
     const { ctx } = this
-    const novels = await ctx.service.novel.list({ start: 0 })
+    const novels = await ctx.service.novel.list({
+      start: ctx.params.start || 0,
+      limit: ctx.params.limit || 20,
+      type: ctx.params.type || 'new'
+    })
     ctx.body = novels
   }
 
@@ -26,6 +30,16 @@ class NovelController extends Controller {
     const { ctx } = this
     const detail = await ctx.service.novel.getChapterContent(ctx.params.id, ctx.params.cid)
     ctx.body = detail
+  }
+
+  async searchBooks () {
+    const { ctx } = this
+    const books = await ctx.service.novel.searchBooksBytBookNameOrAuthorName({
+      query: ctx.params.query,
+      limit: ctx.params.limit || 20,
+      start: ctx.params.start || 0
+    })
+    ctx.body = books
   }
 }
 

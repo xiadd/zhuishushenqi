@@ -2,7 +2,7 @@
 {% extends "base.nj" %}
 
 {% block content %}
-  <div id="content"></div>
+  <div id="example-content"></div>
 {% endblock %}
 
 {% block script %}

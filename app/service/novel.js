@@ -2,7 +2,7 @@ const Service = require('egg').Service
 const axios = require('axios')
 const cheerio = require('cheerio')
 
-const apiUrl = 'http://api.aixdzs.com'
+const apiUrl = 'http://api.ixdzs.com'
 
 class NovelService extends Service {
   /**
@@ -67,6 +67,21 @@ class NovelService extends Service {
       book
     }
     return chapter
+  }
+
+  /**
+   * 通过书名或者作者名搜索小说
+   * @param {object} params 入参
+   */
+  async searchBooksBytBookNameOrAuthorName (params) {
+    const url = `${apiUrl}/book/search`
+    const { data } = await axios.get(url, {
+      params
+    })
+    data.books.forEach(book => {
+      book.cover = book.cover ? 'https://img22.aixdzs.com/' + book.cover : 'https://img22.aixdzs.com/nopic2.jpg'
+    })
+    return data
   }
 }
 
