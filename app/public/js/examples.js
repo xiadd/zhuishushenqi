@@ -1,6 +1,6 @@
 const { useState, useEffect } = React
 
-function useBooks () {
+function useFetchBooks () {
   const [books, setBooks] = useState([])
   const [status, setStatus] = useState('pending')
   useEffect(async () => {
@@ -41,7 +41,7 @@ function Book ({ book }) {
 }
 
 function App () {
-  const { books, status } = useBooks()
+  const { books, status } = useFetchBooks()
   switch (status) {
     case 'pending':
       return (
