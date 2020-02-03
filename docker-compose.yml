@@ -22,8 +22,6 @@ services:
       dockerfile: Dockerfile
     command: npm start
     container_name: novel_api
-    ports: 
-      - "8080:8080"
     volumes:
       - .:/home/app
       - /home/app/node_modules
