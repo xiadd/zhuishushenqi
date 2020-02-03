@@ -1,6 +1,16 @@
 version: "3"
 
 services:
+  nginx:
+    image: nginx:alpine
+    container_name: proxy
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/home/app
+      - ./config/nginx:/etc/nginx/conf.d
+    depends_on:
+      - web
   redis:
     image: redis
     container_name: cache
@@ -21,5 +31,3 @@ services:
       - redis
     environment:
       - REDIS_URL=redis://cache
-    expose:
-      - 8080
