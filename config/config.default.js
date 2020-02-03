@@ -22,14 +22,14 @@ module.exports = appInfo => {
   // add your middleware config here
   config.middleware = [];
 
-  config.redis = {
-    client: {
-      port: 6379,          // Redis port
-      host: '127.0.0.1',   // Redis host
-      password: '',
-      db: 0,
-    },
-  }
+  // config.redis = {
+  //   client: {
+  //     port: 6379,          // Redis port
+  //     host: '127.0.0.1',   // Redis host
+  //     password: '',
+  //     db: 0,
+  //   },
+  // }
 
   // add your user config here
   const userConfig = {
