@@ -20,16 +20,16 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1577691145255_9449';
 
   // add your middleware config here
-  config.middleware = [];
+  config.middleware = ['analysis'];
 
-  // config.redis = {
-  //   client: {
-  //     port: 6379,          // Redis port
-  //     host: '127.0.0.1',   // Redis host
-  //     password: '',
-  //     db: 0,
-  //   },
-  // }
+  config.redis = {
+    client: {
+      port: process.env.REDIS_PORT || 6379,          // Redis port
+      host: process.env.REDIS_HOST || '127.0.0.1',   // Redis host
+      password: '',
+      db: 0,
+    },
+  }
 
   // add your user config here
   const userConfig = {

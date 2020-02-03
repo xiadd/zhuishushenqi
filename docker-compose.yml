@@ -28,4 +28,5 @@ services:
     links:
       - redis
     environment:
-      - REDIS_URL=redis://cache
+      - REDIS_HOST=cache
+      - REDIS_PORT=6379
