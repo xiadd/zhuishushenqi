@@ -1,6 +1,11 @@
 version: "3"
 
 services:
+  redis:
+    image: redis
+    container_name: cache
+    expose:
+      - 6379
   web:
     build:
       context: .
@@ -12,5 +17,9 @@ services:
     volumes:
       - .:/home/app
       - /home/app/node_modules
+    links:
+      - redis
+    environment:
+      - REDIS_URL=redis://cache
     expose:
       - 8080
