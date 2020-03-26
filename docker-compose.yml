@@ -11,11 +11,6 @@ services:
       - ./config/nginx:/etc/nginx/conf.d
     depends_on:
       - web
-  redis:
-    image: redis
-    container_name: cache
-    expose:
-      - 6379
   web:
     build:
       context: .
@@ -25,8 +20,3 @@ services:
     volumes:
       - .:/home/app
       - /home/app/node_modules
-    links:
-      - redis
-    environment:
-      - REDIS_HOST=cache
-      - REDIS_PORT=6379
