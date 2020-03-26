@@ -1,22 +1,14 @@
 version: "3"
 
 services:
-  nginx:
-    image: nginx:alpine
-    container_name: proxy
-    ports:
-      - "80:8080"
-    volumes:
-      - .:/home/app
-      - ./config/nginx:/etc/nginx/conf.d
-    depends_on:
-      - web
   web:
     build:
       context: .
       dockerfile: Dockerfile
     command: npm start
     container_name: novel_api
+    ports:
+      - "8080:8080"
     volumes:
       - .:/home/app
       - /home/app/node_modules
