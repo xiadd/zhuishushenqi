@@ -27,10 +27,14 @@ class NovelService extends Service {
    * @param {string} id 书籍id
    */
   async detail (id) {
-    const [{ data }, chapters] = await Promise.all([axios.get(`${apiUrl}/book/${id}`), this.getChapters(id)])
-    data.chapters = chapters
-    data.cover = data.cover ? 'https://img22.aixdzs.com/' + data.cover : 'https://img22.aixdzs.com/nopic2.jpg'
-    return data
+    try {
+      const [{ data }, chapters] = await Promise.all([axios.get(`${apiUrl}/book/${id}`), this.getChapters(id)])
+      data.chapters = chapters
+      data.cover = data.cover ? 'https://img22.aixdzs.com/' + data.cover : 'https://img22.aixdzs.com/nopic2.jpg'
+      return data
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   /**
