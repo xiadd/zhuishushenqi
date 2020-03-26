@@ -20,7 +20,7 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1577691145255_9449';
 
   // add your middleware config here
-  config.middleware = ['analysis'];
+  config.middleware = [];
 
   config.redis = {
     client: {
