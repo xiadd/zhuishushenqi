@@ -16,7 +16,11 @@
 
 ### 书籍列表
 
-请求地址：`https://novel.juhe.im/books`
+请求地址：
+
+```
+https://novel.juhe.im/books
+```
 
 请求参数：
 
@@ -52,7 +56,11 @@
 
 ### 书籍详情
 
-请求地址：`https://novel.juhe.im/book/{id}`
+请求地址：
+
+```
+https://novel.juhe.im/book/{id}
+```
 
 请求参数：
 
@@ -89,7 +97,11 @@
 
 ### 章节详情
 
-请求地址：`https://novel.juhe.im/book/{bookId}/{cid}`
+请求地址：
+
+```
+https://novel.juhe.im/book/{bookId}/{cid}
+```
 
 请求参数：
 
@@ -112,7 +124,12 @@
 
 本项目使用docker+docker-compose部署，请确保二者已经安装完成。
 
-1. 下载代码：`git clone https://github.com/xiadd/zhuishushenqi.git`
+1. 下载代码：
+
+```
+git clone https://github.com/xiadd/zhuishushenqi.git
+```
+
 2. 进入项目目录
 3. 执行命令：`make build`
 4. 上面命令完成后，执行命令：`make up`
