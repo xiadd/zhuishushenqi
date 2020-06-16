@@ -1,3 +1,5 @@
+[![HitCount](http://hits.dwyl.com/xiadd/xiadd/zhuishushenqi.svg)](http://hits.dwyl.com/xiadd/xiadd/zhuishushenqi)
+
 ## 项目说明
 
 由于追书神器大量移除书籍，以及vip等等问题，本项目保留名称，但是实际已经不再是追书神器的接口了，接口由网络上搜索而来，仅供学习使用，如有侵权请联系删除。
