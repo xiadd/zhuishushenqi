@@ -12,6 +12,6 @@
 {% block script %}
   <script src="/public/static/js/marked.min.js"></script>
   <script src="/public/static/js/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
-  <script src="/public/js/view.js"></script>
+  <script src="/public/js/view.js?v=0.1"></script>
 {% endblock %}
   
