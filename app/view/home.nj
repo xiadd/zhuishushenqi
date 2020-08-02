@@ -2,7 +2,6 @@
 {% extends "base.nj" %}
 
 {% block css %}
-  <link href="/public/css/markdown-style.css?v=0.1" rel="stylesheet">
   <link rel="stylesheet" href="/public/static/css/github-gist.min.css" />
 {% endblock %}
 
