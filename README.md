@@ -134,7 +134,7 @@
 }
 ```
 
-### 章节详情
+### 书籍搜索
 
 请求地址：`https://novel.juhe.im/search}`
 
