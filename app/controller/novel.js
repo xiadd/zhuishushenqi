@@ -23,6 +23,12 @@ class NovelController extends Controller {
     ctx.body = detail
   }
 
+  async chapters () {
+    const { ctx } = this
+    const chapters = await ctx.service.novel.getChapters(ctx.params.id)
+    ctx.body = chapters
+  }
+
   /**
    * 获取章节详细内容
    */
@@ -35,9 +41,7 @@ class NovelController extends Controller {
   async searchBooks () {
     const { ctx } = this
     const books = await ctx.service.novel.searchBooksBytBookNameOrAuthorName({
-      query: ctx.params.query,
-      limit: ctx.params.limit || 20,
-      start: ctx.params.start || 0
+      query: ctx.query.query
     })
     ctx.body = books
   }

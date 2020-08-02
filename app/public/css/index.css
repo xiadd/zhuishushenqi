@@ -219,3 +219,9 @@ summary {
   color: #a6a6a6;
   line-height: 16px;
 }
+
+pre {
+  background: #f4f5f6;
+  border-left: 3px solid #9b4dca;
+  padding: 5px;
+}

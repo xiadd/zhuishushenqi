@@ -28,8 +28,7 @@ class NovelService extends Service {
    */
   async detail (id) {
     try {
-      const [{ data }, chapters] = await Promise.all([axios.get(`${apiUrl}/book/${id}`), this.getChapters(id)])
-      data.chapters = chapters
+      const { data } = await axios.get(`${apiUrl}/book/${id}`)
       data.cover = data.cover ? 'https://img22.aixdzs.com/' + data.cover : 'https://img22.aixdzs.com/nopic2.jpg'
       return data
     } catch (err) {
@@ -42,18 +41,16 @@ class NovelService extends Service {
    * @param {string} id 书籍id
    */
   async getChapters (id) {
-    const url = `http://read.aixdzs.com/1/${id}/`
-    const { data } = await axios.get(url)
-    const $ = cheerio.load(data)
-    const chapters = []
-    $('li.chapter a').each((index, item) => {
-      chapters.push({
-        cid: $(item).attr('href'),
-        wordCount: $(item).attr('title'),
-        title: $(item).text()
+    try {
+      const { data } = await axios.get(`${apiUrl}/content-ios/${id}`)
+      data.chapters.forEach(c => {
+        c.id = c.link.split('/')[1],
+        delete c.link
       })
-    })
-    return chapters
+      return data
+    } catch(err) {
+      // do nothing
+    }
   }
 
   /**
@@ -62,24 +59,16 @@ class NovelService extends Service {
    * @param {string} cid 章节id
    */
   async getChapterContent (id, cid) {
-    const url = `http://read.aixdzs.com/0/${id}/`
-    const [{ data }, book] = await Promise.all([axios.get(url + cid), this.detail(id)])
-    const $ = cheerio.load(data, { decodeEntities: false })
-    const chapter = {
-      title: $('h1').text(),
-      content: $('.content').html(),
-      book
-    }
-    return chapter
+    const { data } = await axios.get(`${apiUrl}/chapter/${id}/${cid}`)
+    return data
   }
 
   /**
    * 通过书名或者作者名搜索小说
-   * @param {object} params 入参
+   * @param {string} params.query 搜索关键词
    */
   async searchBooksBytBookNameOrAuthorName (params) {
-    const url = `${apiUrl}/book/search`
-    const { data } = await axios.get(url, {
+    const { data } = await axios.get(`${apiUrl}/book/search`, {
       params
     })
     data.books.forEach(book => {

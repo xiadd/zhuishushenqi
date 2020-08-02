@@ -12,11 +12,12 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
+        node-version: [10.x]
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     steps:
     - uses: actions/checkout@v2
@@ -24,8 +25,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci --if-present
-    - run: npm run build --if-present
-    - run: npm test
+    - run: npm i -g npminstall && npminstall
+    - run: npm run ci
       env:
         CI: true

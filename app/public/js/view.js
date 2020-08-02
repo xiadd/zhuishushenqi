@@ -10,7 +10,9 @@ async function renderMdFile () {
   const docContainer = document.getElementById('content')
   const doc = await fetchMdFile()
   docContainer.innerHTML = marked(doc)
-  hljs.initHighlightingOnLoad()
+  document.querySelectorAll('pre code').forEach(block => {
+    hljs.highlightBlock(block);
+  })
 }
 
 renderMdFile()
