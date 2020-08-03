@@ -15,5 +15,15 @@ ENV NODE_ENV=production
 #使用RUN命令执行npm install安装工程依赖库
 RUN npm install
 
+RUN cd web
+
+RUN npm install
+
+RUN npm run build
+
+RUN cd ..
+
+RUN mv ./web/build ./app/public
+
 #执行npm start命令，启动Node工程
 CMD npm start

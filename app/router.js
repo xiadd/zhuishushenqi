@@ -4,12 +4,6 @@
 module.exports = app => {
   const { router, controller } = app
   /**
-   * 首页门面controller
-   */
-  router.get('/', controller.home.index)
-  router.get('/examples', controller.home.examples)
-  router.get('/analysis', controller.home.analysis)
-  /**
    * 小说相关controller
    */
 
@@ -23,4 +17,11 @@ module.exports = app => {
   router.get('/book/:id/chapters/:cid', controller.novel.chapterDetail)
   // 搜索小说
   router.get('/search', controller.novel.searchBooks)
+
+  /**
+   * 首页门面controller
+   */
+  router.get('*', controller.home.index)
+  router.get('/examples', controller.home.examples)
+  router.get('/analysis', controller.home.analysis)
 };
