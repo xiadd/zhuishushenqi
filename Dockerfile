@@ -12,14 +12,14 @@ COPY . /home/app
 
 ENV NODE_ENV=production
 
+RUN rm -rf app/public/build
+
 #使用RUN命令执行npm install安装工程依赖库
 RUN npm install
 
 RUN cd web && npm install && npm run build
 
-RUN rm -rf ../app/public/build
-
-RUN cp -r ./web/build ./app/public
+RUN cp -r web/build app/public
 
 #执行npm start命令，启动Node工程
 CMD npm start
