@@ -40,4 +40,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: cd ${{ secrets.PROJECT_PATH }} && git pull && make build && make up
+        script: cd ${{ secrets.PROJECT_PATH }} && rm -rf app/public/build && git pull && make build && make up
