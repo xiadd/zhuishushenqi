@@ -40,7 +40,7 @@
     "autod": "autod"
   },
   "ci": {
-    "version": "10"
+    "version": "12"
   },
   "repository": {
     "type": "git",
