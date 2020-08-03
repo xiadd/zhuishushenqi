@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          测试集成CRA
+          后面文档使用react进行开发
         </a>
       </header>
     </div>
