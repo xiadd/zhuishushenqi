@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          后面文档使用react进行开发
+          后面文档使用react进行开发(USING REACT OR VUE)
         </a>
       </header>
     </div>
