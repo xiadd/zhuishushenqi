@@ -32,12 +32,12 @@ jobs:
     if: github.ref == 'refs/heads/master'
     runs-on: [ubuntu-latest]
     steps:
-      - uses: actions/checkout@v1
-      - name: Deploy to juhe.im
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          script: cd ${{ secrets.PROJECT_PATH }} && git pull && make build && make up
+    - uses: actions/checkout@v1
+    - name: Deploy to juhe.im
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: cd ${{ secrets.PROJECT_PATH }} && git pull && make build && make up
