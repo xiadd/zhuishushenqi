@@ -12,3 +12,4 @@ services:
     volumes:
       - .:/home/app
       - /home/app/node_modules
+      - /home/app/web/build
