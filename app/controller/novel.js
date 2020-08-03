@@ -9,7 +9,7 @@ class NovelController extends Controller {
     const novels = await ctx.service.novel.list({
       start: ctx.params.start || 0,
       limit: ctx.params.limit || 20,
-      type: ctx.params.type || 'new'
+      type: ctx.params.type || 'new',
     })
     ctx.body = novels
   }
@@ -41,7 +41,7 @@ class NovelController extends Controller {
   async searchBooks () {
     const { ctx } = this
     const books = await ctx.service.novel.searchBooksBytBookNameOrAuthorName({
-      query: ctx.query.query
+      query: ctx.query.query,
     })
     ctx.body = books
   }

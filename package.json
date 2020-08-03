@@ -10,7 +10,7 @@
     "async": "^3.1.1",
     "axios": "^0.19.0",
     "cheerio": "^1.0.0-rc.3",
-    "egg": "^2.15.1",
+    "egg": "^2.27.0",
     "egg-redis": "^2.4.0",
     "egg-scripts": "^2.11.0",
     "egg-view-nunjucks": "^2.2.0"
@@ -36,7 +36,7 @@
     "test": "egg-bin test",
     "cov": "egg-bin cov",
     "lint": "eslint .",
-    "ci": "npm run lint && npm run cov",
+    "ci": "npm run lint",
     "autod": "autod"
   },
   "ci": {

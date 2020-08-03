@@ -1,6 +1,5 @@
 const Service = require('egg').Service
 const axios = require('axios')
-const cheerio = require('cheerio')
 
 const apiUrl = 'http://api.ixdzs.com'
 
@@ -44,11 +43,11 @@ class NovelService extends Service {
     try {
       const { data } = await axios.get(`${apiUrl}/content-ios/${id}`)
       data.chapters.forEach(c => {
-        c.id = c.link.split('/')[1],
+        c.id = c.link.split('/')[1]
         delete c.link
       })
       return data
-    } catch(err) {
+    } catch (err) {
       // do nothing
     }
   }
@@ -65,11 +64,12 @@ class NovelService extends Service {
 
   /**
    * 通过书名或者作者名搜索小说
+   * @param {object} params 入参
    * @param {string} params.query 搜索关键词
    */
   async searchBooksBytBookNameOrAuthorName (params) {
     const { data } = await axios.get(`${apiUrl}/book/search`, {
-      params
+      params,
     })
     data.books.forEach(book => {
       book.cover = book.cover ? 'https://img22.aixdzs.com/' + book.cover : 'https://img22.aixdzs.com/nopic2.jpg'
