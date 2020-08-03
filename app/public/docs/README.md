@@ -136,7 +136,7 @@
 
 ### 书籍搜索
 
-请求地址：`https://novel.juhe.im/search}`
+请求地址：`https://novel.juhe.im/search`
 
 请求参数：
 
