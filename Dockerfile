@@ -1,5 +1,5 @@
 #node镜像版本
-FROM node:13-alpine
+FROM node:14-alpine
 
 #在image中创建文件夹
 RUN mkdir -p /home/app
@@ -15,15 +15,7 @@ ENV NODE_ENV=production
 #使用RUN命令执行npm install安装工程依赖库
 RUN npm install
 
-RUN cd web
-
-RUN npm install
-
-RUN npm run build
-
-RUN cd ..
-
-RUN mv ./web/build ./app/public
+RUN cd web && npm install && npm run build && rm -rf ../app/public && mv build ../app/public
 
 #执行npm start命令，启动Node工程
 CMD npm start
