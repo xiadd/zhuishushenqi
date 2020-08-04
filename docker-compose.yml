@@ -10,6 +10,4 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - .:/home/app
       - /home/app/node_modules
-      - /home/app/app/public/build

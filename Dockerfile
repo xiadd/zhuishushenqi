@@ -12,11 +12,10 @@ COPY . /home/app
 
 ENV NODE_ENV=production
 
-RUN rm -rf app/public/build
-
 #使用RUN命令执行npm install安装工程依赖库
 RUN npm install
 
+# 前端打包并把build后的目录移动到后端public目录下面
 RUN cd web && npm install && npm run build
 
 RUN cp -r web/build app/public
