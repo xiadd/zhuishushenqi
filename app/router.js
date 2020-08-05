@@ -21,7 +21,7 @@ module.exports = app => {
   /**
    * 首页门面controller
    */
-  router.get('*', controller.home.index)
   router.get('/examples', controller.home.examples)
   router.get('/analysis', controller.home.analysis)
+  router.get('*', controller.home.index)
 };

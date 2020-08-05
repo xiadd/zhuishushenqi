@@ -9,6 +9,11 @@ class HomeController extends Controller {
     ctx.body = await fs.readFile(path.resolve('app/public/build/index.html'))
   }
 
+  async docs() {
+    const { ctx } = this
+    ctx.body = await fs.readFile(path.resolve('README.md'))
+  }
+
   async examples () {
     const { ctx } = this
     await ctx.render('examples.nj')
