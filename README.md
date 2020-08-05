@@ -1,4 +1,4 @@
-[![HitCount](http://hits.dwyl.com/xiadd/xiadd/zhuishushenqi.svg)](http://hits.dwyl.com/xiadd/xiadd/zhuishushenqi)
+![HitCount](https://github.com/xiadd/zhuishushenqi/workflows/Node.js%20CI/badge.svg)
 
 ## 项目说明
 
