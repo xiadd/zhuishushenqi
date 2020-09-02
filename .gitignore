@@ -16,4 +16,3 @@ test.js
 .next
 .travis.yml
 appveyor.yml
-app/public/build
