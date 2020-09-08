@@ -17,6 +17,8 @@ module.exports = app => {
   router.get('/book/:id/chapters/:cid', controller.novel.chapterDetail)
   // 搜索小说
   router.get('/search', controller.novel.searchBooks)
+  // 文档api
+  router.get('/api/docs', controller.home.docs)
 
   /**
    * 首页门面controller

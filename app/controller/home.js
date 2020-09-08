@@ -11,6 +11,7 @@ class HomeController extends Controller {
 
   async docs() {
     const { ctx } = this
+    ctx.set('Content-Type', 'text/plain')
     ctx.body = await fs.readFile(path.resolve('README.md'))
   }
 
