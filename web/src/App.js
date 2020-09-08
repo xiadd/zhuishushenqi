@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { getDocs } from './services'
+import React from 'react';
 import './App.css';
 
 function App() {
@@ -10,7 +9,8 @@ function App() {
   }, [])
   return (
     <div className="App">
-      
+      <h1>zhuishushenqi</h1>
+      <p>修整中</p>
     </div>
   );
 }
